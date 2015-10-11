@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+		<style type="text/css">
+		/*<![CDATA[*/
+		<!--
+		body {
+	cursor: default;
+    text-align: center;
+    color: #000;
+    background-color: #A1A1A1;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    xwidth: 98%;
+}
+  
+#headerdiv-top {
+	text-align: center;
+    font-family: Verdana, Trebuchet MS, Arial, serif;
+    font-size: 200%;
+    font-weight: bold;
+    line-height: 73%;
+    color #020f1d;
+    background-color: #fff;
+    padding: 15px 0px 15px 0px;
+    margin: 0px auto;
+    border-left: solid 1px #532529;
+    border-right: solid 1px #532529;
+    border-bottom: solid 1px #532529;
+    border-top: solid 3px #532529;
+    width: 90%;
+    position: relative;
+    display: block;
+}
+  
+#headerdiv-middle {
+	text-align: center;
+    font: italic 75% Verdana, Trebuchet MS, Arial, serif;
+    color: #bbb;
+    font-weight: normal;
+    background-color: #F1F1F1;
+    width: 90%;
+    border-left: solid 1px #532529;
+    border-right: solid 1px #532529;
+    margin: 0px auto;
+    padding: 10px 0px 10px 0px;
+    position: relative;
+    display: block;
+}
+  
+  .headerdiv-line {
+	color: #532529;
+}
+  
+#headerdiv-middle a:link, #headerdiv-middle a:visited {
+	text-decoration: underline;
+    background-color: transparent;
+    color: #000;
+}
+  
+#headerdiv-middle a:focus, #headerdiv-middle a:hover {
+	text-decoration: underline;
+    color: #532539;
+}
+  
+#headerdiv-middle a:active {
+	color: #000;
+    text-decoration: line-through;
+    border: none;
+}
+
+#headerdiv-bottom {
+	text-align: center;
+    font: 83% Verdana, Trebuchet MS, Arial, serif;
+    color: #aaa;
+    padding: 8px 0px 8px 0px;
+    margin: 0px auto;
+    border-left: solid 1px #532529;
+    border-right: solid 1px #532529;
+    border-bottom: solid 3px #532529;
+    border-top: solid 1px #bbb;
+    width: 90%;
+    background-color: #F1F1F1;
+    position: relative;
+    display: block;
+}
+
+#maindiv {
+	text-align: center;
+    font-family: Verdana, Trebuchet MS, Arial, serif;
+}
+  
+#maindiv div {
+	background-color: #F1F1F1;
+    color: #020F1D;
+    padding: 11px 0px 25px 0px;
+    margin: 50px auto;
+    border-width: 1px 1px 4px 10px;
+    border-style: solid;
+    border-color: #532529;
+    width: 80%;
+    position: relative;
+    display: block;
+}
+  
+#maindiv div::before {
+	content: counter(kman, lower-roman);
+    counter-increment: kman;
+    font-size: 100%;
+    font-weight: bold;
+    color: #fff;
+    background-color: #532529;
+    width: 42px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+}
+  
+#maindiv p {
+	font-size: 83%;
+    font-style: normal;
+    text-align: justify;
+    line-height: 160%;
+    padding: 0px;
+    margin: 10px auto;
+    width: 90%;
+    display: block;
+}
+  
+#headerdiv-bottom a:link, #headerdiv-bottom a:visited {
+	font-weight: bold;
+    text-decoration: none;
+    background-color: transparent;
+    color: #000;
+}
+  
+#headerdiv-bottom a:focus, #headerdiv-bottom a:hover {
+	text-decoration: none;
+    color: #532539;
+}
+  
+#headerdiv-bottom a:active {
+	color: #000;
+    text-decoration: line-through;
+    border: none;
+}
+  
+#maindiv address a:link, #maindiv address a:visited {
+	font-weight: bold;
+    text-decoration: underline;
+    background-color: transparent;
+    color: #fff;
+}
+  
+#maindiv address a:focus, #maindiv address a:hover {
+	text-decoration: underline;
+    color: #532539;
+}
+  
+#maindiv address a:active {
+	color: #fff;
+    text-decoration: line-through;
+    border: none;
+}
+  
+#maindiv address {
+	font-size: 70%;
+    font-style: normal;
+    text-decoration: none;
+    color: #959FAA;
+    background-color: #532529;
+    padding: 3px 0px 0px;
+    margin: 0px;
+    width: 100%;
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    display: block;
+    text-align: right;
+}
+
+  .address-footer-1 {
+	letter-spacing: 0.2em;
+}
+  
+  h4 {
+	font-family: Verdana, Trebuchet MS, Arial, serif;
+    font-size: 150%;
+    text-align: left;
+    text-indent: 30px;
+    padding: 0px 0px 0px 0px;
+    border-bottom: dotted 2px #ddd;
+}
+
+  h5 {
+	font-family: Verdana, Trebuchet MS, Arial, serif;
+    font-size: 120%;
+    text-align: left;
+    text-indent: 30px;
+    padding: 0px 0px 0px 0px;
+}
+
+  h4::first-letter {
+	color: #532529;
+    background-color: transparent;
+}
+  
+  body h1, body #maindiv h3, h1+h2, body #maindiv h4 {
+	font-weight: bold;
+  display: block;
+}
+  
+#maindiv .divimp {
+	font-size: 80%;
+    font-family: Verdana;
+    text-align: left;
+    background-color: #E1E1E1;
+    border-top: solid 1px #bbb;
+    border-bottom: solid 1px #bbb;
+    border-left: solid 6px #bbb;
+    border-right: solid 6px #bbb;
+    padding: 10px;
+    margin: 20px auto;
+    line-height: 150%;
+}
+  
+#maindiv .divimp::before {
+	display: none;
+}
+
+#maindiv .divimp p {
+	font-size: 100%;
+    text-indent: 0px;
+} 
+  
+#maindiv .small {
+	font-size: 60%;
+}
+
+#maindiv .small::before {
+	display: none;
+}
+
+  .list-numbered {
+	list-style-type: decimal;
+    margin-top: 0px;
+}
+  
+#headerdiv-top-fw {
+	font-size: 40%;
+    color: #532529;
+    margin: 0px;
+		padding-top: 9px;
+		display: block;
+}
+  
+  .faq-q {
+	font-weight: bold;
+    font-style: italic;
+    text-align: justify;
+}
+    
+  .faq-a {
+	text-align: justify;  
+}
+  
+#maindiv .version {
+	display: block;
+    width: 100%;
+    background-color: #F1F1F1;
+    text-align: left;
+    text-indent: 30px;
+    font-style: italic;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-bottom: solid 1px #bbb;
+    border-top: solid 1px #bbb;
+}
+  
+  .version-list {
+	line-height: 150%;
+    font-size: 80%;
+    text-align: left;
+    list-style-type: square;
+}
+-->
+		/*]]>*/
+		</style><title>Semi Multi Clerics Mod Readme</title>
+
+
+
+		<!--<script language="javascript" src="SPELLHOLD%20STUDIOS%20-%20readme_files/js.js"></script>--></head>
+
+
+		<body>
+		<a name="top" id="top"></a>
+		<div id="headerdiv-top">
+		Semi Multi Clerics Mod<br>
+		<span id="headerdiv-top-fw">A Spellhold Studios mod</span>
+		</div>
+		<div id="headerdiv-middle">
+		<span class="headerdiv-line">Author: Bob Tokyo</span> | <span
+		class="headerdiv-line">
+		WeiDU, maintainer: the bigg</a></span> | <span class="headerdiv-line"><a href="http://forums.spellholdstudios.net/index.php?showforum=158" target="_blank">Forum</a> (opens new window)</span> | <span class="headerdiv-line">Version: 0.2.3</span>
+		</div>
+		<div id="headerdiv-bottom">
+		<a href="#intro">Introduction</a> | <a href="#compatibility">Compatibility notes</a> | <a href="#installation">Installation</a> | <a href="#components">Components</a>| <a href="#version">Version history</a> | <a href="#credits">Credits</a> | <a href="#contact">Contact info</a>
+		</div><a name="intro" id="intro"></a>
+		<div id="maindiv">
+
+		<!-- ================== I n t r o d u c t i o n ================== -->
+		<div>
+		<h4>
+		Introduction
+		</h4>
+		<p>
+		This mod will add various clerical spells to wizard magic users via a new
+		item, effectively turning them into previously unavailable X/Cleric kits /
+		multiclass combinations.
+		<br><a href="./readme.orig.html">The original readme</a> is available for
+		reference as well and contains information on the exact effects of the mod.
+		In case of conflict, trust this document over the old readme.
+		</p>
+		
+		<address>
+		<span class="address-footer-1">Semi Multi Clerics Mod &gt; Introduction</span>
+		<a href="#top">BACK TO TOP</a>
+		</address>
+		</div>
+
+		<!-- ================== C o m p a t i b i l i t y ================== -->
+		<a name="compatibility" id="compatibility"></a>
+		<div>
+		<h4>
+		Compatibility notes
+		</h4>
+		<p>
+		<br>Generally speaking, this mod should be compatible with virtually any
+		other decently made WeiDU mod in existance. In over three years, no
+		incompatibility has been reported.
+		</p>
+		<p>
+		However, the mod can be used only if you have access to either Waukeen
+		Promenade and/or the Pocket Plane; if you cannot, you can use the following
+		CLUA console command to start the mod:
+		<div class="divimp">CLUAConsole:CreateCreature("tacprsp")</div>
+		</p>
+		<address>
+		<span class="address-footer-1">Semi Multi Clerics &gt; Compatibility Notes</span>
+		<a href="#top">BACK TO TOP</a>
+		</address>
+		</div>
+
+		<!-- ================== I n s t a l l a t i o n ================== -->
+		<a name="installation" id="installation"></a>
+		<div>
+		<h4>
+		Installation
+		</h4>
+		<h5>
+		Windows
+		</h5>
+		<p>
+		To install the mod, extracted the archive you downloaded to your BG2
+		installation directory using WinZIP, WinRAR, or the `Extract To...' wizard
+		from Windows XP.
+		If properly extracted, you should have a semi_multi_clerics folder,
+		setup-semi_multi_clerics.tp2 and setup-semi_multi_clerics.exe in your BG2
+		folder. To install, simply double-click Setup-semi_multi_clerics.exe and
+		follow the instructions on screen.
+		<br>
+		<br>Please re-run Setup-semi_multi_clerics.exe in your BG2 folder to
+		reinstall, uninstall or otherwise change components.
+		</p>
+
+		<h5>
+		Macintosh
+		</h5>
+		<p>
+		<i>If the mod was previously installed, uninstall it before extracting the
+		new version.</i>
+		Semi Multi Clerics is packaged and installed with WeiDU. To install, simply
+		extract the contents of the mod into your BG2 folder. If properly extracted,
+		you should have a semi_multi_clerics folder, setup-semi_multi_clerics.tp2,
+		Setup-semi_multi_clerics, and Setup-semi_multi_clerics.command in your BG2
+		folder. To install, simply double-click Setup-semi_multi_clerics.command and
+		follow the instructions on screen.
+
+		<h5>
+		Linux
+		</h5>
+		<p>
+		Download the latest version of WeiDU for Linux from
+		<a href="http://www.weidu.org/~thebigg">weidu.org</a> and extract (at least)
+		the WeiDU, weinstall and tolower executables in a $PATH directory (E.G.
+		/usr/bin).
+		<br>Following that, open a terminal, cd to your BG2 installation directory,
+		run `tolower' and answer Y to both queries.
+		<br><span class='small'>
+		You can avoid running the second option (linux.ini) if you've already ran it
+		once in the same directory. To save time, the archive is already tolowered,
+		so there's no need to run the first option (lowercasing file names) either
+		if you've extracted only this mod since the last time you lower cased file
+		name.
+		<br>If you're unsure, running tolower and choosing both options is the safe
+		bet.
+		</span>
+		<br>After that, run 'weinstall semi_multi_clerics' from your BG2
+		installation directory to install or uninstall the mod.
+		</p>
+		<address>
+		<span class="address-footer-1">Semi Multi Clerics &gt; Installation</span>
+		<a href="#top">BACK TO TOP</a>
+		</address>
+		</div>
+
+		<!-- ================== C o m p o n e n t s ================== -->
+		<a name="components" id="components"></a>
+		<div>
+		<h4>
+		Components
+		</h4>
+		<p>
+		Only the main component is available.
+		</p>
+		<a name="c1" id="Robes"></a>
+		<h5>
+		Semi Multi Clerics
+		</h5>
+		<p>
+		<div class=divimp>This component adds a new merchant named Mystra's Witness in the following
+		positions:
+		<ul>
+			<li>ar0700, x1850 y670 (Waukeen's Promenade, north of the Adventurer's
+			Mart)</li>
+			<li>ar4500, x2250 y1350 (in the Pocket Plane)</li>
+		</ul>
+		After talking to him, you can acquire a spell book that will teach you
+		some divine spells (including one that can be used to turn undead), at the
+		cost of some skill points and experience.
+		<p>More details on the exact penalties and bonuses, along with thoughts on
+		balance, are available in <a href="./readme.orig.html">the original
+		readme</a>.
+		</p>
+		</div>
+		</p>
+		<address>
+		<span class="address-footer-1">Semi Multi Mod &gt; Components</span>
+		<a href="#top">BACK TO TOP</a>
+		</address>
+		</div>
+
+		<!-- ================== Version History ================== -->
+		<a name="version" id="version"></a>
+		<div>
+		<h4>
+		Version History
+		</h4>   
+		<p class="version">
+	  Version 0.2.3 - 2 June 2010:
+	  	</p>
+		<ul class="version-list">
+		<li>Russian language.</li>
+		</ul>
+
+		<p class="version">
+	  Version 0.2.2 - 5 June 2007:
+	  	</p>
+		<ul class="version-list">
+		<li>Spanish language.</li>
+		</ul>
+
+		<p class="version">
+          Version 0.2.1 - 4 June 2007:
+		</p>
+		<ul class="version-list">
+		<li>Italian and French language.</li>
+		<li>Mac and Linux.</li>
+		<li>WeiDU V 199.</li>
+		<li>HTML readme, fixed an inconsistency.</li>
+		</ul>
+
+		<p class="version">
+          Version 0.2.0 - sometimes in 2004:
+		</p>
+		<ul class="version-list">
+		<li>Converted from IAP to WeiDU format.</li>
+		<li>Fixed a bug whereby you might fail to learn a spell.</li>
+		</ul>
+
+		<p class="version">
+          Version 0.1.0 - sometimes in 2004:
+		</p>
+		<ul class="version-list">
+		<li>Original release in IAP format</li>
+		</ul>
+
+		<address>
+		<span class="address-footer-1">Semi Multi Clerics &gt; Version History</span>
+		<a href="#top">BACK TO TOP</a>
+		</address>
+		</div>
+
+		<!-- ================== Credits ================== -->
+		<a name="credits" id="credits"></a>
+		<div>
+		<h4>
+		Credits
+		</h4>
+		<p>
+		This mod was made by Bob Tokyo and later converted to WeiDU by the Bigg.
+		</p>
+
+		<h5>Big Thanks:</h5>
+
+		<p class="faq-q">
+          The people who made this possible, by creating amazing modding tools:
+		</p>
+		<ul class="version-list">
+		<li>Westley Weimer, for WeiDU and his willingness to constantly improve it.</li>
+		<li>Jon Olav Hauglid, for NearInfinity and... as above :)</li>
+		<li>Gustov Montessi, author of IEEP</li>
+		</ul>
+		
+		<p class="faq-q">
+          Translation team:
+		</p>
+		<ul class="version-list">
+		<li>French Translation: Ashramyr.</li>
+		<li>Italian Translation: Mirol InXeS.</li>
+		<li>Spanish Translation: Immortality.</li>
+		</ul>
+
+		<address>
+		<span class="address-footer-1">Semi Multi Clerics &gt; Credits</span>
+		<a href="#top">BACK TO TOP</a>
+		</address>
+		</div>
+
+		<!-- ================== C O N T A C T   I N F O ================== -->
+		<a name="contact" id="contact"></a>
+		<div>
+		<h4>
+          Contact Info:
+		</h4>
+		<p>
+		Since the original author has disappeared from the modding boards, customs
+		dictate that I can only fix bugs and add translations, but not implement
+		new ideas in the mod. Hence, I can't satisfy feature requests. On the other
+		hand, bug reports and compatibility problems are welcome.
+		<br>The method of contacting me I prefer is via
+		<a href="http://forums.spellholdstudios.net/index.php?showforum=158" target="_blank">the forum</a>.
+		<br>If you'd rather PM or email me, keep in mind that sometimes I reply with
+		insults when I receive modding related stuff on private channels, as opposed
+		to posts in the public forums, unless there's a really compelling reason to
+		this. If you insist, my e-mail address is available in the tp2, and I
+		regularly read PMs at all the major BG2 comunities.
+		</p>
+		<address>
+		<span class="address-footer-1">Semi Multi Clerics &gt; contact info</span>
+		<a href="#top">back to top</a>
+		</address>
+		</div>
+	
+		</div>
+		<!--<script language="javascript">postamble();</script>-->
+		</body></html>
