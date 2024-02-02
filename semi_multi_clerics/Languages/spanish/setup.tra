@@ -1,0 +1,30 @@
+@0    = ~Semi-multi-clerics~
+@1    = ~Libro~
+@2    = ~Enseñanzas de la Dama~
+@3    = ~Libro
+Las tapas de este volúmen están decoradas con símbolos de Mystra, la Dama de la Urdimbre.~
+@4    = ~Enseñanzas de la Dama
+Este volúmen detalla las enseñanzas y filosofía de Mystra, la dama de la Magia. Explora la vida de los elegidos de Mystra y de las lecciones aprendidas, la vida de los avatares mortales de Mystra y los secretos de la magia divina. El propósito de estas enseñanzas es permitir a los usuarios de la magia arcana el actuar como testigos de Su fé. El manual también permitirá al lector el aprender el poder de muchos hechizos de sacerdotes.
+
+Efectos:
+Equipar y usar como cualquier otro manual. Enseña 35 hechizos de clérigo, los cuales serán escritos en el libro de magia arcana. El esfuerzo de tal flujo de conocimiento causa la pérdida permanente de dos puntos de Con y Des y 47000 puntos de experiencia. Luego de su uso, el manual desaparecerá, transportándose hacia el siguiente estudiante.
+
+Useable por: Todos los lanzadores de hechizos excepto Clérigos/Magos.~
+@5    = ~Gracia de Mystra~
+@6    = ~Nombre: Gracia de Mystra
+Nivel: 2
+Escuela: Nigromancia
+Objetivo: Uno mismo
+Tiempo de lanzamiento: 2
+Duración: 3 turnos
+Tirada de salvación: Ninguna
+Descripción:
+Hay pocas cosas más embarazosas para un sacerdote de Mystra que el tener que apoyarse en la ayuda de sacerdotes de otras deidades cuando deben enfrentarse contra muertos vivientes, sobretodo porque los seguidores de Illmater tienden a incordiar bastante al respecto. "Oh, no os preocupéis," dicen ellos, "el poder de nuestro gran dios viril os protegerá." Es suficiente para hacer que cualquier estudiante de la Dama de la Urdimbre se vuelva loco. Los Sacerdotes de Mystra que trabajan con Magos dedicados finalmente llegaron a una solución. Llamar al poder de la Dama, este hechizo crea un acechador invisible modificado con energía planar positiva. El poder de este elemental afecta a los no-muertos, y puede destruírlos cuando es llamado por un lanzador de alto nivel. El elemental sólo permanecerá en el plano primario durante 3 turnos.
+Efecto:
+Nivel 3-9: Expulsa muertos vivientes como clérigo de 5to nivel.
+Nivel 10-14: Expulsa muertos vivientes como clérigo de 10mo nivel.
+Nivel 15-19: Expulsa muertos vivientes como clérigo de 15to nivel.
+Nivel 20+: Expulsa muertos vivientes como clérigo de 20vo nivel. ~
+@7    = ~Testigo de Mystra~
+@8    = ~Rincón del Aprendiz de Mystra~
+
