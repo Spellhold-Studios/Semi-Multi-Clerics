@@ -1,106 +1,133 @@
-BACKUP ~semi_multi_clerics\backup~
+BACKUP ~semi_multi_clerics/backup~
 AUTHOR ~thebigg@spellholdstudios.net~
 
-AUTO_TRA ~Semi_multi_clerics\%s~
+ALWAYS
+ACTION_IF GAME_IS ~BGEE BG2EE IWDEE EET~ THEN BEGIN
+	ACTION_DEFINE_ARRAY tac_reload BEGIN
+	"Setup"
+	"tacprsp"
+	END
+	ACTION_DEFINE_ARRAY tac_noconvert BEGIN END
+	LAF HANDLE_CHARSETS
+		INT_VAR
+		infer_charset = 1
+		STR_VAR
+		tra_path = EVAL ~%MOD_FOLDER%/languages~
+		noconvert_array = tac_noconvert
+		reload_array = tac_reload
+	END
+END
+END
+
+AUTO_TRA ~Semi_multi_clerics/languages/%s~
 
 LANGUAGE ~English~
 	 ~English~
-	 ~semi_multi_clerics\english\setup.tra~
+	 ~semi_multi_clerics/languages/english/setup.tra~
 
 LANGUAGE ~Italian (By Mirol InXes, http://rtt.altervista.org)~
 	 ~Italian~
-	 ~semi_multi_clerics\italian\setup.tra~
+	 ~semi_multi_clerics/languages/italian/setup.tra~
 
 LANGUAGE ~French (By Ashramyr)~
 	 ~french~
-	 ~semi_multi_clerics\french\setup.tra~
+	 ~semi_multi_clerics/languages/french/setup.tra~
 
 LANGUAGE ~Spanish (By Immortality www.clandlan.net)~
 	 ~spanish~
-	 ~semi_multi_clerics/spanish/setup.tra~
+	 ~semi_multi_clerics/languages/spanish/setup.tra~
 
 LANGUAGE ~Russian (By Fess)~
 	 ~russian~
-	 ~semi_multi_clerics/russian/setup.tra~
+	 ~semi_multi_clerics/languages/russian/setup.tra~
 
 BEGIN @0
 
-AT_INTERACTIVE_EXIT "VIEW semi_multi_clerics\readme.html"
+AT_INTERACTIVE_EXIT "VIEW semi_multi_clerics/readme.html"
 
+INCLUDE ~Semi_multi_clerics/GW_BGEE.tpa~
 
-COPY "semi_multi_clerics\tacturn.bcs" "override"
+COPY "semi_multi_clerics/tacturn.bcs"	"override"
 
-COPY ~Semi_multi_clerics/tacturn1.cre~            ~override/tacturn1.cre~
+COPY ~Semi_multi_clerics/tacturn1.cre~	~override~
 
-COPY_EXISTING ~sppr110.spl~ ~override\tacpr1.spl~ //shillelagh
-~sppr412.spl~ ~override\tacpr10.spl~ //holy power
-~sppr417.spl~ ~override\tacpr11.spl~ //lesser restoration
-~sppr504.spl~ ~override\tacpr12.spl~ //raise dead
-~sppr508.spl~ ~override\tacpr13.spl~ //chaotic commands
-~sppr509.spl~ ~override\tacpr14.spl~ //magic resistance
-~sppr517.spl~ ~override\tacpr15.spl~ //insesct plague
-~sppr513.spl~ ~override\tacpr16.spl~ //righteous magic
-~sppr603.spl~ ~override\tacpr17.spl~ //blade barrer
-~sppr613.spl~ ~override\tacpr18.spl~ //physical mirror
-~sppr705.spl~ ~override\tacpr19.spl~ //fire storm
-~sppr201.spl~ ~override\tacpr2.spl~ //aid
-~sppr711.spl~ ~override\tacpr20.spl~ //regenerate
-~sppr713.spl~ ~override\tacpr21.spl~ //(greater) restoration
-~sppr717.spl~ ~override\tacpr22.spl~ //creeping doom
-~sppr401.spl~ ~override\tacpr23.spl~ //cure serious wounds
-~sppr403.spl~ ~override\tacpr24.spl~ //free action
-~sppr101.spl~ ~override\tacpr25.spl~ //bless
-~sppr113.spl~ ~override\tacpr26.spl~ //doom
-~sppr318.spl~ ~override\tacpr27.spl~ //zone of sweet air
-~sppr410.spl~ ~override\tacpr29.spl~ //call woodland beings
-~sppr111.spl~ ~override\tacpr3.spl~ //armour of faith
-~sppr514.spl~ ~override\tacpr30.spl~ //mass cure
-~sppr607.spl~ ~override\tacpr31.spl~ //heal
-~sppr608.spl~ ~override\tacpr32.spl~ //harm
-~sppr612.spl~ ~override\tacpr33.spl~ //bolt of glory
-~sppr707.spl~ ~override\tacpr34.spl~ //sunray
-~sppr409.spl~ ~override\tacpr35.spl~ //deathward
-~sppr210.spl~ ~override\tacpr4.spl~ //resist fire and cold
-~sppr214.spl~ ~override\tacpr5.spl~ //draw upon holy might
-~sppr308.spl~ ~override\tacpr6.spl~ //remove paralysis
-~sppr313.spl~ ~override\tacpr7.spl~ //holy smite
-~sppr406.spl~ ~override\tacpr8.spl~ //defensive harmony
-~sppr408.spl~ ~override\tacpr9.spl~ //protection from evil 10 ft.
+COPY_EXISTING ~sppr110.spl~ ~override/tacpr1.spl~ //shillelagh
+~sppr412.spl~ ~override/tacpr10.spl~ //holy power
+~sppr417.spl~ ~override/tacpr11.spl~ //lesser restoration
+~sppr504.spl~ ~override/tacpr12.spl~ //raise dead
+~sppr508.spl~ ~override/tacpr13.spl~ //chaotic commands
+~sppr509.spl~ ~override/tacpr14.spl~ //magic resistance
+~sppr517.spl~ ~override/tacpr15.spl~ //insesct plague
+~sppr513.spl~ ~override/tacpr16.spl~ //righteous magic
+~sppr603.spl~ ~override/tacpr17.spl~ //blade barrer
+~sppr613.spl~ ~override/tacpr18.spl~ //physical mirror
+~sppr705.spl~ ~override/tacpr19.spl~ //fire storm
+~sppr201.spl~ ~override/tacpr2.spl~ //aid
+~sppr711.spl~ ~override/tacpr20.spl~ //regenerate
+~sppr713.spl~ ~override/tacpr21.spl~ //(greater) restoration
+~sppr717.spl~ ~override/tacpr22.spl~ //creeping doom
+~sppr401.spl~ ~override/tacpr23.spl~ //cure serious wounds
+~sppr403.spl~ ~override/tacpr24.spl~ //free action
+~sppr101.spl~ ~override/tacpr25.spl~ //bless
+~sppr113.spl~ ~override/tacpr26.spl~ //doom
+~sppr318.spl~ ~override/tacpr27.spl~ //zone of sweet air
+~sppr410.spl~ ~override/tacpr29.spl~ //call woodland beings
+~sppr111.spl~ ~override/tacpr3.spl~ //armour of faith
+~sppr514.spl~ ~override/tacpr30.spl~ //mass cure
+~sppr607.spl~ ~override/tacpr31.spl~ //heal
+~sppr608.spl~ ~override/tacpr32.spl~ //harm
+~sppr612.spl~ ~override/tacpr33.spl~ //bolt of glory
+~sppr707.spl~ ~override/tacpr34.spl~ //sunray
+~sppr409.spl~ ~override/tacpr35.spl~ //deathward
+~sppr210.spl~ ~override/tacpr4.spl~ //resist fire and cold
+~sppr214.spl~ ~override/tacpr5.spl~ //draw upon holy might
+~sppr308.spl~ ~override/tacpr6.spl~ //remove paralysis
+~sppr313.spl~ ~override/tacpr7.spl~ //holy smite
+~sppr406.spl~ ~override/tacpr8.spl~ //defensive harmony
+~sppr408.spl~ ~override/tacpr9.spl~ //protection from evil 10 ft.
 WRITE_SHORT 0x1c 1
 
 
-COPY ~Semi_multi_clerics/TACPRSP.ITM~             ~override/TACPRSP.ITM~
+COPY ~Semi_multi_clerics/TACPRSP.ITM~	~override~
   SAY NAME1 @1
   SAY NAME2 @2
   SAY UNIDENTIFIED_DESC @3
-  SAY DESC @4
+  LPF ~GW_EE~ STR_VAR GW_desc_to_update = "@4" END
 
-COPY ~Semi_multi_clerics/TACTURN.SPL~             ~override/TACTURN.SPL~
+COPY ~Semi_multi_clerics/TACTURN.SPL~	~override~
   SAY NAME1 @5
   SAY UNIDENTIFIED_DESC @6
 
-COPY ~Semi_multi_clerics/tacturn2.cre~            ~override/tacturn2.cre~
+COPY ~Semi_multi_clerics/tacturn2.cre~	~override~
 
-COPY ~Semi_multi_clerics/tacturn3.cre~            ~override/tacturn3.cre~
+COPY ~Semi_multi_clerics/tacturn3.cre~	~override~
 
-COPY ~Semi_multi_clerics/tacturn4.cre~            ~override/tacturn4.cre~
+COPY ~Semi_multi_clerics/tacturn4.cre~	~override~
 
-COPY ~Semi_multi_clerics/tacturn5.cre~            ~override/tacturn5.cre~
+COPY ~Semi_multi_clerics/tacturn5.cre~	~override~
 
-COPY_EXISTING   ~wmart1.cre~    ~override/tb#prsp.cre~
+ACTION_IF GAME_IS ~IWDEE~ THEN BEGIN
+	COPY_EXISTING   ~pomab.cre~	~override/wmart1.cre~
+	EXTEND_TOP "ar2100.bcs" "semi_multi_clerics/ar2100.baf"
+END
+
+ACTION_IF GAME_IS ~BG2EE EET~ THEN BEGIN
+	EXTEND_TOP "OHBHUB.BCS" "semi_multi_clerics/ohbhub.baf"
+END
+
+COPY_EXISTING   ~wmart1.cre~	~override/tb#prsp.cre~
   SAY NAME1     @7
   SAY NAME2     @7
   WRITE_SHORT 0x28      24832   // fighter_male_human
   WRITE_ASCII             0x280   ~tacprsp~
   WRITE_ASCII             0x2cc   ~tacprsp~
 
-COMPILE "semi_multi_clerics\tacprsp.d"
+COMPILE "semi_multi_clerics/tacprsp.d"
 
 
-EXTEND_TOP "ar0700.bcs" "semi_multi_clerics\ar0700.baf"
-EXTEND_TOP "ar4500.bcs" "semi_multi_clerics\ar4500.baf"
+EXTEND_TOP "ar0700.bcs" "semi_multi_clerics/ar0700.baf"
+EXTEND_TOP "ar4500.bcs" "semi_multi_clerics/ar4500.baf"
 
-COPY   ~semi_multi_clerics/tacprsp.sto~    ~override\tacprsp.sto~
-  SAY 0xc       @8
-	ADD_STORE_ITEM ~tacprsp~ #1 #1 #1 ~IDENTIFIED~ #10
+
+COPY   ~semi_multi_clerics/tacprsp.sto~	~override~	SAY 0xc @8	ADD_STORE_ITEM ~tacprsp~ #1 #1 #1 ~IDENTIFIED~ #10
 

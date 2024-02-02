@@ -1,3 +1,5 @@
+@9001 = ~[Uu]sable[ %tab%]+[Bb]y[ %tab%]*:~
+@9002 = ~\(Not[ %tab%]+\|Un\)[Uu]sable[ %tab%]+[Bb]y[ %tab%]*:~
 @0    = ~Semi-multi-clerics~
 @1    = ~Book~
 @2    = ~Teachings of The Lady~
@@ -9,7 +11,8 @@ This volume details the teachings and philosophy of Mystra, Lady of Magic. It ex
 Effects:
 Equip and use as per any other manual. Teaches 35 priestly spells, all of which will be written to the arcane spell book. The physical strain caused by this flood of knowledge causes the permanent loss of 2 point of Con and Dex and 47000 experience points. After use the manual will vanish, moving on to the next worthy student.
 
-Useable by: All Arcane spell casters except Cleric/Mages.~
+Usable by:
+All Arcane spell casters except Cleric/Mages.~
 @5    = ~Mystra's Grace~
 @6    = ~Name: Mystra's Grace
 Level: 2

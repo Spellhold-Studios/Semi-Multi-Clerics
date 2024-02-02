@@ -1,13 +1,13 @@
 BEGIN ~tacprsp~
 
 IF ~True()~ THEN BEGIN hola
-SAY @0
-IF ~~ THEN REPLY @1 GOTO ciao
-IF ~~ THEN REPLY @2 DO ~StartStore("tacprsp",LastTalkedToBy)~ EXIT
+SAY @10
+IF ~~ THEN REPLY @11 GOTO ciao
+IF ~~ THEN REPLY @12 DO ~StartStore("tacprsp",LastTalkedToBy)~ EXIT
 END
 
 IF ~~ THEN BEGIN ciao
-SAY @4
+SAY @14
 IF ~~ THEN EXIT
 END
 

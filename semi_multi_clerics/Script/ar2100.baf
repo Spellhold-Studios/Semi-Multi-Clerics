@@ -2,7 +2,7 @@ IF
   Global("tb#prsp","MYAREA",0)
 THEN
   RESPONSE #100
-    CreateCreature("tb#prsp",[2250.1350],5)
+    CreateCreature("tb#prsp",[423.901],2)
     SetGlobal("tb#prsp","MYAREA",1)
 END
 

@@ -1,5 +1,4 @@
 IF
-  GlobalLT("Chapter","GLOBAL",8)
   Global("tb#prsp","MYAREA",0)
 THEN
   RESPONSE #100
