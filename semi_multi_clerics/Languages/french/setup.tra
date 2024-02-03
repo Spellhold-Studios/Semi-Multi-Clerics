@@ -1,5 +1,6 @@
 @9001 = ~[Uu]tilisable[ %tab%]+[Pp]ar[ %tab%]*:~
 @9002 = ~\([Nn]on[ %tab%]+\|[Ii]n\)[Uu]tilisable[ %tab%]+[Pp]ar[ %tab%]*:~
+
 @0    = ~Semi-multi-clerics~
 @1    = ~Livre~
 @2    = ~Préceptes de la Dame des Mystères~
@@ -8,7 +9,7 @@
 La couverture de ce lourd volume est ornée des symboles de Mystra, la Dame des Mystères.~
 @4    = ~Préceptes de la Dame des Mystères
 
-Cet ouvrage contient les enseignements et la philosophie de Mystra, déesse de la magie. Il étudie en détail les vies des Elus de Mystra ainsi que les leçons que chacun d'entre eux a pu apprendre. Il explore aussi les existences des différents avatars de la Déesse et les secrets de la magie divine. L'objectif suprème de ces enseignements est de permettre aux arcanistes d'agir comme témoins de la foi qu'ils portent en Mystra. Ce manuel assure aussi l'accès de son lecteur à de nombreux sorts de prêtre très puissants.
+Cet ouvrage contient les enseignements et la philosophie de Mystra, déesse de la magie. Il étudie en détail les vies des Élus de Mystra ainsi que les leçons que chacun d'entre eux a pu apprendre. Il explore aussi les existences des différents avatars de la Déesse et les secrets de la magie divine. L'objectif suprême de ces enseignements est de permettre aux arcanistes d'agir comme témoins de la foi qu'ils portent en Mystra. Ce manuel assure aussi l'accès de son lecteur à de nombreux sorts de prêtre très puissants.
 
 Effets :
 
@@ -19,13 +20,13 @@ Tous les lanceurs de sorts profanes sauf les Clercs/Mages.~
 @5    = ~Aura de Mystra~
 @6    = ~Aura de Mystra
 Niveau : 2
-Ecole : Nécromancie
+École : Nécromancie
 Cible : lanceur
 Temps d'invocation : 2
 Durée : 3 rounds
 Jets de sauvegarde : Aucun
 
-Il y a de nombreuses choses embarrassantes pour un adorateur de Mystra, comme celle de devoir compter sur le prêtre d'une autre divinité pour faire face à la menace de morts-vivants. Mais le pire est de souffrir la suffisance des suivants d'Illmater et conssorts face à un tel problème. "Oh ne vous inquiétez pas," disent-ils pleins d'arrogance, "le pouvoir de notre Dieu viril et puissant vous protège". C'en est assez pour attiser la fureur d'un érudit sérieux et consacré à sa Déesse. Les théologiens de Mystra et les mages des grandes écoles de magie sont finalement tombés sur ce sort et l'ont choisi comme solution à ce sujet de forte vexation. Invoquant la toute-puissance de la Déesse, ce sortilège crée une ombre invisible constituée d'énergie positive pure. Le pouvoir de cet amas presque sans pensée repousse les morts-vivants et peut détruire de telles créatures quand elle a été invoquée par un lanceur de sorts suffisamment puissant. L'élémentaire restera controlable seulement sur le Plan Primaire durant trois tours.
+Il y a de nombreuses choses embarrassantes pour un adorateur de Mystra, comme celle de devoir compter sur le prêtre d'une autre divinité pour faire face à la menace de morts-vivants. Mais le pire est de souffrir la suffisance des suivants d'Illmater et consorts face à un tel problème. "Oh ne vous inquiétez pas," disent-ils pleins d'arrogance, "le pouvoir de notre Dieu viril et puissant vous protège". C'en est assez pour attiser la fureur d'un érudit sérieux et consacré à sa Déesse. Les théologiens de Mystra et les mages des grandes écoles de magie sont finalement tombés sur ce sort et l'ont choisi comme solution à ce sujet de forte vexation. Invoquant la toute-puissance de la Déesse, ce sortilège crée une ombre invisible constituée d'énergie positive pure. Le pouvoir de cet amas presque sans pensée repousse les morts-vivants et peut détruire de telles créatures quand elle a été invoquée par un lanceur de sorts suffisamment puissant. L'élémentaire restera contrôlable seulement sur le Plan Primaire durant trois tours.
 
 Effets :
 Niveau 3-9 : Repousse les morts-vivants comme un prêtre de niveau 5.
@@ -34,6 +35,18 @@ Niveau 15-19 : Repousse les morts-vivants comme un prêtre de niveau 15.
 Niveau 20+ : Repousse les morts-vivants comme un prêtre de niveau 20.~
 @7    = ~Représentant de Mystra~
 @8    = ~Coin de l'apprenti de Mystra~
+
+
+@9   = ~Version [ADOUCIE] Accessible au commencement / 25 % de chance de perdre 2 points de Dexterite et Constitution~
+@10    = ~Semi-multi-clerics pour IWD and IWDEE~
+@11    = ~Version [ORIGINALE] Accessible apres l'Ombre-Terre / 100 % de chance de perdre 2 points de Dexterite et Constitution~
+@12    = ~Composant pour IWD and IWDEE~ //~For IWD and IWDEE~
+@13    = ~Composant pour BG2 (ToB), BG2EE, BGT and EET~ //~For BG2 (ToB), BG2EE, BGT and EET~
+@14    = ~Version [ADOUCIE] 25 % de chance de perdre 2 points de Dexterite et Constitution~
+@15    = ~Version [ORIGINALE] 100 % de chance de perdre 2 points de Dexterite et Constitution~
+@16    = ~Seulement dans ToB version [ADOUCIE] 25 % de chance de perdre 2 points de Dexterite et Constitution~
+@17    = ~Seulement dans ToB version [ORIGINALE] 100 % de chance de perdre 2 points de Dexterite et Constitution~
+
 
 // WeiDU prompts
 @-1000= "Le mod %TP2_FILE_NAME% contient"

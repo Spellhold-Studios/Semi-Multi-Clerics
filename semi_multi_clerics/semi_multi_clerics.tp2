@@ -1,25 +1,55 @@
-BACKUP ~semi_multi_clerics/backup~
+BACKUP ~weidu_external/semi_multi_clerics/backup~
 AUTHOR ~thebigg@spellholdstudios.net~
 
+VERSION ~4.1~
+
+README ~semi_multi_clerics/Readme/readme.html~
+
 ALWAYS
-ACTION_IF GAME_IS ~BGEE BG2EE IWDEE EET~ THEN BEGIN
-	ACTION_DEFINE_ARRAY tac_reload BEGIN
-	"Setup"
-	"tacprsp"
+
+    // Copies tra files into the autotra-folder (to leave the originals untouched)
+    DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
+      COPY ~%MOD_FOLDER%/languages/english~  ~weidu_external/semi_multi_clerics/languages/autotra/%LANGUAGE%~
+      COPY ~%MOD_FOLDER%/languages/%LANGUAGE%~  ~weidu_external/semi_multi_clerics/languages/autotra/%LANGUAGE%~
+    END
+
+    LAF autotra_workaround END
+
+// ACTION_DEFINE_ARRAY fl#noconvert BEGIN END
+
+ACTION_DEFINE_ARRAY fl#reload BEGIN setup tacprsp END
+
+    LAF HANDLE_CHARSETS
+      INT_VAR
+        infer_charsets = 1
+      STR_VAR
+        tra_path = EVAL ~weidu_external/semi_multi_clerics/languages/autotra~
+		iconv_path = ~Semi_multi_clerics/Languages/autotra/iconv~
+        // noconvert_array = fl#noconvert
+        reload_array = fl#reload
 	END
-	ACTION_DEFINE_ARRAY tac_noconvert BEGIN END
-	LAF HANDLE_CHARSETS
-		INT_VAR
-		infer_charset = 1
-		STR_VAR
-		tra_path = EVAL ~%MOD_FOLDER%/languages~
-		noconvert_array = tac_noconvert
-		reload_array = tac_reload
+
+INCLUDE ~Semi_multi_clerics/Lib/gw_functions.tpa~
+
+ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
+
+	ACTION_IF NOT VARIABLE_IS_SET bg2_chapter BEGIN
+	ACTION_IF GAME_IS ~eet~ BEGIN
+		OUTER_SET bg2_chapter = 12
+	END ELSE BEGIN
+		OUTER_SET bg2_chapter = 0
 	END
-END
+	OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+		OUTER_SET bg2_chapter = bg2_chapter + 1
+		OUTER_SPRINT name_source ~bg2_chapter_%i%~
+		OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+		END
+	END
+END	
+
 END
 
-AUTO_TRA ~Semi_multi_clerics/languages/%s~
+AUTO_TRA ~weidu_external/semi_multi_clerics/languages/autotra/%s~
 
 LANGUAGE ~English~
 	 ~English~
@@ -41,93 +71,190 @@ LANGUAGE ~Russian (By Fess)~
 	 ~russian~
 	 ~semi_multi_clerics/languages/russian/setup.tra~
 
-BEGIN @0
 
-AT_INTERACTIVE_EXIT "VIEW semi_multi_clerics/readme.html"
+/////////////////////////////////////////////////////////////////////
 
-INCLUDE ~Semi_multi_clerics/GW_BGEE.tpa~
+// IWD
 
-COPY "semi_multi_clerics/tacturn.bcs"	"override"
+BEGIN @14
+DESIGNATED 0 SUBCOMPONENT @10
+LABEL ~thebigg-semi-multi-clerics_0~
+REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @12
 
-COPY ~Semi_multi_clerics/tacturn1.cre~	~override~
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
 
-COPY_EXISTING ~sppr110.spl~ ~override/tacpr1.spl~ //shillelagh
-~sppr412.spl~ ~override/tacpr10.spl~ //holy power
-~sppr417.spl~ ~override/tacpr11.spl~ //lesser restoration
-~sppr504.spl~ ~override/tacpr12.spl~ //raise dead
-~sppr508.spl~ ~override/tacpr13.spl~ //chaotic commands
-~sppr509.spl~ ~override/tacpr14.spl~ //magic resistance
-~sppr517.spl~ ~override/tacpr15.spl~ //insesct plague
-~sppr513.spl~ ~override/tacpr16.spl~ //righteous magic
-~sppr603.spl~ ~override/tacpr17.spl~ //blade barrer
-~sppr613.spl~ ~override/tacpr18.spl~ //physical mirror
-~sppr705.spl~ ~override/tacpr19.spl~ //fire storm
-~sppr201.spl~ ~override/tacpr2.spl~ //aid
-~sppr711.spl~ ~override/tacpr20.spl~ //regenerate
-~sppr713.spl~ ~override/tacpr21.spl~ //(greater) restoration
-~sppr717.spl~ ~override/tacpr22.spl~ //creeping doom
-~sppr401.spl~ ~override/tacpr23.spl~ //cure serious wounds
-~sppr403.spl~ ~override/tacpr24.spl~ //free action
-~sppr101.spl~ ~override/tacpr25.spl~ //bless
-~sppr113.spl~ ~override/tacpr26.spl~ //doom
-~sppr318.spl~ ~override/tacpr27.spl~ //zone of sweet air
-~sppr410.spl~ ~override/tacpr29.spl~ //call woodland beings
-~sppr111.spl~ ~override/tacpr3.spl~ //armour of faith
-~sppr514.spl~ ~override/tacpr30.spl~ //mass cure
-~sppr607.spl~ ~override/tacpr31.spl~ //heal
-~sppr608.spl~ ~override/tacpr32.spl~ //harm
-~sppr612.spl~ ~override/tacpr33.spl~ //bolt of glory
-~sppr707.spl~ ~override/tacpr34.spl~ //sunray
-~sppr409.spl~ ~override/tacpr35.spl~ //deathward
-~sppr210.spl~ ~override/tacpr4.spl~ //resist fire and cold
-~sppr214.spl~ ~override/tacpr5.spl~ //draw upon holy might
-~sppr308.spl~ ~override/tacpr6.spl~ //remove paralysis
-~sppr313.spl~ ~override/tacpr7.spl~ //holy smite
-~sppr406.spl~ ~override/tacpr8.spl~ //defensive harmony
-~sppr408.spl~ ~override/tacpr9.spl~ //protection from evil 10 ft.
-WRITE_SHORT 0x1c 1
+	// Add merchant to Kuldahar
+		COPY_EXISTING   ~pomab.cre~	~override/tb#prsp.cre~
+		SAY NAME1     @7
+		SAY NAME2     @7
+		WRITE_SHORT 0x28      24832   // fighter_male_human
+		WRITE_ASCII             0x280   ~tacprsp~
+		WRITE_ASCII             0x2cc   ~tacprsp~
 
 
-COPY ~Semi_multi_clerics/TACPRSP.ITM~	~override~
-  SAY NAME1 @1
-  SAY NAME2 @2
-  SAY UNIDENTIFIED_DESC @3
-  LPF ~GW_EE~ STR_VAR GW_desc_to_update = "@4" END
+		COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override~
+		SAY NAME1 @1
+		SAY NAME2 @2
+		SAY UNIDENTIFIED_DESC @3
+		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
+		
+	EXTEND_TOP ~ar2100.bcs~ ~semi_multi_clerics/Script/ar2100.baf~
 
-COPY ~Semi_multi_clerics/TACTURN.SPL~	~override~
-  SAY NAME1 @5
-  SAY UNIDENTIFIED_DESC @6
+BEGIN @15
+DESIGNATED 1 SUBCOMPONENT @10
+LABEL ~thebigg-semi-multi-clerics_1~
+REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @12
 
-COPY ~Semi_multi_clerics/tacturn2.cre~	~override~
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
 
-COPY ~Semi_multi_clerics/tacturn3.cre~	~override~
-
-COPY ~Semi_multi_clerics/tacturn4.cre~	~override~
-
-COPY ~Semi_multi_clerics/tacturn5.cre~	~override~
-
-ACTION_IF GAME_IS ~IWDEE~ THEN BEGIN
-	COPY_EXISTING   ~pomab.cre~	~override/wmart1.cre~
-	EXTEND_TOP "ar2100.bcs" "semi_multi_clerics/ar2100.baf"
-END
-
-ACTION_IF GAME_IS ~BG2EE EET~ THEN BEGIN
-	EXTEND_TOP "OHBHUB.BCS" "semi_multi_clerics/ohbhub.baf"
-END
-
-COPY_EXISTING   ~wmart1.cre~	~override/tb#prsp.cre~
-  SAY NAME1     @7
-  SAY NAME2     @7
-  WRITE_SHORT 0x28      24832   // fighter_male_human
-  WRITE_ASCII             0x280   ~tacprsp~
-  WRITE_ASCII             0x2cc   ~tacprsp~
-
-COMPILE "semi_multi_clerics/tacprsp.d"
+	// Add merchant to Kuldahar
+		COPY_EXISTING   ~pomab.cre~	~override/tb#prsp.cre~
+		SAY NAME1     @7
+		SAY NAME2     @7
+		WRITE_SHORT 0x28      24832   // fighter_male_human
+		WRITE_ASCII             0x280   ~tacprsp~
+		WRITE_ASCII             0x2cc   ~tacprsp~
 
 
-EXTEND_TOP "ar0700.bcs" "semi_multi_clerics/ar0700.baf"
-EXTEND_TOP "ar4500.bcs" "semi_multi_clerics/ar4500.baf"
+		COPY ~Semi_multi_clerics/Item/TACPRSP2.ITM~	~override/TACPRSP.ITM~
+		SAY NAME1 @1
+		SAY NAME2 @2
+		SAY UNIDENTIFIED_DESC @3
+		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
+		
+	EXTEND_TOP ~ar2100.bcs~ ~semi_multi_clerics/Script/ar2100.baf~
+
+/////////////////////////////////////////////////////////////////////
+
+// BG2EE
+
+BEGIN @9
+DESIGNATED 10 SUBCOMPONENT @0
+LABEL ~thebigg-semi-multi-clerics_10~
+REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @13
+
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+
+		COPY_EXISTING   ~wmart1.cre~	~override/tb#prsp.cre~
+			SAY NAME1     @7
+			SAY NAME2     @7
+			WRITE_SHORT 0x28      24832   // fighter_male_human
+			WRITE_ASCII             0x280   ~tacprsp~
+			WRITE_ASCII             0x2cc   ~tacprsp~
 
 
-COPY   ~semi_multi_clerics/tacprsp.sto~	~override~	SAY 0xc @8	ADD_STORE_ITEM ~tacprsp~ #1 #1 #1 ~IDENTIFIED~ #10
+		COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override~
+		SAY NAME1 @1
+		SAY NAME2 @2
+		SAY UNIDENTIFIED_DESC @3
+		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
+
+	EXTEND_TOP ~ar0700.bcs~ ~semi_multi_clerics/Script/ar0700.baf~
+	EXTEND_TOP ~ar4500.bcs~ ~semi_multi_clerics/Script/ar4500.baf~
+
+	// Add merchant to Black Pit II
+
+		ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN		
+	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~	
+		END
+
+BEGIN @11
+DESIGNATED 11 SUBCOMPONENT @0
+LABEL ~thebigg-semi-multi-clerics_11~
+REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @13
+
+		COPY ~semi_multi_clerics/Script/ar0700.baf~ ~weidu_external/semi_multi_clerics/Script/ar0700.baf~
+			SPRINT textToReplace ~\(^[%TAB% ]*Global("tb#prsp","MYAREA",0)\)~
+			COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+			PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~GlobalLT("Chapter","GLOBAL",%bg2_chapter_4%)
+			Global("tb#prsp","MYAREA",0)~
+		END
+
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+
+		COPY_EXISTING   ~wmart1.cre~	~override/tb#prsp.cre~
+			SAY NAME1     @7
+			SAY NAME2     @7
+			WRITE_SHORT 0x28      24832   // fighter_male_human
+			WRITE_ASCII             0x280   ~tacprsp~
+			WRITE_ASCII             0x2cc   ~tacprsp~
+
+
+		COPY ~Semi_multi_clerics/Item/TACPRSP2.ITM~	~override/TACPRSP.ITM~
+		SAY NAME1 @1
+		SAY NAME2 @2
+		SAY UNIDENTIFIED_DESC @3
+		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
+
+	EXTEND_TOP ~ar0700.bcs~ ~weidu_external/semi_multi_clerics/Script/ar0700.baf~
+	EXTEND_TOP ~ar4500.bcs~ ~semi_multi_clerics/Script/ar4500.baf~
+
+	// Add merchant to Black Pit II
+
+		ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
+	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~
+		END
+
+BEGIN @16
+DESIGNATED 12 SUBCOMPONENT @0
+LABEL ~thebigg-semi-multi-clerics_12~
+REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @13
+
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+
+		COPY_EXISTING   ~wmart1.cre~	~override/tb#prsp.cre~
+			SAY NAME1     @7
+			SAY NAME2     @7
+			WRITE_SHORT 0x28      24832   // fighter_male_human
+			WRITE_ASCII             0x280   ~tacprsp~
+			WRITE_ASCII             0x2cc   ~tacprsp~
+
+
+		COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override~
+		SAY NAME1 @1
+		SAY NAME2 @2
+		SAY UNIDENTIFIED_DESC @3
+		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
+		
+	EXTEND_TOP ~ar4500.bcs~ ~semi_multi_clerics/Script/ar4500.baf~
+
+	// Add merchant to Black Pit II
+
+		ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
+	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~
+		END
+
+
+
+BEGIN @17
+DESIGNATED 13 SUBCOMPONENT @0
+LABEL ~thebigg-semi-multi-clerics_13~
+REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @13
+
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+
+		COPY_EXISTING   ~wmart1.cre~	~override/tb#prsp.cre~
+			SAY NAME1     @7
+			SAY NAME2     @7
+			WRITE_SHORT 0x28      24832   // fighter_male_human
+			WRITE_ASCII             0x280   ~tacprsp~
+			WRITE_ASCII             0x2cc   ~tacprsp~
+
+
+		COPY ~Semi_multi_clerics/Item/TACPRSP2.ITM~	~override/TACPRSP.ITM~
+		SAY NAME1 @1
+		SAY NAME2 @2
+		SAY UNIDENTIFIED_DESC @3
+		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
+		
+	EXTEND_TOP ~ar4500.bcs~ ~semi_multi_clerics/Script/ar4500.baf~
+
+	// Add merchant to Black Pit II
+
+		ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
+	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~
+		END
+
+
 

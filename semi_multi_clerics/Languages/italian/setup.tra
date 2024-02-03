@@ -1,3 +1,6 @@
+@9001 = ~[Uu]tilizzabile[ %tab%]+\([Ss]olo[ %tab%]+\)?[Dd]a[ %tab%]*:~
+@9002 = ~[Nn]on[ %tab%]+[Uu]tilizzabile[ %tab%]+[Dd]a[ %tab%]*:~
+
 @0    = ~Semi-multi-chierico~
 @1    = ~Libro~
 @2    = ~Insegnamenti della Signora~
@@ -28,3 +31,13 @@ Livello 20+: Scaccia non-morti come un chierico di livello 20. ~
 @7    = ~Fede di Mystra~
 @8    = ~Angolo dell'Apprendista di Mystra~
 
+
+@9   = ~Version [LITE] Available from the beginning / 25% chance of losing 2 Dexterity and Constitution points~
+@10    = ~Semi-multi-clerics for IWD and IWDEE~
+@11    = ~Version [ORIGINAL] Available after the Underdark / 100% chance of losing 2 Dexterity and Constitution points~
+@12    = ~Component for IWD and IWDEE~ //~For IWD and IWDEE~
+@13    = ~Component for BG2 (ToB), BG2EE, BGT and EET~ //~For BG2 (ToB), BG2EE, BGT and EET~
+@14    = ~Version [LITE] 25% chance of losing 2 Dexterity and Constitution points~
+@15    = ~Version [ORIGINAL] 100% chance of losing 2 Dexterity and Constitution points~
+@16    = ~Version ToB Only [LITE] 25% chance of losing 2 Dexterity and Constitution points~
+@17    = ~Version ToB Only [ORIGINAL] 100% chance of losing 2 Dexterity and Constitution points~

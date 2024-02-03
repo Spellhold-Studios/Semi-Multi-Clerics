@@ -1,4 +1,7 @@
-@0    = ~‘Ґ¬Ё-¬г«мвЁ-бўпйҐ­­ЁЄЁ~
+@9001 = ~Используется[ %tab%]*:~
+@9002 = ~Не[ %tab%]+используется[ %tab%]*:~
+
+@0    = ~Semi-multi-clerics~
 @1    = ~Книга~
 @2    = ~Учение Леди Магии~
 @3    = ~Книга
@@ -32,3 +35,13 @@
 @7    = ~Свидетель Мистры~
 @8    = ~Могущество Мистры~
 
+
+@9   = ~Version [LITE] Available from the beginning / 25% chance of losing 2 Dexterity and Constitution points~
+@10    = ~Semi-multi-clerics for IWD and IWDEE~
+@11    = ~Version [ORIGINAL] Available after the Underdark / 100% chance of losing 2 Dexterity and Constitution points~
+@12    = ~Component for IWD and IWDEE~ //~For IWD and IWDEE~
+@13    = ~Component for BG2 (ToB), BG2EE, BGT and EET~ //~For BG2 (ToB), BG2EE, BGT and EET~
+@14    = ~Version [LITE] 25% chance of losing 2 Dexterity and Constitution points~
+@15    = ~Version [ORIGINAL] 100% chance of losing 2 Dexterity and Constitution points~
+@16    = ~Version ToB Only [LITE] 25% chance of losing 2 Dexterity and Constitution points~
+@17    = ~Version ToB Only [ORIGINAL] 100% chance of losing 2 Dexterity and Constitution points~

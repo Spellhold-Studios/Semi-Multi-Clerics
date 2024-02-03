@@ -1,5 +1,6 @@
 @9001 = ~[Uu]sable[ %tab%]+[Bb]y[ %tab%]*:~
 @9002 = ~\(Not[ %tab%]+\|Un\)[Uu]sable[ %tab%]+[Bb]y[ %tab%]*:~
+
 @0    = ~Semi-multi-clerics~
 @1    = ~Book~
 @2    = ~Teachings of The Lady~
@@ -31,3 +32,13 @@ Level 20+: Turns Undead as a 20th level Cleric. ~
 @7    = ~Mystra's witness~
 @8    = ~Mystra's Apprentice's corner~
 
+
+@9   = ~Version [LITE] Available from the beginning / 25% chance of losing 2 Dexterity and Constitution points~
+@10    = ~Semi-multi-clerics for IWD and IWDEE~
+@11    = ~Version [ORIGINAL] Available after the Underdark / 100% chance of losing 2 Dexterity and Constitution points~
+@12    = ~Component for IWD and IWDEE~ //~For IWD and IWDEE~
+@13    = ~Component for BG2 (ToB), BG2EE, BGT and EET~ //~For BG2 (ToB), BG2EE, BGT and EET~
+@14    = ~Version [LITE] 25% chance of losing 2 Dexterity and Constitution points~
+@15    = ~Version [ORIGINAL] 100% chance of losing 2 Dexterity and Constitution points~
+@16    = ~Version ToB Only [LITE] 25% chance of losing 2 Dexterity and Constitution points~
+@17    = ~Version ToB Only [ORIGINAL] 100% chance of losing 2 Dexterity and Constitution points~

@@ -1,3 +1,5 @@
+@9001 = ~\([Ss]ólo[ %tab%]+\)?[Pp]ermitido[ %tab%]+[Aa][ %tab%]*:~
+@9002 = ~[Nn]o[ %tab%]+[Pp]ermitido[ %tab%]+[Aa][ %tab%]*:~
 @0    = ~Semi-multi-clerics~
 @1    = ~Libro~
 @2    = ~Enseñanzas de la Dama~
@@ -28,3 +30,13 @@ Nivel 20+: Expulsa muertos vivientes como clérigo de 20vo nivel. ~
 @7    = ~Testigo de Mystra~
 @8    = ~Rincón del Aprendiz de Mystra~
 
+
+@9   = ~Version [LITE] Available from the beginning / 25% chance of losing 2 Dexterity and Constitution points~
+@10    = ~Semi-multi-clerics for IWD and IWDEE~
+@11    = ~Version [ORIGINAL] Available after the Underdark / 100% chance of losing 2 Dexterity and Constitution points~
+@12    = ~Component for IWD and IWDEE~ //~For IWD and IWDEE~
+@13    = ~Component for BG2 (ToB), BG2EE, BGT and EET~ //~For BG2 (ToB), BG2EE, BGT and EET~
+@14    = ~Version [LITE] 25% chance of losing 2 Dexterity and Constitution points~
+@15    = ~Version [ORIGINAL] 100% chance of losing 2 Dexterity and Constitution points~
+@16    = ~Version ToB Only [LITE] 25% chance of losing 2 Dexterity and Constitution points~
+@17    = ~Version ToB Only [ORIGINAL] 100% chance of losing 2 Dexterity and Constitution points~
