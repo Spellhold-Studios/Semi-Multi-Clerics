@@ -2,7 +2,9 @@
 
 ![Language](https://img.shields.io/static/v1?label=language&message=english%20%7C%20french%20%7C%20italian%20%7C%20spanish%20%7C%20russian%20%7C%20&color=informational)
 
-**Autor** : **The Bigg**
+**Autor** : **Bob Tokyo**
+
+**Maintainer** : **The Bigg**
 
 [Link to original Mod Forum](http://www.shsforums.net/topic/27189-new-version-of-semi-multi-clerics-released/)
 
@@ -37,6 +39,9 @@ Version 0.4.1 - February 2024:
 - Move merchant slightly to not overlapping with the mod Ruad.  
 - GW function and Autotra  
 - Label, metadata, InfinityAutoPackager  
+- Alter XP loss amount between BG and IWD  
+- Restrict to level 7 to avoid negative XP in Icewind Dale  
+- Store price 100 to 1000  
 
 Version 0.4.0 - 23 July 2022:                      
 												   

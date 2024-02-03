@@ -56,7 +56,6 @@ COPY ~Semi_multi_clerics/Creature/tacturn5.cre~	~override~
 
 COMPILE ~semi_multi_clerics/Dialog/tacprsp.d~
 
-
 COPY   ~semi_multi_clerics/Store/tacprsp.sto~	~override~
 	SAY STORE_NAME @8	
 	ADD_STORE_ITEM ~tacprsp~ #1 #1 #1 ~IDENTIFIED~ #10
