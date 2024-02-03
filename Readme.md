@@ -6,7 +6,7 @@
 
 [Link to original Mod Forum](http://www.shsforums.net/topic/27189-new-version-of-semi-multi-clerics-released/)
 
-[Click to access the Readme in English](https://htmlpreview.github.io/?https://github.com/11jo/Kim_NPC/blob/main/semi_multi_clerics/ReadMe/readme.html)
+[Click to access the Readme in English](https://htmlpreview.github.io/?https://github.com/11jo/semi_multi_clerics/blob/master/semi_multi_clerics/Readme/readme.html)
 
 
 
