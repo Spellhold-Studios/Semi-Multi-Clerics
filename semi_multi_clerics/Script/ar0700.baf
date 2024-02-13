@@ -10,5 +10,5 @@ IF
   Global("tacturnAR4500","GLOBAL",1)
 THEN
   RESPONSE #100
-    ActionOverride("tb#prsp",DestroySelf())
+    ActionOverride("tacprsp1",DestroySelf())
 END

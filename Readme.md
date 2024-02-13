@@ -18,7 +18,7 @@ For IWD, IWDEE, Baldur's Gate 2, BG2: EE, BGT and the Enhanced Edition Trilogy (
 ## Description:
 ------------
 
-A new merchant named Mystra's Witness. After talking to him, you can acquire a spell book that will teach you some divine spells (including one that can be used to turn undead), at the cost of some skill points and experience. 
+A new merchant named Mystra's Witness at Waukeen's Promenade (in front of Fennecia's house). After talking to him, you can acquire a spell book that will teach you some divine spells (including one that can be used to turn undead), at the cost of some skill points and experience. 
 
 This mod allows to build original class / kit combinations. (ex:  kensaï/mage (clerc), sorcerer (clerc) ou Skald (clerc)
 
@@ -38,10 +38,10 @@ Version 0.4.1 - February 2024:
 - Components Original and lite.  
 - Move merchant slightly to not overlapping with the mod Ruad.  
 - GW function and Autotra  
-- Label, metadata, InfinityAutoPackager  
-- Alter XP loss amount between BG and IWD  
+- Label, metadata, InfinityAutoPackager   
 - Restrict to level 7 to avoid negative XP in Icewind Dale  
 - Store price 100 to 1000  
+- opcode 171 instead of 147 to avoid extra experience when learning spells  
 
 Version 0.4.0 - 23 July 2022:                      
 												   
