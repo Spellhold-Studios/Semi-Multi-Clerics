@@ -47,6 +47,13 @@ Niveau 20+ : Repousse les morts-vivants comme un prêtre de niveau 20.~
 @16    = ~Seulement dans ToB version [ADOUCIE] 25 % de chance de perdre 2 points de Dexterite et Constitution~
 @17    = ~Seulement dans ToB version [ORIGINALE] 100 % de chance de perdre 2 points de Dexterite et Constitution~
 
+//@20    = ~~
+@21    = ~L'utilisateur perd 47000 points d’expérience.~
+//@22    = ~~
+@23    = ~Apprend une foultitude de sortilèges divins.~
+@24    = ~Perd 2 points de Constitution et de Dextérité.~
+@25    = ~Le groupe perd 77500 points d’expérience.~
+
 
 // WeiDU prompts
 @-1000= "Le mod %TP2_FILE_NAME% contient"

@@ -1,45 +1,45 @@
 // Mod_component.tpa
 
-COMPILE ~semi_multi_clerics/Script/tacturn.baf~	~override~
+	COMPILE ~semi_multi_clerics/Script/tacturn.baf~	~override~
 
 COPY ~Semi_multi_clerics/Creature/tacturn1.cre~	~override~
 
-COPY_EXISTING 
-	~sppr110.spl~ ~override/tacpr1.spl~ //shillelagh
-	~sppr412.spl~ ~override/tacpr10.spl~ //holy power
-	~sppr417.spl~ ~override/tacpr11.spl~ //lesser restoration
-	~sppr504.spl~ ~override/tacpr12.spl~ //raise dead
-	~sppr508.spl~ ~override/tacpr13.spl~ //chaotic commands
-	~sppr509.spl~ ~override/tacpr14.spl~ //magic resistance
-	~sppr517.spl~ ~override/tacpr15.spl~ //insesct plague
-	~sppr513.spl~ ~override/tacpr16.spl~ //righteous magic
-	~sppr603.spl~ ~override/tacpr17.spl~ //blade barrer
-	~sppr613.spl~ ~override/tacpr18.spl~ //physical mirror
-	~sppr705.spl~ ~override/tacpr19.spl~ //fire storm
-	~sppr201.spl~ ~override/tacpr2.spl~ //aid
-	~sppr711.spl~ ~override/tacpr20.spl~ //regenerate
-	~sppr713.spl~ ~override/tacpr21.spl~ //(greater) restoration
-	~sppr717.spl~ ~override/tacpr22.spl~ //creeping doom
-	~sppr401.spl~ ~override/tacpr23.spl~ //cure serious wounds
-	~sppr403.spl~ ~override/tacpr24.spl~ //free action
-	~sppr101.spl~ ~override/tacpr25.spl~ //bless
-	~sppr113.spl~ ~override/tacpr26.spl~ //doom
-	~sppr318.spl~ ~override/tacpr27.spl~ //zone of sweet air
-	~sppr410.spl~ ~override/tacpr29.spl~ //call woodland beings
-	~sppr111.spl~ ~override/tacpr3.spl~ //armour of faith
-	~sppr514.spl~ ~override/tacpr30.spl~ //mass cure
-	~sppr607.spl~ ~override/tacpr31.spl~ //heal
-	~sppr608.spl~ ~override/tacpr32.spl~ //harm
-	~sppr612.spl~ ~override/tacpr33.spl~ //bolt of glory
-	~sppr707.spl~ ~override/tacpr34.spl~ //sunray
-	~sppr409.spl~ ~override/tacpr35.spl~ //deathward
-	~sppr210.spl~ ~override/tacpr4.spl~ //resist fire and cold
-	~sppr214.spl~ ~override/tacpr5.spl~ //draw upon holy might
-	~sppr308.spl~ ~override/tacpr6.spl~ //remove paralysis
-	~sppr313.spl~ ~override/tacpr7.spl~ //holy smite
-	~sppr406.spl~ ~override/tacpr8.spl~ //defensive harmony
-	~sppr408.spl~ ~override/tacpr9.spl~ //protection from evil 10 ft.
-	WRITE_SHORT 0x1c 1
+		COPY_EXISTING 
+			~sppr110.spl~ ~override/tacpr1.spl~ //shillelagh
+			~sppr412.spl~ ~override/tacpr10.spl~ //holy power
+			~sppr417.spl~ ~override/tacpr11.spl~ //lesser restoration
+			~sppr504.spl~ ~override/tacpr12.spl~ //raise dead
+			~sppr508.spl~ ~override/tacpr13.spl~ //chaotic commands
+			~sppr509.spl~ ~override/tacpr14.spl~ //magic resistance
+			~sppr517.spl~ ~override/tacpr15.spl~ //insesct plague
+			~sppr513.spl~ ~override/tacpr16.spl~ //righteous magic
+			~sppr603.spl~ ~override/tacpr17.spl~ //blade barrer
+			~sppr613.spl~ ~override/tacpr18.spl~ //physical mirror
+			~sppr705.spl~ ~override/tacpr19.spl~ //fire storm
+			~sppr201.spl~ ~override/tacpr2.spl~ //aid
+			~sppr711.spl~ ~override/tacpr20.spl~ //regenerate
+			~sppr713.spl~ ~override/tacpr21.spl~ //(greater) restoration
+			~sppr717.spl~ ~override/tacpr22.spl~ //creeping doom
+			~sppr401.spl~ ~override/tacpr23.spl~ //cure serious wounds
+			~sppr403.spl~ ~override/tacpr24.spl~ //free action
+			~sppr101.spl~ ~override/tacpr25.spl~ //bless
+			~sppr113.spl~ ~override/tacpr26.spl~ //doom
+			~sppr318.spl~ ~override/tacpr27.spl~ //zone of sweet air
+			~sppr410.spl~ ~override/tacpr29.spl~ //call woodland beings
+			~sppr111.spl~ ~override/tacpr3.spl~ //armour of faith
+			~sppr514.spl~ ~override/tacpr30.spl~ //mass cure
+			~sppr607.spl~ ~override/tacpr31.spl~ //heal
+			~sppr608.spl~ ~override/tacpr32.spl~ //harm
+			~sppr612.spl~ ~override/tacpr33.spl~ //bolt of glory
+			~sppr707.spl~ ~override/tacpr34.spl~ //sunray
+			~sppr409.spl~ ~override/tacpr35.spl~ //deathward
+			~sppr210.spl~ ~override/tacpr4.spl~ //resist fire and cold
+			~sppr214.spl~ ~override/tacpr5.spl~ //draw upon holy might
+			~sppr308.spl~ ~override/tacpr6.spl~ //remove paralysis
+			~sppr313.spl~ ~override/tacpr7.spl~ //holy smite
+			~sppr406.spl~ ~override/tacpr8.spl~ //defensive harmony
+			~sppr408.spl~ ~override/tacpr9.spl~ //protection from evil 10 ft.
+			WRITE_SHORT 0x1c 1
 	
 
 COPY ~Semi_multi_clerics/Spell/TACTURN.SPL~	~override~
@@ -54,8 +54,14 @@ COPY ~Semi_multi_clerics/Creature/tacturn4.cre~	~override~
 
 COPY ~Semi_multi_clerics/Creature/tacturn5.cre~	~override~
 
-COMPILE ~semi_multi_clerics/Dialog/tacprsp.d~
+	COMPILE ~semi_multi_clerics/Dialog/tacprsp.d~
 
 COPY   ~semi_multi_clerics/Store/tacprsp.sto~	~override~
-	SAY STORE_NAME @8	
-	ADD_STORE_ITEM ~tacprsp~ #1 #1 #1 ~IDENTIFIED~ #10
+	SAY STORE_NAME @8
+	WRITE_SHORT 0x14 100 // Sell markup
+	WRITE_SHORT 0x18 50 // Buy markup
+	// ADD_STORE_ITEM ~tacprsp~ #1 #1 #1 ~IDENTIFIED~ #10	 
+    LPF ADD_STORE_ITEM_EX
+      INT_VAR stack=10 
+        STR_VAR item_name=~tacprsp~ flags=~identified~
+      END

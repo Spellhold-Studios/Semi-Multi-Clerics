@@ -97,7 +97,26 @@ REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @12
 		SAY NAME2 @2
 		SAY UNIDENTIFIED_DESC @3
 		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_LONG 0x34 1000 // Store price
+		WRITE_SHORT 0x34 1000 // Store price
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@21)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@23)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			probability1=25
+			parameter1= RESOLVE_STR_REF (@24)
+		END // Add extended effect
 		
 	EXTEND_TOP ~ar2100.bcs~ ~semi_multi_clerics/Script/ar2100.baf~
 
@@ -122,7 +141,25 @@ REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @12
 		SAY NAME2 @2
 		SAY UNIDENTIFIED_DESC @3
 		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_LONG 0x34 1000 // Store price
+		WRITE_SHORT 0x34 1000 // Store price
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			parameter1= RESOLVE_STR_REF (@21)
+			target=1
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@23)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@24)
+		END // Add extended effect
 		
 	EXTEND_TOP ~ar2100.bcs~ ~semi_multi_clerics/Script/ar2100.baf~
 
@@ -150,15 +187,48 @@ REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @13
 		SAY NAME2 @2
 		SAY UNIDENTIFIED_DESC @3
 		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_LONG 0x34 1000 // Store price	
+		WRITE_SHORT 0x34 1000 // Store price	
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
 		LPF ADD_ITEM_EFFECT 
 		INT_VAR 
 			opcode=104 
 			target=1 
 			timing=1 
-			parameter1=~-124500~
+			parameter1=~-47000~
 			parameter2=0
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=104 
+			target=3 
+			timing=1 
+			parameter1=~-77500~
+			parameter2=0
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@21)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@25)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@23)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			probability1=25
+			parameter1= RESOLVE_STR_REF (@24)
 		END // Add extended effect
 		
 	EXTEND_TOP ~ar0700.bcs~ ~semi_multi_clerics/Script/ar0700.baf~
@@ -198,15 +268,47 @@ REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @13
 		SAY NAME2 @2
 		SAY UNIDENTIFIED_DESC @3
 		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_LONG 0x34 1000 // Store price
+		WRITE_SHORT 0x34 1000 // Store price
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
 		LPF ADD_ITEM_EFFECT 
 		INT_VAR 
 			opcode=104 
 			target=1 
 			timing=1 
-			parameter1=~-124500~
+			parameter1=~-47000~
 			parameter2=0
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=104 
+			target=3 
+			timing=1 
+			parameter1=~-77500~
+			parameter2=0
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@21)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@25)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@23)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@24)
 		END // Add extended effect
 
 	EXTEND_TOP ~ar0700.bcs~ ~weidu_external/semi_multi_clerics/Script/ar0700.baf~
@@ -238,15 +340,48 @@ REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @13
 		SAY NAME2 @2
 		SAY UNIDENTIFIED_DESC @3
 		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_LONG 0x34 1000 // Store price
+		WRITE_SHORT 0x34 1000 // Store price
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
 		LPF ADD_ITEM_EFFECT 
 		INT_VAR 
 			opcode=104 
 			target=1 
 			timing=1 
-			parameter1=~-124500~
+			parameter1=~-47000~
 			parameter2=0
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=104 
+			target=3 
+			timing=1 
+			parameter1=~-77500~
+			parameter2=0
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@21)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@25)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@23)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			probability1=25
+			parameter1= RESOLVE_STR_REF (@24)
 		END // Add extended effect
 		
 	EXTEND_TOP ~ar4500.bcs~ ~semi_multi_clerics/Script/ar4500.baf~
@@ -279,15 +414,47 @@ REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @13
 		SAY NAME2 @2
 		SAY UNIDENTIFIED_DESC @3
 		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_LONG 0x34 1000 // Store price
+		WRITE_SHORT 0x34 1000 // Store price
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
 		LPF ADD_ITEM_EFFECT 
 		INT_VAR 
 			opcode=104 
 			target=1 
 			timing=1 
-			parameter1=~-124500~
+			parameter1=~-47000~
 			parameter2=0
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=104 
+			target=3 
+			timing=1 
+			parameter1=~-77500~
+			parameter2=0
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@21)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@25)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@23)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@24)
 		END // Add extended effect
 		
 	EXTEND_TOP ~ar4500.bcs~ ~semi_multi_clerics/Script/ar4500.baf~
