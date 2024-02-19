@@ -26,10 +26,11 @@ Temps d'invocation : 2
 Durée : 3 rounds
 Jets de sauvegarde : Aucun
 
-Il y a de nombreuses choses embarrassantes pour un adorateur de Mystra, comme celle de devoir compter sur le prêtre d'une autre divinité pour faire face à la menace de morts-vivants. Mais le pire est de souffrir la suffisance des suivants d'Illmater et consorts face à un tel problème. "Oh ne vous inquiétez pas," disent-ils pleins d'arrogance, "le pouvoir de notre Dieu viril et puissant vous protège". C'en est assez pour attiser la fureur d'un érudit sérieux et consacré à sa Déesse. Les théologiens de Mystra et les mages des grandes écoles de magie sont finalement tombés sur ce sort et l'ont choisi comme solution à ce sujet de forte vexation. Invoquant la toute-puissance de la Déesse, ce sortilège crée une ombre invisible constituée d'énergie positive pure. Le pouvoir de cet amas presque sans pensée repousse les morts-vivants et peut détruire de telles créatures quand elle a été invoquée par un lanceur de sorts suffisamment puissant. L'élémentaire restera contrôlable seulement sur le Plan Primaire durant trois tours.
+Il y a de nombreuses choses embarrassantes pour un adorateur de Mystra, comme celle de devoir compter sur le prêtre d'une autre divinité pour faire face à la menace de morts-vivants. Mais le pire est de souffrir la suffisance des suivants d'Illmater et consorts face à un tel problème. « Oh ne vous inquiétez pas, » disent-ils pleins d'arrogance, « le pouvoir de notre Dieu viril et puissant vous protège ». C'en est assez pour attiser la fureur d'un érudit sérieux et consacré à sa Déesse. Les théologiens de Mystra et les mages des grandes écoles de magie sont finalement tombés sur ce sort et l'ont choisi comme solution à ce sujet de forte vexation. Invoquant la toute-puissance de la Déesse, ce sortilège crée une ombre invisible constituée d'énergie positive pure. Le pouvoir de cet amas presque sans pensée repousse les morts-vivants et peut détruire de telles créatures quand elle a été invoquée par un lanceur de sorts suffisamment puissant. L'élémentaire restera contrôlable seulement sur le Plan Primaire durant trois tours.
 
 Effets :
-Niveau 3-9 : Repousse les morts-vivants comme un prêtre de niveau 5.
+Niveau 1-4 : Repousse les morts-vivants comme un prêtre de niveau 2.
+Niveau 5-9 : Repousse les morts-vivants comme un prêtre de niveau 5.
 Niveau 10-14 : Repousse les morts-vivants comme un prêtre de niveau 10.
 Niveau 15-19 : Repousse les morts-vivants comme un prêtre de niveau 15.
 Niveau 20+ : Repousse les morts-vivants comme un prêtre de niveau 20.~
@@ -58,6 +59,7 @@ Accessible apres l'Ombre-Terre / 100 % de chance de perdre 2 points de Dexterite
 @22    = ~Ombre de Mystra~ //~Mystra's shadow~
 @23    = ~Apprend une foultitude de sortilèges divins.~
 @24    = ~Perd 2 points de Constitution et de Dextérité.~
+@25    = ~L'utilisateur perd 5000 points d’expérience.~
 
 
 // WeiDU prompts

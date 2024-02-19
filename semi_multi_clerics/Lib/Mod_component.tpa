@@ -44,6 +44,11 @@ COPY ~Semi_multi_clerics/Spell/TACTURN.SPL~	~override~
 	SAY NAME1 @5
 	SAY UNIDENTIFIED_DESC @6
 
+COPY ~Semi_multi_clerics/Creature/tacturn.cre~	~override~
+	SAY NAME1 @22
+	SAY NAME2 @22
+	WRITE_BYTE 0x270 ~128~ // Allegiance
+
 COPY ~Semi_multi_clerics/Creature/tacturn1.cre~	~override~
 	SAY NAME1 @22
 	SAY NAME2 @22

@@ -22,6 +22,8 @@ A new merchant named Mystra's Witness at Waukeen's Promenade (in front of Fennec
 
 This mod allows to build original class / kit combinations. (ex:  kensaï/mage (clerc), sorcerer (clerc) ou Skald (clerc)
 
+If you are playing on IWDEE, the seller can be found near Orrik's tower. (But you'll be allowed to buy the spell book only once you've reached 5000 XP.)
+
 ## Install:
 --------
 
@@ -39,8 +41,8 @@ Version 0.4.1 - February 2024:
 - Move merchant slightly to not overlapping with the mod Ruad.  
 - GW function and Autotra  
 - Label, metadata, InfinityAutoPackager   
-- Restrict to level 7 to avoid negative XP in Icewind Dale  
-- Store price 100 to 1000  
+- Alter XP loss amount between BG and IWD  
+- Store price 100 to 1000 for BG, 5000 for IWD  
 - opcode 171 instead of 147 to avoid extra experience when learning spells thanks to Rivvers
 - Workaround for tacturn.spl (Mystra's Grace) previously summoned ally creature cannot efficiently use the Turn Undead abilitiy
 

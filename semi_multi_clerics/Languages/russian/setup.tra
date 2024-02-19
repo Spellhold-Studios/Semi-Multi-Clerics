@@ -28,7 +28,8 @@
 Есть довольно мало вещей, способных смутить и вызвать неудобство у последователя Мисты, вынуждая прибегать к помощи священников других божеств, и одно из них - это иметь дело с Нежитью. В таких случаях священники Илматера становятся невероятно самодовольными: "О, не волнуйтесь," говорят они, "сила нашего закаленного невзгодами Бога защитит вас." Этого достаточно, чтобы привести преданного студента Ткачихи Магии в ярость. Исследования Священников Мистры, работавших с преданными Искусству Волшебниками, наконец позволили изобрести заклинание, способное решить эту проблему. Обращаясь к могуществу Леди, это заклинание создает измененного Невидимого Охотника из чистой энергии Позитивного Плана бытия. Сила этого полу-разумного элементаля разрушает нежить, и может даже уничтожить такие существа, когда он призван заклинателем достаточно высокого уровня. Элементаль может существовать на Первичном Материальном Плане только 3 раунда.
 
 Эффект:
-Уровень 3-9: Изгоняет Нежить как священник 5-го уровня.
+Уровень 1-4: Изгоняет Нежить как священник 2-го уровня.
+Уровень 5-9: Изгоняет Нежить как священник 5-го уровня.
 Уровень 10-14: Изгоняет Нежить как священник 10-го уровня.
 Уровень 15-19: Изгоняет Нежить как священник 15-го уровня.
 Уровень 20 +: Изгоняет Нежить как священник 20-го уровня.~
@@ -36,18 +37,25 @@
 @8    = ~Могущество Мистры~
 
 
-@9   = ~Version [LITE] Available from the beginning / 25% chance of losing 2 Dexterity and Constitution points~
+@9   = ~Version [LITE]
+Available from the beginning / 25% chance of losing 2 Dexterity and Constitution points~
 @10    = ~Semi-multi-clerics for IWD and IWDEE~
-@11    = ~Version [ORIGINAL] Available after the Underdark / 100% chance of losing 2 Dexterity and Constitution points~
+@11    = ~Version [ORIGINAL]
+Available after the Underdark / 100% chance of losing 2 Dexterity and Constitution points~
 @12    = ~Component for IWD and IWDEE~ //~For IWD and IWDEE~
 @13    = ~Component for BG2 (ToB), BG2EE, BGT and EET~ //~For BG2 (ToB), BG2EE, BGT and EET~
-@14    = ~Version [LITE] 25% chance of losing 2 Dexterity and Constitution points~
-@15    = ~Version [ORIGINAL] 100% chance of losing 2 Dexterity and Constitution points~
-@16    = ~Version ToB Only [LITE] 25% chance of losing 2 Dexterity and Constitution points~
-@17    = ~Version ToB Only [ORIGINAL] 100% chance of losing 2 Dexterity and Constitution points~
+@14    = ~Version [LITE]
+25% chance of losing 2 Dexterity and Constitution points~
+@15    = ~Version [ORIGINAL]
+100% chance of losing 2 Dexterity and Constitution points~
+@16    = ~Version ToB Only [LITE]
+25% chance of losing 2 Dexterity and Constitution points~
+@17    = ~Version ToB Only [ORIGINAL]
+100% chance of losing 2 Dexterity and Constitution points~
 
 @20    = ~Emissary of Mystra~
 @21    = ~The user loses 47,000 XP.~
 @22    = ~Mystra's shadow~
 @23    = ~Learns a multitude of divine spells.~
 @24    = ~Suffers a loss of 2 points in Constitution and Dexterity.~
+@25    = ~The user loses 5,000 XP.~

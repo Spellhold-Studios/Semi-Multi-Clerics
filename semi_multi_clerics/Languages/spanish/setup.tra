@@ -23,7 +23,8 @@ Tirada de salvación: Ninguna
 Descripción:
 Hay pocas cosas más embarazosas para un sacerdote de Mystra que el tener que apoyarse en la ayuda de sacerdotes de otras deidades cuando deben enfrentarse contra muertos vivientes, sobretodo porque los seguidores de Illmater tienden a incordiar bastante al respecto. "Oh, no os preocupéis," dicen ellos, "el poder de nuestro gran dios viril os protegerá." Es suficiente para hacer que cualquier estudiante de la Dama de la Urdimbre se vuelva loco. Los Sacerdotes de Mystra que trabajan con Magos dedicados finalmente llegaron a una solución. Llamar al poder de la Dama, este hechizo crea un acechador invisible modificado con energía planar positiva. El poder de este elemental afecta a los no-muertos, y puede destruírlos cuando es llamado por un lanzador de alto nivel. El elemental sólo permanecerá en el plano primario durante 3 turnos.
 Efecto:
-Nivel 3-9: Expulsa muertos vivientes como clérigo de 5to nivel.
+Nivel 1-4: Expulsa muertos vivientes como clérigo de 2to nivel.
+Nivel 5-9: Expulsa muertos vivientes como clérigo de 5to nivel.
 Nivel 10-14: Expulsa muertos vivientes como clérigo de 10mo nivel.
 Nivel 15-19: Expulsa muertos vivientes como clérigo de 15to nivel.
 Nivel 20+: Expulsa muertos vivientes como clérigo de 20vo nivel. ~
@@ -31,18 +32,25 @@ Nivel 20+: Expulsa muertos vivientes como clérigo de 20vo nivel. ~
 @8    = ~Rincón del Aprendiz de Mystra~
 
 
-@9   = ~Version [LITE] Available from the beginning / 25% chance of losing 2 Dexterity and Constitution points~
+@9   = ~Version [LITE]
+Available from the beginning / 25% chance of losing 2 Dexterity and Constitution points~
 @10    = ~Semi-multi-clerics for IWD and IWDEE~
-@11    = ~Version [ORIGINAL] Available after the Underdark / 100% chance of losing 2 Dexterity and Constitution points~
+@11    = ~Version [ORIGINAL]
+Available after the Underdark / 100% chance of losing 2 Dexterity and Constitution points~
 @12    = ~Component for IWD and IWDEE~ //~For IWD and IWDEE~
 @13    = ~Component for BG2 (ToB), BG2EE, BGT and EET~ //~For BG2 (ToB), BG2EE, BGT and EET~
-@14    = ~Version [LITE] 25% chance of losing 2 Dexterity and Constitution points~
-@15    = ~Version [ORIGINAL] 100% chance of losing 2 Dexterity and Constitution points~
-@16    = ~Version ToB Only [LITE] 25% chance of losing 2 Dexterity and Constitution points~
-@17    = ~Version ToB Only [ORIGINAL] 100% chance of losing 2 Dexterity and Constitution points~
+@14    = ~Version [LITE]
+25% chance of losing 2 Dexterity and Constitution points~
+@15    = ~Version [ORIGINAL]
+100% chance of losing 2 Dexterity and Constitution points~
+@16    = ~Version ToB Only [LITE]
+25% chance of losing 2 Dexterity and Constitution points~
+@17    = ~Version ToB Only [ORIGINAL]
+100% chance of losing 2 Dexterity and Constitution points~
 
 @20    = ~Emissary of Mystra~
 @21    = ~The user loses 47,000 XP.~
 @22    = ~Mystra's shadow~
 @23    = ~Learns a multitude of divine spells.~
 @24    = ~Suffers a loss of 2 points in Constitution and Dexterity.~
+@25    = ~The user loses 5,000 XP.~

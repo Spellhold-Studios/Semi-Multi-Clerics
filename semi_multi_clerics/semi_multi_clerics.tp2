@@ -378,12 +378,21 @@ REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @12
 		SAY NAME2 @2
 		SAY UNIDENTIFIED_DESC @3
 		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_SHORT 0x34 1000 // Store price
+		WRITE_SHORT 0x34 5000 // Store price
+		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=104 
+			target=1 
+			timing=1 
+			parameter1=~-5000~
+			parameter2=0
+		END // Add extended effect
 		LPF ADD_ITEM_EFFECT 
 		INT_VAR 
 			opcode=139
 			target=1
-			parameter1= RESOLVE_STR_REF (@21)
+			parameter1= RESOLVE_STR_REF (@25)
 		END // Add extended effect
 		LPF ADD_ITEM_EFFECT 
 		INT_VAR 
@@ -422,9 +431,18 @@ REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @12
 		SAY NAME2 @2
 		SAY UNIDENTIFIED_DESC @3
 		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_SHORT 0x34 1000 // Store price
+		WRITE_SHORT 0x34 5000 // Store price
+		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=10 END // Delete extended effect
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=15 END // Delete extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=104 
+			target=1 
+			timing=1 
+			parameter1=~-5000~
+			parameter2=0
+		END // Add extended effect
 		LPF ADD_ITEM_EFFECT 
 		INT_VAR 
 			opcode=10
@@ -444,7 +462,7 @@ REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @12
 		LPF ADD_ITEM_EFFECT 
 		INT_VAR 
 			opcode=139
-			parameter1= RESOLVE_STR_REF (@21)
+			parameter1= RESOLVE_STR_REF (@25)
 			target=1
 		END // Add extended effect
 		LPF ADD_ITEM_EFFECT 
