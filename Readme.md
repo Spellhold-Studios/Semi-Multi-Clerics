@@ -41,7 +41,8 @@ Version 0.4.1 - February 2024:
 - Label, metadata, InfinityAutoPackager   
 - Restrict to level 7 to avoid negative XP in Icewind Dale  
 - Store price 100 to 1000  
-- opcode 171 instead of 147 to avoid extra experience when learning spells  
+- opcode 171 instead of 147 to avoid extra experience when learning spells thanks to Rivvers
+- Workaround for tacturn.spl (Mystra's Grace) previously summoned ally creature cannot efficiently use the Turn Undead abilitiy
 
 Version 0.4.0 - 23 July 2022:                      
 												   

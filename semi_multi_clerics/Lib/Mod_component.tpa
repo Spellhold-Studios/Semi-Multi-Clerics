@@ -2,8 +2,6 @@
 
 	COMPILE ~semi_multi_clerics/Script/tacturn.baf~	~override~
 
-COPY ~Semi_multi_clerics/Creature/tacturn1.cre~	~override~
-
 		COPY_EXISTING 
 			~sppr110.spl~ ~override/tacpr1.spl~ //shillelagh
 			~sppr412.spl~ ~override/tacpr10.spl~ //holy power
@@ -46,13 +44,37 @@ COPY ~Semi_multi_clerics/Spell/TACTURN.SPL~	~override~
 	SAY NAME1 @5
 	SAY UNIDENTIFIED_DESC @6
 
+COPY ~Semi_multi_clerics/Creature/tacturn1.cre~	~override~
+	SAY NAME1 @22
+	SAY NAME2 @22
+	WRITE_BYTE 0x270 ~128~ // Allegiance
+
 COPY ~Semi_multi_clerics/Creature/tacturn2.cre~	~override~
+	SAY NAME1 @22
+	SAY NAME2 @22
+	WRITE_BYTE 0x270 ~128~ // Allegiance
 
 COPY ~Semi_multi_clerics/Creature/tacturn3.cre~	~override~
+	SAY NAME1 @22
+	SAY NAME2 @22
+	WRITE_BYTE 0x270 ~128~ // Allegiance
 
 COPY ~Semi_multi_clerics/Creature/tacturn4.cre~	~override~
+	SAY NAME1 @22
+	SAY NAME2 @22
+	WRITE_BYTE 0x270 ~128~ // Allegiance
 
+/*
 COPY ~Semi_multi_clerics/Creature/tacturn5.cre~	~override~
+	SAY NAME1 @20
+	SAY NAME2 @20
+	WRITE_BYTE 0x270 ~4~ // Allegiance
+	WRITE_ASCII 0x248 ~tacturn5~ (8) // Override script
+	WRITE_ASCII 0x250 ~~ (8) // Class script
+	WRITE_ASCII 0x258 ~~ (8) // Race script
+	WRITE_ASCII 0x260 ~~ (8) // General script
+	WRITE_ASCII 0x268 ~~ (8) // Default script
+*/
 
 	COMPILE ~semi_multi_clerics/Dialog/tacprsp.d~
 

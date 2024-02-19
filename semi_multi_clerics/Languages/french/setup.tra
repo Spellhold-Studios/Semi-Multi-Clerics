@@ -37,19 +37,25 @@ Niveau 20+ : Repousse les morts-vivants comme un prêtre de niveau 20.~
 @8    = ~Coin de l'apprenti de Mystra~
 
 
-@9   = ~Version [ADOUCIE] Accessible au commencement / 25 % de chance de perdre 2 points de Dexterite et Constitution~
+@9   = ~Version [ADOUCIE] 
+Accessible au commencement / 25 % de chance de perdre 2 points de Dexterite et Constitution~
 @10    = ~Semi-multi-clerics pour IWD and IWDEE~
-@11    = ~Version [ORIGINALE] Accessible apres l'Ombre-Terre / 100 % de chance de perdre 2 points de Dexterite et Constitution~
+@11    = ~Version [ORIGINALE] 
+Accessible apres l'Ombre-Terre / 100 % de chance de perdre 2 points de Dexterite et Constitution~
 @12    = ~Composant pour IWD and IWDEE~ //~For IWD and IWDEE~
 @13    = ~Composant pour BG2 (ToB), BG2EE, BGT and EET~ //~For BG2 (ToB), BG2EE, BGT and EET~
-@14    = ~Version [ADOUCIE] 25 % de chance de perdre 2 points de Dexterite et Constitution~
-@15    = ~Version [ORIGINALE] 100 % de chance de perdre 2 points de Dexterite et Constitution~
-@16    = ~Seulement dans ToB version [ADOUCIE] 25 % de chance de perdre 2 points de Dexterite et Constitution~
-@17    = ~Seulement dans ToB version [ORIGINALE] 100 % de chance de perdre 2 points de Dexterite et Constitution~
+@14    = ~Version [ADOUCIE] 
+25 % de chance de perdre 2 points de Dexterite et Constitution~
+@15    = ~Version [ORIGINALE] 
+100 % de chance de perdre 2 points de Dexterite et Constitution~
+@16    = ~Seulement dans ToB version [ADOUCIE] 
+25 % de chance de perdre 2 points de Dexterite et Constitution~
+@17    = ~Seulement dans ToB version [ORIGINALE] 
+100 % de chance de perdre 2 points de Dexterite et Constitution~
 
-//@20    = ~~
+@20    = ~Envoyé de Mystra~
 @21    = ~L'utilisateur perd 47000 points d’expérience.~
-//@22    = ~~
+@22    = ~Ombre de Mystra~ //~Mystra's shadow~
 @23    = ~Apprend une foultitude de sortilèges divins.~
 @24    = ~Perd 2 points de Constitution et de Dextérité.~
 

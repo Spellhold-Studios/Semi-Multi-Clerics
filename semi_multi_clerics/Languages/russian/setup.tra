@@ -46,8 +46,8 @@
 @16    = ~Version ToB Only [LITE] 25% chance of losing 2 Dexterity and Constitution points~
 @17    = ~Version ToB Only [ORIGINAL] 100% chance of losing 2 Dexterity and Constitution points~
 
-//@20    = ~~
+@20    = ~Emissary of Mystra~
 @21    = ~The user loses 47,000 XP.~
-//@22    = ~~
+@22    = ~Mystra's shadow~
 @23    = ~Learns a multitude of divine spells.~
 @24    = ~Suffers a loss of 2 points in Constitution and Dexterity.~
