@@ -1,9 +1,9 @@
 IF
-  Global("tb#prsp","MYAREA",0)
+	Global("tb#prsp","MYAREA",0)
 THEN
-  RESPONSE #100
-    CreateCreature("tb#prsp",[2250.1350],5)
-    SetGlobal("tb#prsp","MYAREA",1)
-    SetGlobal("tacturnAR4500","GLOBAL",1)
+	RESPONSE #100
+		CreateCreature("tb#prsp",[2250.1350],5)
+		SetGlobal("tb#prsp","MYAREA",1)
+		SetGlobal("tacturnMoveTo","GLOBAL",4)
 END
 

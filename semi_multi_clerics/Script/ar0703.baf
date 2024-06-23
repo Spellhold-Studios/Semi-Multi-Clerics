@@ -1,0 +1,16 @@
+IF
+	Global("tb#prsp","MYAREA",0)
+THEN
+	RESPONSE #100
+		CreateCreature("tb#prsp",[686.201],9)
+		SetGlobal("tb#prsp","MYAREA",1)
+		SetGlobal("tacturnMoveTo","GLOBAL",2)
+END
+
+IF
+	GlobalGT("tacturnMoveTo","GLOBAL",2)
+THEN
+	RESPONSE #100
+		ActionOverride("tb#prsp",DestroySelf())
+END
+

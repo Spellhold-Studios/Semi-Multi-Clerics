@@ -32,22 +32,26 @@ Livello 20+: Scaccia non-morti come un chierico di livello 20. ~
 @7    = ~Fede di Mystra~
 @8    = ~Angolo dell'Apprendista di Mystra~
 
+@9    = ~Semi-multi-clerics for IWD / IWDEE~
+@10   = ~Semi-multi-clerics for BG2-ToB / BG2EE / BGT / EET~
+@11   = ~Semi-multi-clerics for BGEE (SOD)~
 
-@9   = ~Version [LITE]
-Available from the beginning / 25% chance of losing 2 Dexterity and Constitution points~
-@10    = ~Semi-multi-clerics for IWD and IWDEE~
-@11    = ~Version [ORIGINAL]
-Available after the Underdark / 100% chance of losing 2 Dexterity and Constitution points~
-@12    = ~Component for IWD and IWDEE~ //~For IWD and IWDEE~
-@13    = ~Component for BG2 (ToB), BG2EE, BGT and EET~ //~For BG2 (ToB), BG2EE, BGT and EET~
-@14    = ~Version [LITE]
-25% chance of losing 2 Dexterity and Constitution points~
-@15    = ~Version [ORIGINAL]
-100% chance of losing 2 Dexterity and Constitution points~
-@16    = ~Version ToB Only [LITE]
-25% chance of losing 2 Dexterity and Constitution points~
-@17    = ~Version ToB Only [ORIGINAL]
-100% chance of losing 2 Dexterity and Constitution points~
+@12   = ~Version [ORIGINAL] 
+Accessible at the beginning / 100% chance of losing 2 points of Dexterite and Constitution~
+@13   = ~Version [SOFT] 
+Accessible at the beginning / 25% chance of losing 2 points of Dexterite and Constitution~
+@14    = ~Version [ORIGINAL DELAYED] 
+Accessible after Underdark / 100% chance of losing 2 points of Dexterite and Constitution~
+@15    = ~Version [SOFT DELAYED] 
+Accessible after Underdark / 25% chance of losing 2 points of Dexterite and Constitution~
+@16    = ~Version [ORIGINAL DELAYED] 
+Accessible at Baldur's Gate / 100% chance of losing 2 points of Dexterite and Constitution~
+@17    = ~Version [SOFT DELAYED] 
+Accessible at Baldur's Gate / 25% chance of losing 2 points of Dexterite and Constitution~
+@18    = ~Version [ORIGINAL DELAYED] 
+Accessible after Dragon's Eye / 100% chance of losing 2 points of Dexterite and Constitution~
+@19    = ~Version [SOFT DELAYED] 
+Accessible after Dragon's Eye / 25% chance of losing 2 points of Dexterite and Constitution~
 
 @20    = ~Emissary of Mystra~
 @21    = ~The user loses 47,000 XP.~
@@ -55,3 +59,8 @@ Available after the Underdark / 100% chance of losing 2 Dexterity and Constituti
 @23    = ~Learns a multitude of divine spells.~
 @24    = ~Suffers a loss of 2 points in Constitution and Dexterity.~
 @25    = ~The user loses 5,000 XP.~
+
+@30    = ~Require BG2-ToB / BG2EE / BGT / EET~
+@31    = ~Require IWD / IWDEE~
+@32    = ~Require BGEE (SOD)~
+@33    = ~Incompatible with another component already installed~

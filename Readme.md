@@ -20,7 +20,7 @@ For IWD, IWDEE, Baldur's Gate 2, BG2: EE, BGT and the Enhanced Edition Trilogy (
 
 A new merchant named Mystra's Witness at Waukeen's Promenade (in front of Fennecia's house). After talking to him, you can acquire a spell book that will teach you some divine spells (including one that can be used to turn undead), at the cost of some skill points and experience. 
 
-This mod allows to build original class / kit combinations. (ex:  kensaï/mage (clerc), sorcerer (clerc) ou Skald (clerc)
+This mod allows to build original class / kit combinations. (ex:  Kensaï/mage (cleric), Sorcerer (cleric) ou Skald (cleric)
 
 If you are playing on IWDEE, the seller can be found near Orrik's tower. (But you'll be allowed to buy the spell book only once you've reached 5000 XP.)
 
@@ -35,16 +35,18 @@ Follow the prompt
 ## Version History:
 ----------------
 
-Version 0.4.1 - February 2024:  
+Version 0.4.1 - June 2024:  
 
-- Components Original and lite.  
+- Components Original and Soft. And allow installation on different game.  
 - Move merchant slightly to not overlapping with the mod Ruad.  
-- GW function and Autotra  
-- Label, metadata, InfinityAutoPackager   
-- Alter XP loss amount between BG and IWD  
-- Store price 100 to 1000 for BG, 5000 for IWD  
-- opcode 171 instead of 147 to avoid extra experience when learning spells thanks to Rivvers
-- Workaround for tacturn.spl (Mystra's Grace) previously summoned ally creature cannot efficiently use the Turn Undead abilitiy
+- GW function and Autotra.  
+- Label, metadata, InfinityAutoPackager.   
+- Alter XP loss amount between BG and IWD.  
+- Store price 100 to 1000.
+- opcode 171 instead of 147 to avoid extra experience when learning spells thanks to Rivvers.
+- Workaround for tacturn.spl (Mystra's Grace) previously summoned ally creature cannot efficiently use the Turn Undead abilitiy.  
+- BGEE compatibility.  
+- Black Pits I and II compatibility.  
 
 Version 0.4.0 - 23 July 2022:                      
 												   

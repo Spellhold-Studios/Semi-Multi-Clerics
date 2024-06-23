@@ -1,0 +1,8 @@
+IF
+  Global("tb#prsp","MYAREA",0)
+THEN
+  RESPONSE #100
+    CreateCreature("tb#prsp",[787.388],3)
+    SetGlobal("tb#prsp","MYAREA",1)
+END
+

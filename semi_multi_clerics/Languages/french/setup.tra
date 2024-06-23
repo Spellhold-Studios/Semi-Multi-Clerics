@@ -37,22 +37,26 @@ Niveau 20+ : Repousse les morts-vivants comme un prêtre de niveau 20.~
 @7    = ~Représentant de Mystra~
 @8    = ~Coin de l'apprenti de Mystra~
 
+@9    = ~Semi-multi-clerics pour IWD / IWDEE~
+@10   = ~Semi-multi-clerics pour BG2-ToB / BG2EE / BGT / EET~
+@11   = ~Semi-multi-clerics pour BGEE (SOD)~
 
-@9   = ~Version [ADOUCIE] 
+@12   = ~Version [ORIGINALE] 
+Accessible au commencement / 100 % de chance de perdre 2 points de Dexterite et Constitution~
+@13   = ~Version [ADOUCIE] 
 Accessible au commencement / 25 % de chance de perdre 2 points de Dexterite et Constitution~
-@10    = ~Semi-multi-clerics pour IWD and IWDEE~
-@11    = ~Version [ORIGINALE] 
+@14    = ~Version [ORIGINALE RETARDEE] 
 Accessible apres l'Ombre-Terre / 100 % de chance de perdre 2 points de Dexterite et Constitution~
-@12    = ~Composant pour IWD and IWDEE~ //~For IWD and IWDEE~
-@13    = ~Composant pour BG2 (ToB), BG2EE, BGT and EET~ //~For BG2 (ToB), BG2EE, BGT and EET~
-@14    = ~Version [ADOUCIE] 
-25 % de chance de perdre 2 points de Dexterite et Constitution~
-@15    = ~Version [ORIGINALE] 
-100 % de chance de perdre 2 points de Dexterite et Constitution~
-@16    = ~Seulement dans ToB version [ADOUCIE] 
-25 % de chance de perdre 2 points de Dexterite et Constitution~
-@17    = ~Seulement dans ToB version [ORIGINALE] 
-100 % de chance de perdre 2 points de Dexterite et Constitution~
+@15    = ~Version [ADOUCIE RETARDEE] 
+Accessible apres l'Ombre-Terre / 25 % de chance de perdre 2 points de Dexterite et Constitution~
+@16    = ~Version [ORIGINALE RETARDEE] 
+Accessible à la Porte de Baldur / 100 % de chance de perdre 2 points de Dexterite et Constitution~
+@17    = ~Version [ADOUCIE RETARDEE] 
+Accessible à la Porte de Baldur / 25 % de chance de perdre 2 points de Dexterite et Constitution~
+@18    = ~Version [ORIGINALE RETARDEE] 
+Accessible apres l'Oeil du Dragon / 100 % de chance de perdre 2 points de Dexterite et Constitution~
+@19    = ~Version [ADOUCIE RETARDEE] 
+Accessible apres l'Oeil du Dragon / 25 % de chance de perdre 2 points de Dexterite et Constitution~
 
 @20    = ~Envoyé de Mystra~
 @21    = ~L'utilisateur perd 47000 points d’expérience.~
@@ -60,6 +64,12 @@ Accessible apres l'Ombre-Terre / 100 % de chance de perdre 2 points de Dexterite
 @23    = ~Apprend une foultitude de sortilèges divins.~
 @24    = ~Perd 2 points de Constitution et de Dextérité.~
 @25    = ~L'utilisateur perd 5000 points d’expérience.~
+
+@30    = ~Necessite BG2-ToB / BG2EE / BGT / EET~
+@31    = ~Necessite IWD / IWDEE~
+@32    = ~Necessite BGEE (SOD)~
+@33    = ~Incompatible avec un autre composant deja installe~
+
 
 
 // WeiDU prompts

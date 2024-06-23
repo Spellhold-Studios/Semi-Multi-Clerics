@@ -1,7 +1,7 @@
 BACKUP ~weidu_external/semi_multi_clerics/backup~
 AUTHOR ~thebigg@spellholdstudios.net~
 
-VERSION ~4.1~
+VERSION ~4.2~
 
 README ~semi_multi_clerics/Readme/readme.html~
 
@@ -75,55 +75,40 @@ LANGUAGE ~Russian (By Fess)~
 
 // BG2EE
 
-BEGIN @9
-DESIGNATED 10 SUBCOMPONENT @0
-LABEL ~thebigg-semi-multi-clerics_10~
-REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @13
+BEGIN @12  /* Version [ORIGINALE] 
+Accessible au commencement / 100 % de chance de perdre 2 points de Dexterite et Constitution */
+DESIGNATED 1  SUBCOMPONENT @10   /*~Semi-multi-clerics pour BG2 (ToB), BG2EE, BGT~*/
+LABEL ~thebigg-semi-multi-ORIGINALE-BG2~
+REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @30 /* Necessite BG2-ToB / BG2EE / BGT / EET */
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~10~ @33 /* Incompatible avec un composant deja installe*/
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~12~ @33 /* Incompatible avec un composant deja installe*/
+
+OUTER_SET ORIGINALE = 1
+OUTER_SET ADOUCIE = 0
 
 	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
 
-		COPY_EXISTING   ~wmart1.cre~	~override/tb#prsp.cre~
-			SAY NAME1     @7
-			SAY NAME2     @7
-			WRITE_SHORT 0x28      24832   // fighter_male_human
-			WRITE_ASCII             0x280   ~tacprsp~
-			WRITE_ASCII             0x2cc   ~tacprsp~
+	EXTEND_TOP ~ar0700.bcs~ ~semi_multi_clerics/Script/ar0700.baf~
+	EXTEND_TOP ~ar4500.bcs~ ~semi_multi_clerics/Script/ar4500.baf~
 
+	// Add merchant to Black Pit II
 
-		COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override~
-		SAY NAME1 @1
-		SAY NAME2 @2
-		SAY UNIDENTIFIED_DESC @3
-		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_SHORT 0x34 1000 // Store price	
-		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=104 
-			target=1 
-			timing=1 
-			parameter1=~-47000~
-			parameter2=0
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@21)
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@23)
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			probability1=25
-			parameter1= RESOLVE_STR_REF (@24)
-		END // Add extended effect
+		ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
+	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~
+		END
+
+BEGIN @13 /* Version [ADOUCIE] 
+Accessible au commencement / 25 % de chance de perdre 2 points de Dexterite et Constitution */
+DESIGNATED 2 SUBCOMPONENT @10   /*~Semi-multi-clerics pour BG2 (ToB), BG2EE, BGT~*/
+LABEL ~thebigg-semi-multi-ADOUCIE-BG2~
+REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @30 /* Necessite BG2-ToB / BG2EE / BGT / EET */
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~9~ @33 /* Incompatible avec un composant deja installe*/
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~11~ @33 /* Incompatible avec un composant deja installe*/
+
+OUTER_SET ORIGINALE = 0
+OUTER_SET ADOUCIE = 1
+
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
 		
 	EXTEND_TOP ~ar0700.bcs~ ~semi_multi_clerics/Script/ar0700.baf~
 	EXTEND_TOP ~ar4500.bcs~ ~semi_multi_clerics/Script/ar4500.baf~
@@ -134,80 +119,26 @@ REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @13
 	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~	
 		END
 
-BEGIN @11
-DESIGNATED 11 SUBCOMPONENT @0
-LABEL ~thebigg-semi-multi-clerics_11~
-REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @13
+BEGIN @14 /* Version [ORIGINALE RETARDEE] 
+Accessible apres l'Ombre-Terre / 100 % de chance de perdre 2 points de Dexterite et Constitution */
+DESIGNATED 3 SUBCOMPONENT @10   /*~Semi-multi-clerics pour BG2 (ToB), BG2EE, BGT~*/
+LABEL ~thebigg-semi-multi-ORIGINALE_RETARDEE-BG2~
+REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @30 /* Necessite BG2-ToB / BG2EE / BGT / EET */
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~10~ @33 /* Incompatible avec un composant deja installe*/
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~12~ @33 /* Incompatible avec un composant deja installe*/
+
+OUTER_SET ORIGINALE = 1
+OUTER_SET ADOUCIE = 0
 
 		COPY ~semi_multi_clerics/Script/ar0700.baf~ ~weidu_external/semi_multi_clerics/Script/ar0700.baf~
 			SPRINT textToReplace ~\(^[%TAB% ]*Global("tb#prsp","MYAREA",0)\)~
 			COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
 			PATCH_IF (num_matches > 0) BEGIN
-			REPLACE_TEXTUALLY ~%textToReplace%~ ~GlobalLT("Chapter","GLOBAL",%bg2_chapter_4%)
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~GlobalGT("Chapter","GLOBAL",%bg2_chapter_4%)
 			Global("tb#prsp","MYAREA",0)~
 		END
 
 	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
-
-		COPY_EXISTING   ~wmart1.cre~	~override/tb#prsp.cre~
-			SAY NAME1     @7
-			SAY NAME2     @7
-			WRITE_SHORT 0x28      24832   // fighter_male_human
-			WRITE_ASCII             0x280   ~tacprsp~
-			WRITE_ASCII             0x2cc   ~tacprsp~
-
-
-		COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override/TACPRSP.ITM~
-		SAY NAME1 @1
-		SAY NAME2 @2
-		SAY UNIDENTIFIED_DESC @3
-		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_SHORT 0x34 1000 // Store price
-		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
-		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=10 END // Delete extended effect
-		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=15 END // Delete extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=10
-			target=1 
-			timing=1 
-			parameter1=~-2~
-			parameter2=0
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=15
-			target=1 
-			timing=1 
-			parameter1=~-2~
-			parameter2=0
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=104 
-			target=1 
-			timing=1 
-			parameter1=~-47000~
-			parameter2=0
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@21)
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@23)
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@24)
-		END // Add extended effect
 
 	EXTEND_TOP ~ar0700.bcs~ ~weidu_external/semi_multi_clerics/Script/ar0700.baf~
 	EXTEND_TOP ~ar4500.bcs~ ~semi_multi_clerics/Script/ar4500.baf~
@@ -218,264 +149,196 @@ REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @13
 	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~
 		END
 
-BEGIN @16
-DESIGNATED 12 SUBCOMPONENT @0
-LABEL ~thebigg-semi-multi-clerics_12~
-REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @13
+BEGIN @15 /* Version [ADOUCIE RETARDEE] 
+Accessible apres l'Ombre-Terre / 25 % de chance de perdre 2 points de Dexterite et Constitution */
+DESIGNATED 4 SUBCOMPONENT @10   /*~Semi-multi-clerics pour BG2 (ToB), BG2EE, BGT~*/
+LABEL ~thebigg-semi-multi-ADOUCIE_RETARDEE-BG2~
+REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @30 /* Necessite BG2-ToB / BG2EE / BGT / EET */
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~9~ @33 /* Incompatible avec un composant deja installe*/
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~11~ @33 /* Incompatible avec un composant deja installe*/
 
-	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+OUTER_SET ORIGINALE = 0
+OUTER_SET ADOUCIE = 1
 
-		COPY_EXISTING   ~wmart1.cre~	~override/tb#prsp.cre~
-			SAY NAME1     @7
-			SAY NAME2     @7
-			WRITE_SHORT 0x28      24832   // fighter_male_human
-			WRITE_ASCII             0x280   ~tacprsp~
-			WRITE_ASCII             0x2cc   ~tacprsp~
-
-
-		COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override~
-		SAY NAME1 @1
-		SAY NAME2 @2
-		SAY UNIDENTIFIED_DESC @3
-		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_SHORT 0x34 1000 // Store price
-		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=104 
-			target=1 
-			timing=1 
-			parameter1=~-47000~
-			parameter2=0
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@21)
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@23)
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			probability1=25
-			parameter1= RESOLVE_STR_REF (@24)
-		END // Add extended effect
-		
-	EXTEND_TOP ~ar4500.bcs~ ~semi_multi_clerics/Script/ar4500.baf~
-
-	// Add merchant to Black Pit II
-
-		ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
-	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~
+		COPY ~semi_multi_clerics/Script/ar0700.baf~ ~weidu_external/semi_multi_clerics/Script/ar0700.baf~
+			SPRINT textToReplace ~\(^[%TAB% ]*Global("tb#prsp","MYAREA",0)\)~
+			COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+			PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~GlobalGT("Chapter","GLOBAL",%bg2_chapter_4%)
+			Global("tb#prsp","MYAREA",0)~
 		END
 
-
-
-BEGIN @17
-DESIGNATED 13 SUBCOMPONENT @0
-LABEL ~thebigg-semi-multi-clerics_13~
-REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @13
-
 	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
-
-		COPY_EXISTING   ~wmart1.cre~	~override/tb#prsp.cre~
-			SAY NAME1     @7
-			SAY NAME2     @7
-			WRITE_SHORT 0x28      24832   // fighter_male_human
-			WRITE_ASCII             0x280   ~tacprsp~
-			WRITE_ASCII             0x2cc   ~tacprsp~
-
-
-		COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override/TACPRSP.ITM~
-		SAY NAME1 @1
-		SAY NAME2 @2
-		SAY UNIDENTIFIED_DESC @3
-		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_SHORT 0x34 1000 // Store price
-		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
-		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=10 END // Delete extended effect
-		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=15 END // Delete extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=10
-			target=1 
-			timing=1 
-			parameter1=~-2~
-			parameter2=0
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=15
-			target=1 
-			timing=1 
-			parameter1=~-2~
-			parameter2=0
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=104 
-			target=1 
-			timing=1 
-			parameter1=~-47000~
-			parameter2=0
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@21)
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@23)
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@24)
-		END // Add extended effect
 		
+	EXTEND_TOP ~ar0700.bcs~ ~weidu_external/semi_multi_clerics/Script/ar0700.baf~
 	EXTEND_TOP ~ar4500.bcs~ ~semi_multi_clerics/Script/ar4500.baf~
 
 	// Add merchant to Black Pit II
 
-		ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
-	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~
+		ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN		
+	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~	
 		END
 
 /////////////////////////////////////////////////////////////////////
 
 // IWD
 
-BEGIN @14
-DESIGNATED 0 SUBCOMPONENT @10
-LABEL ~thebigg-semi-multi-clerics_0~
-REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @12
+BEGIN @12 /* Version [ORIGINALE] 
+Accessible au commencement / 100 % de chance de perdre 2 points de Dexterite et Constitution */
+DESIGNATED 5 SUBCOMPONENT @9 /* Semi-multi-clerics pour IWD / IWDEE */
+LABEL ~thebigg-semi-multi-ORIGINALE-IWD~
+REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @31 /*Necessite IWD / IWDEE */
+
+OUTER_SET ORIGINALE = 1
+OUTER_SET ADOUCIE = 0
 
 	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
-
-	// Add merchant to Kuldahar
-		COPY_EXISTING   ~pomab.cre~	~override/tb#prsp.cre~
-		SAY NAME1     @7
-		SAY NAME2     @7
-		WRITE_SHORT 0x28      24832   // fighter_male_human
-		WRITE_ASCII             0x280   ~tacprsp~
-		WRITE_ASCII             0x2cc   ~tacprsp~
-
-
-		COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override~
-		SAY NAME1 @1
-		SAY NAME2 @2
-		SAY UNIDENTIFIED_DESC @3
-		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_SHORT 0x34 5000 // Store price
-		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=104 
-			target=1 
-			timing=1 
-			parameter1=~-5000~
-			parameter2=0
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@25)
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@23)
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			probability1=25
-			parameter1= RESOLVE_STR_REF (@24)
-		END // Add extended effect
 		
 	EXTEND_TOP ~ar2100.bcs~ ~semi_multi_clerics/Script/ar2100.baf~
 
-BEGIN @15
-DESIGNATED 1 SUBCOMPONENT @10
-LABEL ~thebigg-semi-multi-clerics_1~
-REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @12
+BEGIN @13 /* Version [ADOUCIE] 
+Accessible au commencement / 25 % de chance de perdre 2 points de Dexterite et Constitution */
+DESIGNATED 6 SUBCOMPONENT @9 /* Semi-multi-clerics pour IWD / IWDEE */
+LABEL ~thebigg-semi-multi-ADOUCIE-IWD~
+REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @31 /*Necessite IWD / IWDEE */
+
+OUTER_SET ORIGINALE = 0
+OUTER_SET ADOUCIE = 1
 
 	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
-
-	// Add merchant to Kuldahar
-		COPY_EXISTING   ~pomab.cre~	~override/tb#prsp.cre~
-		SAY NAME1     @7
-		SAY NAME2     @7
-		WRITE_SHORT 0x28      24832   // fighter_male_human
-		WRITE_ASCII             0x280   ~tacprsp~
-		WRITE_ASCII             0x2cc   ~tacprsp~
-
-
-		COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override/TACPRSP.ITM~
-		SAY NAME1 @1
-		SAY NAME2 @2
-		SAY UNIDENTIFIED_DESC @3
-		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_SHORT 0x34 5000 // Store price
-		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
-		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=10 END // Delete extended effect
-		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=15 END // Delete extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=104 
-			target=1 
-			timing=1 
-			parameter1=~-5000~
-			parameter2=0
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=10
-			target=1 
-			timing=1 
-			parameter1=~-2~
-			parameter2=0
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=15
-			target=1 
-			timing=1 
-			parameter1=~-2~
-			parameter2=0
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			parameter1= RESOLVE_STR_REF (@25)
-			target=1
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@23)
-		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@24)
-		END // Add extended effect
 		
 	EXTEND_TOP ~ar2100.bcs~ ~semi_multi_clerics/Script/ar2100.baf~
+
+BEGIN @18 /*Version [ORIGINALE RETARDEE] 
+Accessible apres l'Oeil du Dragon / 100 % de chance de perdre 2 points de Dexterite et Constitution */
+DESIGNATED 7 SUBCOMPONENT @9 /* Semi-multi-clerics pour IWD / IWDEE */
+LABEL ~thebigg-semi-multi-ORIGINALE_RETARDEE-IWD~
+REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @31 /*Necessite IWD / IWDEE */
+
+OUTER_SET ORIGINALE = 1
+OUTER_SET ADOUCIE = 0
+
+		COPY ~semi_multi_clerics/Script/ar2100.baf~ ~weidu_external/semi_multi_clerics/Script/ar2100.baf~
+			SPRINT textToReplace ~\(^[%TAB% ]*Global("tb#prsp","MYAREA",0)\)~
+			COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+			PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~GlobalGT("Chapter","GLOBAL",1)
+			Global("tb#prsp","MYAREA",0)~
+		END
+
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+		
+	EXTEND_TOP ~ar2100.bcs~ ~weidu_external/semi_multi_clerics/Script/ar2100.baf~
+
+BEGIN @19 /*Version [ADOUCIE RETARDEE] 
+Accessible apres l'Oeil du Dragon / 25 % de chance de perdre 2 points de Dexterite et Constitution */
+DESIGNATED 8 SUBCOMPONENT @9 /* Semi-multi-clerics pour IWD / IWDEE */
+LABEL ~thebigg-semi-multi-ADOUCIE_RETARDEE-IWD~
+REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @31 /*Necessite IWD / IWDEE */
+
+OUTER_SET ORIGINALE = 0
+OUTER_SET ADOUCIE = 1
+
+		COPY ~semi_multi_clerics/Script/ar2100.baf~ ~weidu_external/semi_multi_clerics/Script/ar2100.baf~
+			SPRINT textToReplace ~\(^[%TAB% ]*Global("tb#prsp","MYAREA",0)\)~
+			COUNT_REGEXP_INSTANCES ~%textToReplace%~ num_matches
+			PATCH_IF (num_matches > 0) BEGIN
+			REPLACE_TEXTUALLY ~%textToReplace%~ ~GlobalGT("Chapter","GLOBAL",1)
+			Global("tb#prsp","MYAREA",0)~
+		END
+
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+		
+	EXTEND_TOP ~ar2100.bcs~ ~weidu_external/semi_multi_clerics/Script/ar2100.baf~
+	
+	
+/////////////////////////////////////////////////////////////////////
+
+// BGEE
+
+BEGIN @12 /*Version [ORIGINALE] 
+Accessible au commencement / 100 % de chance de perdre 2 points de Dexterite et Constitution */
+DESIGNATED 9 SUBCOMPONENT @11 /*Semi-multi-clerics pour BGEE (SOD)*/
+LABEL ~thebigg-semi-multi-ORIGINALE-BG1~
+REQUIRE_PREDICATE (GAME_IS ~bgee eet~) @32 /*Necessite BGEE (SOD) */
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~2~ @33 /* Incompatible avec un composant deja installe*/
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~4~ @33 /* Incompatible avec un composant deja installe*/
+
+OUTER_SET ORIGINALE = 1
+OUTER_SET ADOUCIE = 0
+
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+		
+	EXTEND_TOP ~%Beregost_FirebeadsHouse_L1_BCS%.bcs~ ~semi_multi_clerics/Script/ar3333.baf~
+	
+	
+	// Add merchant to Black Pit
+
+		ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
+	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~
+		END
+
+BEGIN @13 /*Version [ADOUCIE] 
+Accessible au commencement / 25 % de chance de perdre 2 points de Dexterite et Constitution */
+DESIGNATED 10 SUBCOMPONENT @11 /*Semi-multi-clerics pour BGEE (SOD)*/
+LABEL ~thebigg-semi-multi-ADOUCIE-BG1~
+REQUIRE_PREDICATE (GAME_IS ~bgee eet~) @32 /*Necessite BGEE (SOD) */
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~1~ @33 /* Incompatible avec un composant deja installe*/
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~3~ @33 /* Incompatible avec un composant deja installe*/
+
+OUTER_SET ORIGINALE = 0
+OUTER_SET ADOUCIE = 1
+
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+		
+	EXTEND_TOP ~%Beregost_FirebeadsHouse_L1_BCS%.bcs~ ~semi_multi_clerics/Script/ar3333.baf~
+	
+	// Add merchant to Black Pit
+
+		ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
+	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~
+		END
+	
+BEGIN @16 /* Version [ORIGINALE RETARDEE] 
+Accessible à Baldur's Gate / 100 % de chance de perdre 2 points de Dexterite et Constitution */
+DESIGNATED 11 SUBCOMPONENT @11 /*Semi-multi-clerics pour BGEE (SOD)*/
+LABEL ~thebigg-semi-multi-ORIGINALE_RETARDEE-BG1~
+REQUIRE_PREDICATE (GAME_IS ~bgee eet~) @32 /*Necessite BGEE (SOD) */
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~2~ @33 /* Incompatible avec un composant deja installe*/
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~4~ @33 /* Incompatible avec un composant deja installe*/
+
+OUTER_SET ORIGINALE = 1
+OUTER_SET ADOUCIE = 0
+
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+		
+	EXTEND_TOP ~%EBaldursGate_SorcerousSundries_L1_BCS%.bcs~ ~semi_multi_clerics/Script/ar0703.baf~
+	
+	// Add merchant to Black Pit
+	
+		ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
+	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~
+		END
+
+BEGIN @17 /*Version [ADOUCIE RETARDEE] 
+Accessible à Baldur's Gate / 25 % de chance de perdre 2 points de Dexterite et Constitution */
+DESIGNATED 12 SUBCOMPONENT @11 /*Semi-multi-clerics pour BGEE (SOD)*/
+LABEL ~thebigg-semi-multi-ADOUCIE_RETARDEE-BG1~
+REQUIRE_PREDICATE (GAME_IS ~bgee eet~) @32 /*Necessite BGEE (SOD) */
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~1~ @33 /* Incompatible avec un composant deja installe*/
+FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~3~ @33 /* Incompatible avec un composant deja installe*/
+
+OUTER_SET ORIGINALE = 0
+OUTER_SET ADOUCIE = 1
+
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+		
+	EXTEND_TOP ~%EBaldursGate_SorcerousSundries_L1_BCS%.bcs~ ~semi_multi_clerics/Script/ar0703.baf~
+	
+	// Add merchant to Black Pit
+
+		ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
+	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~
+		END
+
+
