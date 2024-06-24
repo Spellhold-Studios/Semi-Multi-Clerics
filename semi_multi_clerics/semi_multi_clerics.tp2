@@ -14,7 +14,8 @@ ALWAYS
     END
 
     LAF autotra_workaround END
-
+	
+	ACTION_IF GAME_IS ~iwdee bgee bg2ee eet~ BEGIN
 // ACTION_DEFINE_ARRAY fl#noconvert BEGIN END
 
 ACTION_DEFINE_ARRAY fl#reload BEGIN setup END
@@ -24,12 +25,20 @@ ACTION_DEFINE_ARRAY fl#reload BEGIN setup END
         infer_charsets = 1
       STR_VAR
         tra_path = EVAL ~weidu_external/semi_multi_clerics/languages/autotra~
+        out_path = EVAL ~weidu_external/semi_multi_clerics/languages/autotra/UTF8~
 		iconv_path = ~Semi_multi_clerics/Languages/autotra/iconv~
         // noconvert_array = fl#noconvert
         reload_array = fl#reload
 	END
+   COPY ~weidu_external/semi_multi_clerics/languages/autotra/%LANGUAGE%~ ~weidu_external/semi_multi_clerics/languages/autotra/ANSI/%LANGUAGE%~
+   COPY ~weidu_external/semi_multi_clerics/languages/autotra/UTF8/%LANGUAGE%~ ~weidu_external/semi_multi_clerics/languages/autotra/%LANGUAGE%~
+  END
 
 INCLUDE ~Semi_multi_clerics/Lib/gw_functions.tpa~
+
+	ACTION_IF NOT GAME_IS ~iwdee iwd~ BEGIN
+INCLUDE ~Semi_multi_clerics/Lib/g3_cpmvars_master.tpa~
+	END
 
 ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
 
@@ -193,6 +202,7 @@ OUTER_SET ORIGINALE = 1
 OUTER_SET ADOUCIE = 0
 
 	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_IWD.tpa~
 		
 	EXTEND_TOP ~ar2100.bcs~ ~semi_multi_clerics/Script/ar2100.baf~
 
@@ -206,6 +216,7 @@ OUTER_SET ORIGINALE = 0
 OUTER_SET ADOUCIE = 1
 
 	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_IWD.tpa~
 		
 	EXTEND_TOP ~ar2100.bcs~ ~semi_multi_clerics/Script/ar2100.baf~
 
@@ -227,6 +238,7 @@ OUTER_SET ADOUCIE = 0
 		END
 
 	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_IWD.tpa~
 		
 	EXTEND_TOP ~ar2100.bcs~ ~weidu_external/semi_multi_clerics/Script/ar2100.baf~
 
@@ -248,6 +260,7 @@ OUTER_SET ADOUCIE = 1
 		END
 
 	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_IWD.tpa~
 		
 	EXTEND_TOP ~ar2100.bcs~ ~weidu_external/semi_multi_clerics/Script/ar2100.baf~
 	
@@ -267,15 +280,19 @@ FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~4~ @33 /* Incompatible avec un 
 OUTER_SET ORIGINALE = 1
 OUTER_SET ADOUCIE = 0
 
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~TACPRSP.itm~ BEGIN
 	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+END
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_Bg1.tpa~
 		
 	EXTEND_TOP ~%Beregost_FirebeadsHouse_L1_BCS%.bcs~ ~semi_multi_clerics/Script/ar3333.baf~
+	EXTEND_TOP ~%EBaldursGate_SorcerousSundries_L1_BCS%.bcs~ ~semi_multi_clerics/Script/ar0703.baf~
 	
 	
 	// Add merchant to Black Pit
 
 		ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
-	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~
+	EXTEND_TOP ~oh9360.BCS~ ~semi_multi_clerics/Script/oh9360.baf~
 		END
 
 BEGIN @13 /*Version [ADOUCIE] 
@@ -289,14 +306,18 @@ FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~3~ @33 /* Incompatible avec un 
 OUTER_SET ORIGINALE = 0
 OUTER_SET ADOUCIE = 1
 
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~TACPRSP.itm~ BEGIN
 	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+END
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_Bg1.tpa~
 		
 	EXTEND_TOP ~%Beregost_FirebeadsHouse_L1_BCS%.bcs~ ~semi_multi_clerics/Script/ar3333.baf~
+	EXTEND_TOP ~%EBaldursGate_SorcerousSundries_L1_BCS%.bcs~ ~semi_multi_clerics/Script/ar0703.baf~
 	
 	// Add merchant to Black Pit
 
 		ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
-	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~
+	EXTEND_TOP ~oh9360.BCS~ ~semi_multi_clerics/Script/oh9360.baf~
 		END
 	
 BEGIN @16 /* Version [ORIGINALE RETARDEE] 
@@ -310,14 +331,17 @@ FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~4~ @33 /* Incompatible avec un 
 OUTER_SET ORIGINALE = 1
 OUTER_SET ADOUCIE = 0
 
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~TACPRSP.itm~ BEGIN
 	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+END
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_Bg1.tpa~
 		
 	EXTEND_TOP ~%EBaldursGate_SorcerousSundries_L1_BCS%.bcs~ ~semi_multi_clerics/Script/ar0703.baf~
 	
 	// Add merchant to Black Pit
 	
 		ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
-	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~
+	EXTEND_TOP ~oh9360.BCS~ ~semi_multi_clerics/Script/oh9360.baf~
 		END
 
 BEGIN @17 /*Version [ADOUCIE RETARDEE] 
@@ -331,14 +355,17 @@ FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~3~ @33 /* Incompatible avec un 
 OUTER_SET ORIGINALE = 0
 OUTER_SET ADOUCIE = 1
 
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~TACPRSP.itm~ BEGIN
 	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
+END
+	INCLUDE ~Semi_multi_clerics/Lib/Mod_Bg1.tpa~
 		
 	EXTEND_TOP ~%EBaldursGate_SorcerousSundries_L1_BCS%.bcs~ ~semi_multi_clerics/Script/ar0703.baf~
 	
 	// Add merchant to Black Pit
 
 		ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
-	EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~
+	EXTEND_TOP ~oh9360.BCS~ ~semi_multi_clerics/Script/oh9360.baf~
 		END
 
 

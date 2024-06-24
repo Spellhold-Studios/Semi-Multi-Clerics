@@ -1,0 +1,119 @@
+// Mod_BG1.tpa
+
+	COMPILE EVALUATE_BUFFER~semi_multi_clerics/Dialog/TACPRBG.d~ USING ~weidu_external/semi_multi_clerics/languages/autotra/%LANGUAGE%/tacprsp.tra~
+
+
+
+COPY   ~semi_multi_clerics/Store/tacprsp.sto~	~override/tacprbg.sto~
+	SAY STORE_NAME @8
+	WRITE_LONG 0x14 100 // Sell markup
+	WRITE_SHORT 0x18 50 // Buy markup
+	// ADD_STORE_ITEM ~tacprsp~ #1 #1 #1 ~IDENTIFIED~ #10	 
+    LPF ADD_STORE_ITEM_EX
+		INT_VAR stack=10 
+        STR_VAR item_name=~tacprbg~ flags=~identified~
+      END
+			
+ACTION_IF GAME_IS ~bgt bg2 bg2ee eet~ THEN BEGIN
+	COPY_EXISTING   ~wmart1.cre~	~override/tb#prsp.cre~
+			SAY NAME1     @7
+			SAY NAME2     @7
+			WRITE_SHORT 0x28      24832   // fighter_male_human
+			WRITE_ASCII             0x280   ~tacprsp~ (8)
+			WRITE_ASCII             0x2cc   ~tacprsp~ (8)
+END
+			
+	// Add merchant to BGEE 
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
+	COPY_EXISTING   ~INNKE2.CRE~	~override/tb#prsp.cre~
+			SAY NAME1     @7
+			SAY NAME2     @7
+			WRITE_SHORT 0x28      24832   // fighter_male_human
+			WRITE_ASCII             0x280   ~tacprsp~ (8)
+			WRITE_ASCII             0x2cc   ~tacprsp~ (8)
+END
+	 
+	 
+	 	// Adapte inconvénients  
+	COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override/TACPRBG.ITM~
+		SAY NAME1 @1
+		SAY NAME2 @2
+		SAY UNIDENTIFIED_DESC @3
+		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
+		WRITE_SHORT 0x34 1000 // Store price
+     PATCH_IF (ADOUCIE == 1) BEGIN	
+		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=104 
+			target=1 
+			timing=1 
+			parameter1=~-5000~
+			parameter2=0
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@25)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@23)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@24)
+			probability1=25
+		END // Add extended effect	
+     END ELSE PATCH_IF (ORIGINALE == 1) BEGIN
+		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
+		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=10 END // Delete extended effect
+		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=15 END // Delete extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=10
+			target=1 
+			timing=1 
+			parameter1=~-2~
+			parameter2=0
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=15
+			target=1 
+			timing=1 
+			parameter1=~-2~
+			parameter2=0
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=104 
+			target=1 
+			timing=1 
+			parameter1=~-5000~
+			parameter2=0
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@25)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@23)
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT 
+		INT_VAR 
+			opcode=139
+			target=1
+			parameter1= RESOLVE_STR_REF (@24)
+		END // Add extended effect	
+	END	 

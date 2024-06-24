@@ -11,5 +11,5 @@ IF
 	GlobalGT("tacturnMoveTo","GLOBAL",1)
 THEN
 	RESPONSE #100
-		ActionOverride("tb#prsp",DestroySelf())
+		ActionOverride("tacprsp",DestroySelf())
 END
