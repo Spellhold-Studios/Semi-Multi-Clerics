@@ -1,8 +1,7 @@
 // Mod_BG1.tpa
 
-	COMPILE EVALUATE_BUFFER~semi_multi_clerics/Dialog/TACPRBG.d~ USING ~weidu_external/semi_multi_clerics/languages/autotra/%LANGUAGE%/tacprsp.tra~
-
-
+// Adapt dialog to open another store in bg1
+	COMPILE EVALUATE_BUFFER ~semi_multi_clerics/Dialog/TACPRBG.d~ USING ~weidu_external/semi_multi_clerics/languages/autotra/%LANGUAGE%/tacprsp.tra~
 
 COPY   ~semi_multi_clerics/Store/tacprsp.sto~	~override/tacprbg.sto~
 	SAY STORE_NAME @8
@@ -13,15 +12,6 @@ COPY   ~semi_multi_clerics/Store/tacprsp.sto~	~override/tacprbg.sto~
 		INT_VAR stack=10 
         STR_VAR item_name=~tacprbg~ flags=~identified~
       END
-			
-ACTION_IF GAME_IS ~bgt bg2 bg2ee eet~ THEN BEGIN
-	COPY_EXISTING   ~wmart1.cre~	~override/tb#prsp.cre~
-			SAY NAME1     @7
-			SAY NAME2     @7
-			WRITE_SHORT 0x28      24832   // fighter_male_human
-			WRITE_ASCII             0x280   ~tacprsp~ (8)
-			WRITE_ASCII             0x2cc   ~tacprsp~ (8)
-END
 			
 	// Add merchant to BGEE 
 ACTION_IF GAME_IS ~bgee~ THEN BEGIN
