@@ -34,7 +34,7 @@ Livello 20+: Scaccia non-morti come un chierico di livello 20. ~
 
 @9    = ~Semi-multi-clerics for IWD / IWDEE~
 @10   = ~Semi-multi-clerics for BG2-ToB / BG2EE / BGT / EET~
-@11   = ~Semi-multi-clerics for BGEE (SOD)~
+@11   = ~Semi-multi-clerics for BGEE (SOD) / BGT / EET~
 
 @12   = ~Version [ORIGINAL] 
 Accessible at the beginning / 100% chance of losing 2 points of Dexterite and Constitution~
@@ -62,5 +62,5 @@ Accessible after Dragon's Eye / 25% chance of losing 2 points of Dexterite and C
 
 @30    = ~Require BG2-ToB / BG2EE / BGT / EET~
 @31    = ~Require IWD / IWDEE~
-@32    = ~Require BGEE (SOD)~
+@32    = ~Require BGEE (SOD) / BGT / EET~
 @33    = ~Incompatible with another component already installed~

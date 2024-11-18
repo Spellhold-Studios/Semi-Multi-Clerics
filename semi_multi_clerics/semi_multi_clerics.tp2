@@ -89,8 +89,6 @@ Accessible au commencement / 100 % de chance de perdre 2 points de Dexterite et 
 DESIGNATED 1  SUBCOMPONENT @10   /*~Semi-multi-clerics pour BG2 (ToB), BG2EE, BGT~*/
 LABEL ~thebigg-semi-multi-ORIGINALE-BG2~
 REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @30 /* Necessite BG2-ToB / BG2EE / BGT / EET */
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~10~ @33 /* Incompatible avec un composant deja installe*/
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~12~ @33 /* Incompatible avec un composant deja installe*/
 
 OUTER_SET ORIGINALE = 1
 OUTER_SET ADOUCIE = 0
@@ -111,8 +109,6 @@ Accessible au commencement / 25 % de chance de perdre 2 points de Dexterite et C
 DESIGNATED 2 SUBCOMPONENT @10   /*~Semi-multi-clerics pour BG2 (ToB), BG2EE, BGT~*/
 LABEL ~thebigg-semi-multi-ADOUCIE-BG2~
 REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @30 /* Necessite BG2-ToB / BG2EE / BGT / EET */
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~9~ @33 /* Incompatible avec un composant deja installe*/
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~11~ @33 /* Incompatible avec un composant deja installe*/
 
 OUTER_SET ORIGINALE = 0
 OUTER_SET ADOUCIE = 1
@@ -133,8 +129,6 @@ Accessible apres l'Ombre-Terre / 100 % de chance de perdre 2 points de Dexterite
 DESIGNATED 3 SUBCOMPONENT @10   /*~Semi-multi-clerics pour BG2 (ToB), BG2EE, BGT~*/
 LABEL ~thebigg-semi-multi-ORIGINALE_RETARDEE-BG2~
 REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @30 /* Necessite BG2-ToB / BG2EE / BGT / EET */
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~10~ @33 /* Incompatible avec un composant deja installe*/
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~12~ @33 /* Incompatible avec un composant deja installe*/
 
 OUTER_SET ORIGINALE = 1
 OUTER_SET ADOUCIE = 0
@@ -163,8 +157,6 @@ Accessible apres l'Ombre-Terre / 25 % de chance de perdre 2 points de Dexterite 
 DESIGNATED 4 SUBCOMPONENT @10   /*~Semi-multi-clerics pour BG2 (ToB), BG2EE, BGT~*/
 LABEL ~thebigg-semi-multi-ADOUCIE_RETARDEE-BG2~
 REQUIRE_PREDICATE (GAME_IS ~tob bgt bg2ee eet~) @30 /* Necessite BG2-ToB / BG2EE / BGT / EET */
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~9~ @33 /* Incompatible avec un composant deja installe*/
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~11~ @33 /* Incompatible avec un composant deja installe*/
 
 OUTER_SET ORIGINALE = 0
 OUTER_SET ADOUCIE = 1
@@ -274,8 +266,6 @@ Accessible au commencement / 100 % de chance de perdre 2 points de Dexterite et 
 DESIGNATED 9 SUBCOMPONENT @11 /*Semi-multi-clerics pour BGEE (SOD)*/
 LABEL ~thebigg-semi-multi-ORIGINALE-BG1~
 REQUIRE_PREDICATE (GAME_IS ~bgee eet~) @32 /*Necessite BGEE (SOD) */
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~2~ @33 /* Incompatible avec un composant deja installe*/
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~4~ @33 /* Incompatible avec un composant deja installe*/
 
 OUTER_SET ORIGINALE = 1
 OUTER_SET ADOUCIE = 0
@@ -300,8 +290,6 @@ Accessible au commencement / 25 % de chance de perdre 2 points de Dexterite et C
 DESIGNATED 10 SUBCOMPONENT @11 /*Semi-multi-clerics pour BGEE (SOD)*/
 LABEL ~thebigg-semi-multi-ADOUCIE-BG1~
 REQUIRE_PREDICATE (GAME_IS ~bgee eet~) @32 /*Necessite BGEE (SOD) */
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~1~ @33 /* Incompatible avec un composant deja installe*/
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~3~ @33 /* Incompatible avec un composant deja installe*/
 
 OUTER_SET ORIGINALE = 0
 OUTER_SET ADOUCIE = 1
@@ -325,8 +313,6 @@ Accessible à Baldur's Gate / 100 % de chance de perdre 2 points de Dexterite et 
 DESIGNATED 11 SUBCOMPONENT @11 /*Semi-multi-clerics pour BGEE (SOD)*/
 LABEL ~thebigg-semi-multi-ORIGINALE_RETARDEE-BG1~
 REQUIRE_PREDICATE (GAME_IS ~bgee eet~) @32 /*Necessite BGEE (SOD) */
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~2~ @33 /* Incompatible avec un composant deja installe*/
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~4~ @33 /* Incompatible avec un composant deja installe*/
 
 OUTER_SET ORIGINALE = 1
 OUTER_SET ADOUCIE = 0
@@ -349,8 +335,6 @@ Accessible à Baldur's Gate / 25 % de chance de perdre 2 points de Dexterite et C
 DESIGNATED 12 SUBCOMPONENT @11 /*Semi-multi-clerics pour BGEE (SOD)*/
 LABEL ~thebigg-semi-multi-ADOUCIE_RETARDEE-BG1~
 REQUIRE_PREDICATE (GAME_IS ~bgee eet~) @32 /*Necessite BGEE (SOD) */
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~1~ @33 /* Incompatible avec un composant deja installe*/
-FORBID_COMPONENT ~Setup-semi_multi_clerics.tp2~ ~3~ @33 /* Incompatible avec un composant deja installe*/
 
 OUTER_SET ORIGINALE = 0
 OUTER_SET ADOUCIE = 1

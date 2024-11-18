@@ -7,8 +7,8 @@
 			SAY NAME1     @7
 			SAY NAME2     @7
 			WRITE_SHORT 0x28      24832   // fighter_male_human
-			WRITE_ASCII             0x280   ~tacprsp~ (8)
-			WRITE_ASCII             0x2cc   ~tacprsp~ (8)
+			WRITE_ASCII	0x280   ~tacprsp~ (8)
+			WRITE_ASCII	0x2cc   ~tacprsp~ (8)
 	 
 	 
 	 	// Adapte inconvénients  

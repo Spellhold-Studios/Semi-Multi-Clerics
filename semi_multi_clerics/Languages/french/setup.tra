@@ -39,7 +39,7 @@ Niveau 20+ : Repousse les morts-vivants comme un prêtre de niveau 20.~
 
 @9    = ~Semi-multi-clerics pour IWD / IWDEE~
 @10   = ~Semi-multi-clerics pour BG2-ToB / BG2EE / BGT / EET~
-@11   = ~Semi-multi-clerics pour BGEE (SOD)~
+@11   = ~Semi-multi-clerics pour BGEE (SOD) / BGT / EET~
 
 @12   = ~Version [ORIGINALE] 
 Accessible au commencement / 100 % de chance de perdre 2 points de Dexterite et Constitution~
@@ -67,7 +67,7 @@ Accessible apres l'Oeil du Dragon / 25 % de chance de perdre 2 points de Dexteri
 
 @30    = ~Necessite BG2-ToB / BG2EE / BGT / EET~
 @31    = ~Necessite IWD / IWDEE~
-@32    = ~Necessite BGEE (SOD)~
+@32    = ~Necessite BGEE (SOD) / BGT / EET~
 @33    = ~Incompatible avec un autre composant deja installe~
 
 
