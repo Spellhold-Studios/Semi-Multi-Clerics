@@ -1,6 +1,6 @@
 // Mod_IWD.tpa
 	
-	COMPILE ~semi_multi_clerics/Dialog/TACPRIW.d~	~override~
+	COMPILE ~semi_multi_clerics/Dialog/TACPRIW.d~
 	
 	// Add merchant to Kuldahar  
 	COPY_EXISTING   ~pomab.cre~	~override/tb#prsp.cre~
@@ -94,3 +94,14 @@
 			parameter1= RESOLVE_STR_REF (@24)
 		END // Add extended effect	
 	END
+
+
+ACTION_IF DELAYED = 0 THEN BEGIN
+
+	EXTEND_TOP ~ar2100.bcs~ ~semi_multi_clerics/Script/ar2100.baf~
+
+END ELSE ACTION_IF DELAYED = 1 BEGIN
+
+	EXTEND_TOP ~ar2100.bcs~ ~weidu_external/semi_multi_clerics/Script/ar2100.baf~
+
+END

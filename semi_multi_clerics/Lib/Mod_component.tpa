@@ -1,6 +1,6 @@
 // Mod_component.tpa
 
-	COMPILE ~semi_multi_clerics/Script/tacturn.baf~	~override~
+	COMPILE ~semi_multi_clerics/Script/tacturn.baf~
 
 	COMPILE ~semi_multi_clerics/Dialog/tacprsp.d~
 
@@ -82,25 +82,26 @@ COPY ~Semi_multi_clerics/Creature/tacturn5.cre~	~override~
 	WRITE_ASCII 0x260 ~~ (8) // General script
 	WRITE_ASCII 0x268 ~~ (8) // Default script
 */
-
-COPY   ~semi_multi_clerics/Store/tacprsp.sto~	~override~
-	SAY STORE_NAME @8
-	WRITE_LONG 0x14 100 // Sell markup
-	WRITE_SHORT 0x18 50 // Buy markup
-	// ADD_STORE_ITEM ~tacprsp~ #1 #1 #1 ~IDENTIFIED~ #10	 
-    LPF ADD_STORE_ITEM_EX
-		INT_VAR stack=10 
-        STR_VAR item_name=~tacprsp~ flags=~identified~
-      END
 			
 ACTION_IF GAME_IS ~bgt bg2 bg2ee eet~ THEN BEGIN
+
+	COPY   ~semi_multi_clerics/Store/tacprsp.sto~	~override~
+		SAY STORE_NAME @8
+		WRITE_LONG 0x14 100 // Sell markup
+		WRITE_SHORT 0x18 50 // Buy markup
+		// ADD_STORE_ITEM ~tacprsp~ #1 #1 #1 ~IDENTIFIED~ #10	 
+		LPF ADD_STORE_ITEM_EX
+			INT_VAR stack=10 
+			STR_VAR item_name=~tacprsp~ flags=~identified~
+		END
+
 	COPY_EXISTING   ~wmart1.cre~	~override/tb#prsp.cre~
 			SAY NAME1     @7
 			SAY NAME2     @7
 			WRITE_SHORT 0x28      24832   // fighter_male_human
 			WRITE_ASCII             0x280   ~tacprsp~ (8)
 			WRITE_ASCII             0x2cc   ~tacprsp~ (8)
-END
+
 
 	 	// Adapte inconvénients  
 	 COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override~
@@ -184,4 +185,40 @@ END
 			target=1
 			parameter1= RESOLVE_STR_REF (@24)
 		END // Add extended effect
+	END
+
+	// Add merchant to Waukeen
+
+	ACTION_IF DELAYED = 0 THEN BEGIN
+	
+		EXTEND_TOP ~ar0700.bcs~ ~semi_multi_clerics/Script/ar0700.baf~
+		
+	END ELSE ACTION_IF DELAYED = 1 BEGIN
+	
+		EXTEND_TOP ~ar0700.bcs~ ~weidu_external/semi_multi_clerics/Script/ar0700.baf~
+
+	END
+
+END
+
+	// Add merchant to Black Pit II
+
+	ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN	
+
+		EXTEND_TOP ~OHBHUB.BCS~ ~semi_multi_clerics/Script/ohbhub.baf~	
+
+	END
+
+	EXTEND_TOP ~ar4500.bcs~ ~semi_multi_clerics/Script/ar4500.baf~
+
+	// Include BGEE or IWD1
+
+	ACTION_IF GAME_IS ~bgee eet bgt~ THEN BEGIN
+
+		INCLUDE ~Semi_multi_clerics/Lib/Mod_Bg1.tpa~
+	
+	END ELSE ACTION_IF GAME_IS ~iwdee iwd~ BEGIN
+
+		INCLUDE ~Semi_multi_clerics/Lib/Mod_IWD.tpa~
+
 	END

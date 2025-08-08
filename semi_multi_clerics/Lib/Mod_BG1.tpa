@@ -2,28 +2,32 @@
 
 // Adapt dialog to open another store in bg1
 	COMPILE EVALUATE_BUFFER ~semi_multi_clerics/Dialog/TACPRBG.d~ USING ~weidu_external/semi_multi_clerics/languages/autotra/%LANGUAGE%/tacprsp.tra~
-
-COPY   ~semi_multi_clerics/Store/tacprsp.sto~	~override/tacprbg.sto~
-	SAY STORE_NAME @8
-	WRITE_LONG 0x14 100 // Sell markup
-	WRITE_SHORT 0x18 50 // Buy markup
-	// ADD_STORE_ITEM ~tacprsp~ #1 #1 #1 ~IDENTIFIED~ #10	 
-    LPF ADD_STORE_ITEM_EX
-		INT_VAR stack=10 
-        STR_VAR item_name=~tacprbg~ flags=~identified~
-      END
-			
+	
+	COPY   ~semi_multi_clerics/Store/tacprsp.sto~	~override/tacprbg.sto~
+		SAY STORE_NAME @8
+		WRITE_LONG 0x14 100 // Sell markup
+		WRITE_SHORT 0x18 50 // Buy markup
+		// ADD_STORE_ITEM ~tacprsp~ #1 #1 #1 ~IDENTIFIED~ #10	 
+		LPF ADD_STORE_ITEM_EX
+			INT_VAR stack=10 
+			STR_VAR item_name=~tacprbg~ flags=~identified~
+		END
+		
 	// Add merchant to BGEE 
-ACTION_IF GAME_IS ~bgee~ THEN BEGIN
 	COPY_EXISTING   ~INNKE2.CRE~	~override/tb#prsp.cre~
 			SAY NAME1     @7
 			SAY NAME2     @7
 			WRITE_SHORT 0x28      24832   // fighter_male_human
 			WRITE_ASCII             0x280   ~tacprsp~ (8)
 			WRITE_ASCII             0x2cc   ~tacprsp~ (8)
-END
-	 
-	 
+
+	// Add merchant to Black Pit
+		ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
+		
+	EXTEND_TOP ~oh9360.BCS~ ~semi_multi_clerics/Script/oh9360.baf~
+	
+		END
+
 	 	// Adapte inconvénients  
 	COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override/TACPRBG.ITM~
 		SAY NAME1 @1
@@ -107,3 +111,15 @@ END
 			parameter1= RESOLVE_STR_REF (@24)
 		END // Add extended effect	
 	END	 
+
+	// Add merchant to Firebeads House
+
+	ACTION_IF DELAYED = 0 THEN BEGIN
+
+		EXTEND_TOP ~%Beregost_FirebeadsHouse_L1_BCS%.bcs~ ~semi_multi_clerics/Script/ar3333.baf~
+
+	END
+
+	// Add merchant to Sorcerous Sundries
+
+		EXTEND_TOP ~%EBaldursGate_SorcerousSundries_L1_BCS%.bcs~ ~semi_multi_clerics/Script/ar0703.baf~

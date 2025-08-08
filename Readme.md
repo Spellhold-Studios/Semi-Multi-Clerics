@@ -22,7 +22,7 @@ A new merchant named Mystra's Witness at Waukeen's Promenade (in front of Fennec
 
 This mod allows to build original class / kit combinations. (ex:  Kensaï/mage (cleric), Sorcerer (cleric) ou Skald (cleric)
 
-If you are playing on IWDEE, the seller can be found near Orrik's tower. (But you'll be allowed to buy the spell book only once you've reached 5000 XP.)
+If you are playing on IWDEE or BGEE, the seller can be found near Orrik's tower or in Firebeard house or at the Sorcerous Sundries. (But you'll be allowed to buy the spell book only once you've reached 5000 XP.)
 
 ## Install:
 --------
@@ -34,6 +34,10 @@ Follow the prompt
 
 ## Version History:
 ----------------
+
+Version 0.4.2 - August 2025:
+
+- Modify component installation
 
 Version 0.4.1 - June 2024:  
 

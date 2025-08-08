@@ -1,5 +1,4 @@
 IF
-	AreaCheck("OH8100")
 	Global("tb#prsp","MYAREA",0)
 THEN
 	RESPONSE #100

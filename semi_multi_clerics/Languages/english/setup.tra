@@ -34,25 +34,41 @@ Level 20+: Turns Undead as a 20th level Cleric. ~
 @8    = ~Mystra's Apprentice's corner~
 
 @9    = ~Semi-multi-clerics for IWD / IWDEE~
-@10   = ~Semi-multi-clerics for BG2-ToB / BG2EE / BGT / EET~
-@11   = ~Semi-multi-clerics for BGEE (SOD) / BGT / EET~
+@10   = ~Semi-multi-clerics for BG2-ToB / BG2EE (BGT / EET)~
+@11   = ~Semi-multi-clerics for BGEE / SOD~
 
-@12   = ~Version [ORIGINAL] 
-Accessible at the beginning / 100% chance of losing 2 points of Dexterite and Constitution~
-@13   = ~Version [SOFT] 
-Accessible at the beginning / 25% chance of losing 2 points of Dexterite and Constitution~
-@14    = ~Version [ORIGINAL DELAYED] 
-Accessible after Underdark / 100% chance of losing 2 points of Dexterite and Constitution~
-@15    = ~Version [SOFT DELAYED] 
-Accessible after Underdark / 25% chance of losing 2 points of Dexterite and Constitution~
-@16    = ~Version [ORIGINAL DELAYED] 
-Accessible at Baldur's Gate / 100% chance of losing 2 points of Dexterite and Constitution~
-@17    = ~Version [SOFT DELAYED] 
-Accessible at Baldur's Gate / 25% chance of losing 2 points of Dexterite and Constitution~
-@18    = ~Version [ORIGINAL DELAYED] 
-Accessible after Dragon's Eye / 100% chance of losing 2 points of Dexterite and Constitution~
-@19    = ~Version [SOFT DELAYED] 
-Accessible after Dragon's Eye / 25% chance of losing 2 points of Dexterite and Constitution~
+@12   = ~[ORIGINAL]
+- Accessible at the beginning 
+- 100% chance of losing 2 points of Dexterite and Constitution
+~
+@13   = ~[SOFT]
+- Accessible at the beginning
+- 25% chance of losing 2 points of Dexterite and Constitution
+~
+@14    = ~[ORIGINAL DELAYED]
+- Accessible after Underdark / at Baldur's Gate
+- 100% chance of losing 2 points of Dexterite and Constitution
+~
+@15    = ~[SOFT DELAYED]
+- Accessible after Underdark / at Baldur's Gate
+- 25% chance of losing 2 points of Dexterite and Constitution
+~
+@16    = ~[ORIGINAL DELAYED]
+- Accessible at Baldur's Gate 
+- 100% chance of losing 2 points of Dexterite and Constitution
+~
+@17    = ~[SOFT DELAYED]
+- Accessible at Baldur's Gate
+- 25% chance of losing 2 points of Dexterite and Constitution
+~
+@18    = ~[ORIGINAL DELAYED]
+- Accessible after Dragon's Eye
+- 100% chance of losing 2 points of Dexterite and Constitution
+~
+@19    = ~[SOFT DELAYED]
+- Accessible after Dragon's Eye
+- 25% chance of losing 2 points of Dexterite and Constitution
+~
 
 @20    = ~Emissary of Mystra~
 @21    = ~The user loses 47,000 XP.~
@@ -61,7 +77,7 @@ Accessible after Dragon's Eye / 25% chance of losing 2 points of Dexterite and C
 @24    = ~Suffers a loss of 2 points in Constitution and Dexterity.~
 @25    = ~The user loses 5,000 XP.~
 
-@30    = ~Require BG2-ToB / BG2EE / BGT / EET~
+@30    = ~Require BG2-ToB / BG2EE (BGT / EET)~
 @31    = ~Require IWD / IWDEE~
-@32    = ~Require BGEE (SOD) / BGT / EET~
+@32    = ~Require BGEE / SOD~
 @33    = ~Incompatible with another component already installed~
