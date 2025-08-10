@@ -1,17 +1,20 @@
-// Mod_IWD.tpa
-	
-	COMPILE ~semi_multi_clerics/Dialog/TACPRIW.d~
-	
+	// Mod_IWD.tpa
+
+		COMPILE ~semi_multi_clerics/Dialog/TACPRIW.d~
+
 	// Add merchant to Kuldahar  
-	COPY_EXISTING   ~pomab.cre~	~override/tb#prsp.cre~
+
+		COPY_EXISTING   ~pomab.cre~	~override/tb#prsp.cre~
 			SAY NAME1     @7
 			SAY NAME2     @7
 			WRITE_SHORT 0x28      24832   // fighter_male_human
+			WRITE_ASCII SCRIPT_GENERAL ~tacprsp~ (8)
 			WRITE_ASCII	0x280   ~tacprsp~ (8)
 			WRITE_ASCII	0x2cc   ~tacprsp~ (8)
-	 
-	 
-	 	// Adapte inconvénients  
+
+
+	 	// Adapte inconvenients
+
 	 COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override~
 		SAY NAME1 @1
 		SAY NAME2 @2
@@ -20,88 +23,71 @@
 		WRITE_SHORT 0x34 1000 // Store price
      PATCH_IF (ADOUCIE == 1) BEGIN
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=104 
-			target=1 
-			timing=1 
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=104
+			target=1
+			timing=1
 			parameter1=~-5000~
 			parameter2=0
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
 			opcode=139
 			target=1
 			parameter1= RESOLVE_STR_REF (@25)
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@23)
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=139 target=1 parameter1= RESOLVE_STR_REF (@23)
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@24)
-			probability1=25
-		END // Add extended effect	
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=139 target=1 parameter1= RESOLVE_STR_REF (@24) probability1=25
+		END // Add extended effect
      END ELSE PATCH_IF (ORIGINALE == 1) BEGIN
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=10 END // Delete extended effect
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=15 END // Delete extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=10
-			target=1 
-			timing=1 
-			parameter1=~-2~
-			parameter2=0
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=10 target=1 timing=1 parameter1=~-2~ parameter2=0
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=15
-			target=1 
-			timing=1 
-			parameter1=~-2~
-			parameter2=0
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=15 target=1 timing=1 parameter1=~-2~ parameter2=0
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=104 
-			target=1 
-			timing=1 
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=104
+			target=1
+			timing=1
 			parameter1=~-5000~
 			parameter2=0
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
 			opcode=139
 			target=1
 			parameter1= RESOLVE_STR_REF (@25)
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@23)
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=139 target=1 parameter1= RESOLVE_STR_REF (@23)
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@24)
-		END // Add extended effect	
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=139 target=1 parameter1= RESOLVE_STR_REF (@24)
+		END // Add extended effect
 	END
 
 
-ACTION_IF DELAYED = 0 THEN BEGIN
+	ACTION_IF DELAYED = 0 THEN BEGIN
 
-	EXTEND_TOP ~ar2100.bcs~ ~semi_multi_clerics/Script/ar2100.baf~
+		EXTEND_TOP ~ar2100.bcs~ ~semi_multi_clerics/Script/ar2100.baf~
 
-END ELSE ACTION_IF DELAYED = 1 BEGIN
+	END ELSE ACTION_IF DELAYED = 1 BEGIN
 
-	EXTEND_TOP ~ar2100.bcs~ ~weidu_external/semi_multi_clerics/Script/ar2100.baf~
+		EXTEND_TOP ~ar2100.bcs~ ~weidu_external/semi_multi_clerics/Script/ar2100.baf~
 
-END
+	END

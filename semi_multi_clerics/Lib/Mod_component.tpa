@@ -1,6 +1,8 @@
 // Mod_component.tpa
 
-	COMPILE ~semi_multi_clerics/Script/tacturn.baf~
+		COMPILE ~semi_multi_clerics/Script/tacturn.baf~
+
+		COMPILE ~semi_multi_clerics/Script/tacprsp.baf~
 
 	COMPILE ~semi_multi_clerics/Dialog/tacprsp.d~
 
@@ -40,7 +42,7 @@
 			~sppr406.spl~ ~override/tacpr8.spl~ //defensive harmony
 			~sppr408.spl~ ~override/tacpr9.spl~ //protection from evil 10 ft.
 			WRITE_SHORT 0x1c 1
-	
+
 
 COPY ~Semi_multi_clerics/Spell/TACTURN.SPL~	~override~
 	SAY NAME1 @5
@@ -82,12 +84,12 @@ COPY ~Semi_multi_clerics/Creature/tacturn5.cre~	~override~
 	WRITE_ASCII 0x260 ~~ (8) // General script
 	WRITE_ASCII 0x268 ~~ (8) // Default script
 */
-			
+
 ACTION_IF GAME_IS ~bgt bg2 bg2ee eet~ THEN BEGIN
 
 	COPY   ~semi_multi_clerics/Store/tacprsp.sto~	~override~
 		SAY STORE_NAME @8
-		WRITE_LONG 0x14 100 // Sell markup
+		WRITE_LONG 0x14 150 // Sell markup
 		WRITE_SHORT 0x18 50 // Buy markup
 		// ADD_STORE_ITEM ~tacprsp~ #1 #1 #1 ~IDENTIFIED~ #10	 
 		LPF ADD_STORE_ITEM_EX
@@ -99,11 +101,12 @@ ACTION_IF GAME_IS ~bgt bg2 bg2ee eet~ THEN BEGIN
 			SAY NAME1     @7
 			SAY NAME2     @7
 			WRITE_SHORT 0x28      24832   // fighter_male_human
+			WRITE_ASCII SCRIPT_GENERAL ~tacprsp~ (8)
 			WRITE_ASCII             0x280   ~tacprsp~ (8)
 			WRITE_ASCII             0x2cc   ~tacprsp~ (8)
 
+	 	// Adapte inconvenients  
 
-	 	// Adapte inconvénients  
 	 COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override~
 		SAY NAME1 @1
 		SAY NAME2 @2
@@ -112,92 +115,79 @@ ACTION_IF GAME_IS ~bgt bg2 bg2ee eet~ THEN BEGIN
 		WRITE_SHORT 0x34 1000 // Store price
      PATCH_IF (ADOUCIE == 1) BEGIN	
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=104 
-			target=1 
-			timing=1 
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=104
+			target=1
+			timing=1
 			parameter1=~-47000~
 			parameter2=0
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
 			opcode=139
 			target=1
 			parameter1= RESOLVE_STR_REF (@21)
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@23)
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=139 target=1 parameter1= RESOLVE_STR_REF (@23)
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			probability1=25
-			parameter1= RESOLVE_STR_REF (@24)
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=139 target=1 parameter1= RESOLVE_STR_REF (@24) probability1=25
 		END // Add extended effect
      END ELSE PATCH_IF (ORIGINALE == 1) BEGIN
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=10 END // Delete extended effect
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=15 END // Delete extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=10
-			target=1 
-			timing=1 
-			parameter1=~-2~
-			parameter2=0
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=10 target=1 timing=1 parameter1=~-2~ parameter2=0
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=15
-			target=1 
-			timing=1 
-			parameter1=~-2~
-			parameter2=0
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=15 target=1 timing=1 parameter1=~-2~ parameter2=0
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=104 
-			target=1 
-			timing=1 
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=104
+			target=1
+			timing=1
 			parameter1=~-47000~
 			parameter2=0
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
 			opcode=139
 			target=1
 			parameter1= RESOLVE_STR_REF (@21)
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@23)
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=139 target=1 parameter1= RESOLVE_STR_REF (@23)
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@24)
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=139 target=1 parameter1= RESOLVE_STR_REF (@24)
 		END // Add extended effect
 	END
 
 	// Add merchant to Waukeen
 
 	ACTION_IF DELAYED = 0 THEN BEGIN
-	
+
 		EXTEND_TOP ~ar0700.bcs~ ~semi_multi_clerics/Script/ar0700.baf~
 		
 	END ELSE ACTION_IF DELAYED = 1 BEGIN
-	
+
 		EXTEND_TOP ~ar0700.bcs~ ~weidu_external/semi_multi_clerics/Script/ar0700.baf~
 
 	END
+
+	// Add merchant to Pocket Plane
+
+	EXTEND_TOP ~ar4500.bcs~ ~semi_multi_clerics/Script/ar4500.baf~
 
 END
 
@@ -209,14 +199,12 @@ END
 
 	END
 
-	EXTEND_TOP ~ar4500.bcs~ ~semi_multi_clerics/Script/ar4500.baf~
-
 	// Include BGEE or IWD1
 
 	ACTION_IF GAME_IS ~bgee eet bgt~ THEN BEGIN
 
 		INCLUDE ~Semi_multi_clerics/Lib/Mod_Bg1.tpa~
-	
+
 	END ELSE ACTION_IF GAME_IS ~iwdee iwd~ BEGIN
 
 		INCLUDE ~Semi_multi_clerics/Lib/Mod_IWD.tpa~

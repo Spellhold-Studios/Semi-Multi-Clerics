@@ -1,16 +1,24 @@
 IF
-	Global("tb#prsp","MYAREA",0)
+	!Dead("tacprsp")
+	!Global("TACPRSP_EMPTY","GLOBAL",10)
+	OR(2)
+		!InMyArea("tacprsp")
+		Global("tb#prsp","MYAREA",0)
+	!GlobalGT("tacturnMoveTo","GLOBAL",2)
 THEN
 	RESPONSE #100
-		CreateCreature("tb#prsp",[686.201],9)
 		SetGlobal("tb#prsp","MYAREA",1)
 		SetGlobal("tacturnMoveTo","GLOBAL",2)
+		CreateCreature("tb#prsp",[686.201],9)
+		Continue()
 END
 
 IF
+	InMyArea("tacprsp")
 	GlobalGT("tacturnMoveTo","GLOBAL",2)
 THEN
 	RESPONSE #100
 		ActionOverride("tacprsp",DestroySelf())
+		Continue()
 END
 

@@ -1,8 +1,9 @@
 // Mod_BG1.tpa
 
-// Adapt dialog to open another store in bg1
+	// Adapt dialog to open another store in bg1
+
 	COMPILE EVALUATE_BUFFER ~semi_multi_clerics/Dialog/TACPRBG.d~ USING ~weidu_external/semi_multi_clerics/languages/autotra/%LANGUAGE%/tacprsp.tra~
-	
+
 	COPY   ~semi_multi_clerics/Store/tacprsp.sto~	~override/tacprbg.sto~
 		SAY STORE_NAME @8
 		WRITE_LONG 0x14 100 // Sell markup
@@ -12,23 +13,31 @@
 			INT_VAR stack=10 
 			STR_VAR item_name=~tacprbg~ flags=~identified~
 		END
-		
+
+	ACTION_IF (GAME_IS ~bgee~ AND NOT GAME_IS ~eet~) THEN BEGIN
+
 	// Add merchant to BGEE 
-	COPY_EXISTING   ~INNKE2.CRE~	~override/tb#prsp.cre~
+	
+		COPY_EXISTING   ~INNKE2.CRE~	~override/tb#prsp.cre~
 			SAY NAME1     @7
 			SAY NAME2     @7
 			WRITE_SHORT 0x28      24832   // fighter_male_human
+			WRITE_ASCII SCRIPT_GENERAL ~tacprsp~ (8)
 			WRITE_ASCII             0x280   ~tacprsp~ (8)
 			WRITE_ASCII             0x2cc   ~tacprsp~ (8)
 
+	END
+
 	// Add merchant to Black Pit
-		ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
-		
-	EXTEND_TOP ~oh9360.BCS~ ~semi_multi_clerics/Script/oh9360.baf~
 	
+		ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
+
+	EXTEND_TOP ~oh9360.BCS~ ~semi_multi_clerics/Script/oh9360.baf~
+
 		END
 
-	 	// Adapte inconvénients  
+		// Adapte inconvenients  
+		
 	COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override/TACPRBG.ITM~
 		SAY NAME1 @1
 		SAY NAME2 @2
@@ -37,80 +46,63 @@
 		WRITE_SHORT 0x34 1000 // Store price
      PATCH_IF (ADOUCIE == 1) BEGIN	
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=104 
-			target=1 
-			timing=1 
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=104
+			target=1
+			timing=1
 			parameter1=~-5000~
 			parameter2=0
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
 			opcode=139
 			target=1
 			parameter1= RESOLVE_STR_REF (@25)
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@23)
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=139 target=1 parameter1= RESOLVE_STR_REF (@23)
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@24)
-			probability1=25
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=139 target=1 parameter1= RESOLVE_STR_REF (@24) probability1=25
 		END // Add extended effect	
      END ELSE PATCH_IF (ORIGINALE == 1) BEGIN
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=10 END // Delete extended effect
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=15 END // Delete extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=10
-			target=1 
-			timing=1 
-			parameter1=~-2~
-			parameter2=0
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=10 target=1 timing=1 parameter1=~-2~ parameter2=0
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=15
-			target=1 
-			timing=1 
-			parameter1=~-2~
-			parameter2=0
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=15 target=1 timing=1 parameter1=~-2~ parameter2=0
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=104 
-			target=1 
-			timing=1 
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=104
+			target=1
+			timing=1
 			parameter1=~-5000~
 			parameter2=0
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
 			opcode=139
 			target=1
 			parameter1= RESOLVE_STR_REF (@25)
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@23)
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=139 target=1 parameter1= RESOLVE_STR_REF (@23)
 		END // Add extended effect
-		LPF ADD_ITEM_EFFECT 
-		INT_VAR 
-			opcode=139
-			target=1
-			parameter1= RESOLVE_STR_REF (@24)
-		END // Add extended effect	
-	END	 
+		LPF ADD_ITEM_EFFECT
+		INT_VAR
+			opcode=139 target=1 parameter1= RESOLVE_STR_REF (@24)
+		END // Add extended effect
+	END
 
 	// Add merchant to Firebeads House
 

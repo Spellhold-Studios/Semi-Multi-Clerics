@@ -77,5 +77,9 @@ Nivel 20+: Expulsa muertos vivientes como clérigo de 20vo nivel. ~
 
 @30    = ~Require BG2-ToB / BG2EE (BGT / EET)~
 @31    = ~Require IWD / IWDEE~
-@32    = ~Require BGEE / SOD~
+@32    = ~Require BGEE / SOD without EET~
 @33    = ~Incompatible with another component already installed~
+
+@34    = ~Incompatible with your game~
+@35    = ~Add a new reply when the store is empty~
+

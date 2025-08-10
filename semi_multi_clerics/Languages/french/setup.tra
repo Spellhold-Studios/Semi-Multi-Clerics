@@ -83,8 +83,11 @@ Niveau 20+ : Repousse les morts-vivants comme un prêtre de niveau 20.~
 
 @30    = ~Necessite BG2-ToB / BG2EE (BGT / EET)~
 @31    = ~Necessite IWD / IWDEE~
-@32    = ~Necessite BGEE / SOD~
+@32    = ~Necessite BGEE / SOD sans EET~
 @33    = ~Incompatible avec un autre composant deja installe~
+
+@34    = ~Incompatible avec votre jeu~
+@35    = ~Ajouter un nouvelle replique quand le magasin est vide~
 
 
 

@@ -286,3 +286,15 @@ OUTER_SET DELAYED = 1
 	INCLUDE ~Semi_multi_clerics/Lib/Mod_component.tpa~
 
 
+BEGIN @35
+DESIGNATED 50
+LABEL ~thebigg-semi-multi_Addition~
+REQUIRE_PREDICATE (GAME_IS ~tob bgt bgee iwd iwdee bg2ee eet~) @34
+
+	COMPILE ~Semi_multi_clerics/Dialog/empty.d~ USING ~weidu_external/Semi_multi_clerics/Languages/autotra/%s/tacprsp.tra~
+
+ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
+
+	COMPILE ~Semi_multi_clerics/Dialog/empty_BG.d~
+
+		END

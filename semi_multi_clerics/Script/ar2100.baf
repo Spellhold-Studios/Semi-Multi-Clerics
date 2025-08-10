@@ -1,8 +1,13 @@
 IF
-  Global("tb#prsp","MYAREA",0)
+	!Dead("tacprsp")
+	!Global("TACPRSP_EMPTY","GLOBAL",10)
+	OR(2)
+		!InMyArea("tacprsp")
+		Global("tb#prsp","MYAREA",0)
 THEN
-  RESPONSE #100
-    CreateCreature("tb#prsp",[423.901],2)
-    SetGlobal("tb#prsp","MYAREA",1)
+	RESPONSE #100
+		SetGlobal("tb#prsp","MYAREA",1)
+		CreateCreature("tb#prsp",[423.901],2)
+		Continue()
 END
 
