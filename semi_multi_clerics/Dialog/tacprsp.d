@@ -4,11 +4,11 @@ BEGIN ~TACPRSP~
 	IF ~
 	OR(3)
 		AreaCheck("AR0700")
-		AreaCheck("ar4500")
+		AreaCheck("AR4500")
 		AreaCheck("OH8100")~ THEN BEGIN hola
 		SAY @10
 		IF ~~ THEN REPLY @11 GOTO ciao
-		IF ~XPGT(LastTalkedToBy,46999)~ THEN REPLY @12 DO ~StartStore("tacprsp",LastTalkedToBy)~ EXIT
+		IF ~XPGT(LastTalkedToBy,46999)~ THEN REPLY @12 DO ~StartStore("TACPRSP",LastTalkedToBy)~ EXIT
 	END
 	
 	IF ~~ THEN BEGIN ciao

@@ -1,6 +1,6 @@
 IF
 	!Dead("tacprsp")
-	!Global("TACPRSP_EMPTY","GLOBAL",10)
+	!Global("TACPRSP_EMPTY","GLOBAL",11)
 	OR(2)
 		!InMyArea("tacprsp")
 		Global("tb#prsp","MYAREA",0)
@@ -8,6 +8,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("tb#prsp","MYAREA",1)
 		CreateCreature("tb#prsp",[787.388],3)
+		ActionOverride("tacprsp",ChangeAIScript("tacprBG",GENERAL))
 		Continue()
 END
 

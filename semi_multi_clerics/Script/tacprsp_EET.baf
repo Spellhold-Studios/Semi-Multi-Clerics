@@ -1,0 +1,133 @@
+//////////////////// EET (BG2, BP2) ////////////////////
+
+IF
+	!Global("TACPRBG","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRBG","GLOBAL",0)
+		SetGlobal("TACPRBG1","GLOBAL",0)
+		SetGlobal("TACPRBG2","GLOBAL",0)
+		SetGlobal("TACPRBG3","GLOBAL",0)
+		SetGlobal("TACPRBG4","GLOBAL",0)
+		SetGlobal("TACPRBG5","GLOBAL",0)
+		SetGlobal("TACPRBG6","GLOBAL",0)
+		SetGlobal("TACPRBG7","GLOBAL",0)
+		SetGlobal("TACPRBG8","GLOBAL",0)
+		SetGlobal("TACPRBG9","GLOBAL",0)
+		Continue()
+END
+
+IF
+	Global("TACPRSP_EMPTY","GLOBAL",0)
+	Global("TACPR_BG2","LOCALS",0)
+	AreaCheck("AR0700")
+THEN
+	RESPONSE #100
+		SetGlobal("TACPR_BG2","LOCALS",1)
+		Continue()
+END
+
+IF
+	Global("TACPRSP_EMPTY","GLOBAL",1)
+	Global("TACPR_BG2","LOCALS",0)
+	AreaCheck("AR0700")
+THEN
+	RESPONSE #100
+		SetGlobal("TACPR_BG2","LOCALS",1)
+		RemoveStoreItem("TACPRSP","TACPRSP",1)
+		Continue()
+END
+
+IF
+	Global("TACPRSP_EMPTY","GLOBAL",2)
+	Global("TACPR_BG2","LOCALS",0)
+	AreaCheck("AR0700")
+THEN
+	RESPONSE #100
+		SetGlobal("TACPR_BG2","LOCALS",1)
+		RemoveStoreItem("TACPRSP","TACPRSP",2)
+		Continue()
+END
+
+IF
+	Global("TACPRSP_EMPTY","GLOBAL",3)
+	Global("TACPR_BG2","LOCALS",0)
+	AreaCheck("AR0700")
+THEN
+	RESPONSE #100
+		SetGlobal("TACPR_BG2","LOCALS",1)
+		RemoveStoreItem("TACPRSP","TACPRSP",3)
+		Continue()
+END
+
+
+IF
+	Global("TACPRSP_EMPTY","GLOBAL",4)
+	Global("TACPR_BG2","LOCALS",0)
+	AreaCheck("AR0700")
+THEN
+	RESPONSE #100
+		SetGlobal("TACPR_BG2","LOCALS",1)
+		RemoveStoreItem("TACPRSP","TACPRSP",4)
+		Continue()
+END
+
+
+IF
+	Global("TACPRSP_EMPTY","GLOBAL",5)
+	Global("TACPR_BG2","LOCALS",0)
+	AreaCheck("AR0700")
+THEN
+	RESPONSE #100
+		SetGlobal("TACPR_BG2","LOCALS",1)
+		RemoveStoreItem("TACPRSP","TACPRSP",5)
+		Continue()
+END
+
+
+IF
+	Global("TACPRSP_EMPTY","GLOBAL",6)
+	Global("TACPR_BG2","LOCALS",0)
+	AreaCheck("AR0700")
+THEN
+	RESPONSE #100
+		SetGlobal("TACPR_BG2","LOCALS",1)
+		RemoveStoreItem("TACPRSP","TACPRSP",6)
+		Continue()
+END
+
+
+IF
+	Global("TACPRSP_EMPTY","GLOBAL",7)
+	Global("TACPR_BG2","LOCALS",0)
+	AreaCheck("AR0700")
+THEN
+	RESPONSE #100
+		SetGlobal("TACPR_BG2","LOCALS",1)
+		RemoveStoreItem("TACPRSP","TACPRSP",7)
+		Continue()
+END
+
+
+IF
+	Global("TACPRSP_EMPTY","GLOBAL",8)
+	Global("TACPR_BG2","LOCALS",0)
+	AreaCheck("AR0700")
+THEN
+	RESPONSE #100
+		SetGlobal("TACPR_BG2","LOCALS",1)
+		RemoveStoreItem("TACPRSP","TACPRSP",8)
+		Continue()
+END
+
+
+IF
+	Global("TACPRSP_EMPTY","GLOBAL",9)
+	Global("TACPR_BG2","LOCALS",0)
+	AreaCheck("AR0700")
+THEN
+	RESPONSE #100
+		SetGlobal("TACPR_BG2","LOCALS",1)
+		RemoveStoreItem("TACPRSP","TACPRSP",9)
+		Continue()
+END

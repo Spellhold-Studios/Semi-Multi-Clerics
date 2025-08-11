@@ -4,6 +4,8 @@
 
 	COMPILE EVALUATE_BUFFER ~semi_multi_clerics/Dialog/TACPRBG.d~ USING ~weidu_external/semi_multi_clerics/languages/autotra/%LANGUAGE%/tacprsp.tra~
 
+		COMPILE ~semi_multi_clerics/Script/tacprBG.baf~
+
 	COPY   ~semi_multi_clerics/Store/tacprsp.sto~	~override/tacprbg.sto~
 		SAY STORE_NAME @8
 		WRITE_LONG 0x14 100 // Sell markup
@@ -22,7 +24,7 @@
 			SAY NAME1     @7
 			SAY NAME2     @7
 			WRITE_SHORT 0x28      24832   // fighter_male_human
-			WRITE_ASCII SCRIPT_GENERAL ~tacprsp~ (8)
+			WRITE_ASCII SCRIPT_GENERAL ~tacprBG~ (8)
 			WRITE_ASCII             0x280   ~tacprsp~ (8)
 			WRITE_ASCII             0x2cc   ~tacprsp~ (8)
 
@@ -33,6 +35,8 @@
 		ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
 
 	EXTEND_TOP ~oh9360.BCS~ ~semi_multi_clerics/Script/oh9360.baf~
+
+	EXTEND_TOP ~tacprsp.BCS~ ~semi_multi_clerics/Script/tacprsp_EET.baf~
 
 		END
 
