@@ -290,6 +290,20 @@ BEGIN @35
 DESIGNATED 50
 LABEL ~thebigg-semi-multi_Addition~
 REQUIRE_PREDICATE (GAME_IS ~tob bgt bgee iwd iwdee bg2ee eet~) @34
+REQUIRE_PREDICATE ((MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 1 ||
+					MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 2 ||
+					MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 3 ||
+					MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 4 ||
+					MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 5 ||
+					MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 6 ||
+					MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 7 ||
+					MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 8 ||
+					MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 9 ||
+					MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 10 ||
+					MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 11 ||
+					MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 12 ||
+					MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 13 ||
+					MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 14)) ~Main component required~
 
 	COMPILE ~Semi_multi_clerics/Dialog/empty.d~ USING ~weidu_external/Semi_multi_clerics/Languages/autotra/%s/tacprsp.tra~
 
