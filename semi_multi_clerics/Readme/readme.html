@@ -302,7 +302,7 @@
 		<div id="headerdiv-middle">
 		<span class="headerdiv-line">Author: Bob Tokyo</span> | <span
 		class="headerdiv-line">
-		WeiDU, maintainer: the bigg</a></span> | <span class="headerdiv-line"><a href="http://forums.spellholdstudios.net/index.php?showforum=158" target="_blank">Forum</a> (opens new window)</span> | <span class="headerdiv-line">Version: 0.3.0</span>
+		WeiDU, maintainer: the bigg</a></span> | <span class="headerdiv-line"><a href="http://forums.spellholdstudios.net/index.php?showforum=158" target="_blank">Forum</a> (opens new window)</span> | <span class="headerdiv-line">Version: 0.4.2</span>
 		</div>
 		<div id="headerdiv-bottom">
 		<a href="#intro">Introduction</a> | <a href="#compatibility">Compatibility notes</a> | <a href="#installation">Installation</a> | <a href="#components">Components</a>| <a href="#version">Version history</a> | <a href="#credits">Credits</a> | <a href="#contact">Contact info</a>
@@ -315,12 +315,21 @@
 		Introduction
 		</h4>
 		<p>
-		This mod will add various clerical spells to wizard magic users via a new
-		item, effectively turning them into previously unavailable X/Cleric kits /
+		</h5,5>
+		</p>
+		<p>
+		<div class=divimp>
+		This mod will add various clerical spells (<b><span class='small'>including one that can be used to turn undead</span></b>) to wizard magic users via a new
+		item, effectively turning them into previously unavailable X / Cleric kits /
 		multiclass combinations.
-		<br><a href="./readme.orig.html">The original readme</a> is available for
+		</div>
+		<div class=divimp>
+		<a href="./readme.orig.html">The original readme</a> is available for
 		reference as well and contains information on the exact effects of the mod.
 		In case of conflict, trust this document over the old readme.
+		</div>
+		<a name="c1" id="Robes"></a>
+		<h5,5>
 		</p>
 		
 		<address>
@@ -337,17 +346,31 @@
 		</h4>
 		<p>
 		<br>Generally speaking, this mod should be compatible with virtually any
-		other decently made WeiDU mod in existance. In over three years, no
+		other decently made WeiDU mod in existance. In over twenty years, no
 		incompatibility has been reported.
 		</p>
 		<p>
-		However, the mod can be used only if you have access to either Waukeen
-		Promenade and/or the Pocket Plane; if you cannot, you can use the following
-		CLUA console command to start the mod:
+		<ul class="version-list">
+		<li>For BG2, the mod can be used only if you have access to either Waukeen
+		Promenade and /or the Pocket Plane; if you cannot, you can use the following CLUA console command to acces the store:</li>
+		</ul>
 		<div class="divimp">CLUAConsole:CreateCreature("tb#prsp")</div>
 		</p>
 		<p>
-		If you are playing on IWDEE or BGEE, the seller can be found near Orrik's tower or in Firebeard house or at the Sorcerous Sundries. (But you'll be allowed to buy the spell book only once you've reached 5000 XP.)
+		<ul class="version-list">
+		<li>If you are playing on BGT or EET, the seller can be found at Firebeard house, at the Sorcerous Sundries, in Waukeen
+		Promenade and the Pocket Plane.</li>
+		</ul>
+		</p>
+		<p>
+		<ul class="version-list">
+		<li>If you are playing on IWDEE or BGEE, the seller can be found near Orrik's tower or in Firebeard house or at the Sorcerous Sundries. (But you'll be allowed to buy the spell book only once you've reached 5000 XP.).</li>
+		</ul>
+		</p>
+		<p>
+		<ul class="version-list">
+		<li>Merchant will also appear in hub areas from Black Pits I and II.</li>
+		</ul>
 		</p>
 		<address>
 		<span class="address-footer-1">Semi Multi Clerics &gt; Compatibility Notes</span>
@@ -430,10 +453,10 @@
 		<ul>
 			<li>ar0700, x1715 y1020 (Waukeen's Promenade, north of the Adventurer's
 			Mart)</li>
-			<li>ar4500, x2250 y1350 (in the Pocket Plane)</li>
-			<li>ar2100, x423 y901 (Kuldahar, Near Horrick Tower on IWDEE)</li>
+			<li>ar4500, x2250 y1350 (the Pocket Plane)</li>
+			<li>ar2100, x423 y901 (Kuldahar, Near Horrick Tower for IWDEE)</li>
 			<li>ar3333 / bg3333, x420 y189 (Beregost, Firebead house)</li>
-			<li>ar0703 / bg0703, x686 y201 (Baldur's GateSorcerous Sundries)</li>
+			<li>ar0703 / bg0703, x686 y201 (Baldur's Gate Sorcerous Sundries)</li>
 		</ul>
 		After talking to him, you can acquire a spell book that will teach you
 		some divine spells (including one that can be used to turn undead), at the
@@ -480,6 +503,14 @@
 		Accessible after Underdark (bg2) or at Baldur's Gate (bg1) or after Dragon's Eye (Iwd) / 25% chance of losing 2 points of Dexterite and Constitution.
 		</p>
 		</div>
+		<p align="left"><b>Add a new reply when the store is empty</b></p>
+		</h5,5>
+		</p>
+		<p>
+		<div class=divimp>
+		The merchant will simply tell you that it's done and leave.
+		</p>
+		</div>
 		<address>
 		<span class="address-footer-1">Semi Multi Mod &gt; Components</span>
 		<a href="#top">BACK TO TOP</a>
@@ -498,7 +529,8 @@
 	  	</p>
 		<ul class="version-list">
 		<li>Modify component installation</li>
-		<li></li>
+		<li>Store adaptation between BGEE and BG2EE for EET</li>
+		<li>Additionnal component that make the merchant leave if the store is empty</li>
 		</ul>
 
 		<p class="version">

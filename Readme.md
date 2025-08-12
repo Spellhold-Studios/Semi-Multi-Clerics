@@ -18,11 +18,13 @@ For IWD, IWDEE, Baldur's Gate 2, BG2: EE, BGT and the Enhanced Edition Trilogy (
 ## Description:
 ------------
 
-A new merchant named Mystra's Witness at Waukeen's Promenade (in front of Fennecia's house). After talking to him, you can acquire a spell book that will teach you some divine spells (including one that can be used to turn undead), at the cost of some skill points and experience. 
+A new merchant named Mystra's Witness at Waukeen's Promenade (in front of Fennecia's house). After talking to him, you can acquire a spell book that will teach you some divine spells <sub><sup>**(including one that can be used to turn undead)**</sub></sup>, at the cost of some skill points and experience. 
 
-This mod allows to build original class / kit combinations. (ex:  Kensaï/mage (cleric), Sorcerer (cleric) ou Skald (cleric)
+This mod allows to build original class / kit combinations. (ex:  Kensaï / mage (cleric), Sorcerer (cleric) ou Skald (cleric)
 
 If you are playing on IWDEE or BGEE, the seller can be found near Orrik's tower or in Firebeard house or at the Sorcerous Sundries. (But you'll be allowed to buy the spell book only once you've reached 5000 XP.)
+
+Merchant will also appear in the Pocket Plane and hub areas from Black Pits I and II.
 
 ## Install:
 --------
@@ -38,6 +40,8 @@ Follow the prompt
 Version 0.4.2 - August 2025:
 
 - Modify component installation
+- Store adaptation between BGEE and BG2EE for EET
+- Additionnal component that make the merchant leave if the store is empty
 
 Version 0.4.1 - June 2024:  
 
