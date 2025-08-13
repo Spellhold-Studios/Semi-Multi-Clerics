@@ -2,42 +2,42 @@
 
 ![Language](https://img.shields.io/static/v1?label=language&message=english%20%7C%20french%20%7C%20italian%20%7C%20spanish%20%7C%20russian%20%7C%20&color=informational)
 
-**Author** : **Bob Tokyo**
+**Auteur** : **Bob Tokyo**
 
-**Maintainer** : **The Bigg**
+**Mainteneur** : **The Bigg**
 
-[Link to original Mod Forum](http://www.shsforums.net/topic/27189-new-version-of-semi-multi-clerics-released/)
+[Lien vers le forum original du Mod](http://www.shsforums.net/topic/27189-new-version-of-semi-multi-clerics-released/)
 
-[Clicker pour acceder au readme en français](https://github.com/Plutonium-X/KIT_Semi_Multi/blob/master/Readme_FR.md)
+[Click to access the Readme in English](https://github.com/Plutonium-X/KIT_Semi_Multi/blob/master/Readme.md)
 
-[Click to access the official Readme](https://htmlpreview.github.io/?https://github.com/Plutonium-X/KIT_Semi_Multi/blob/master/semi_multi_clerics/Readme/readme.html)
-
-
-
-For IWD, IWDEE, BG: EE, Baldur's Gate 2, BG2: EE, BGT and the Enhanced Edition Trilogy (EET).
+[Clicker pour acceder au readme officiel en anglais](https://htmlpreview.github.io/?https://github.com/Plutonium-X/KIT_Semi_Multi/blob/master/semi_multi_clerics/Readme/readme.html)
 
 
-## Description:
-------------
 
-A new merchant named Mystra's Witness at Waukeen's Promenade (in front of Fennecia's house). After talking to him, you can acquire a spell book that will teach you some divine spells <sub><sup>**(including one that can be used to turn undead)**</sub></sup>, at the cost of some skill points and experience. 
+Pour IWD, IWDEE, BG: EE, Baldur's Gate 2, BG2: EE, BGT and the Enhanced Edition Trilogy (EET).
 
-This mod allows to build original class / kit combinations. (ex:  Kensaï / mage (cleric), Sorcerer (cleric) ou Skald (cleric)
 
-If you are playing on IWDEE or BGEE, the seller can be found near Orrik's tower or in Firebeard house or at the Sorcerous Sundries. (But you'll be allowed to buy the spell book only once you've reached 5000 XP.)
+## Description :
+---------------
 
-Merchant will also appear in the Pocket Plane and hub areas from Black Pits I and II.
+Un nouveau marchand nommé « Envoyé de Mystra » sera présent sur la promenade de Waukyne (devant la maison de Fennecia). Après lui avoir parlé, vous pourrez acquérir un grimoire qui vous permettra d'apprendre divers sorts divins, <sub><sup>**(dont l'un peut être utilisé pour repousser les morts-vivants)**</sub></sup>, en échange de quelques points de capacités et d'une quantité d'expérience. 
 
-## Install:
---------
+Ce mod permet de créer des combinaisons de classes ou kits inédites. (ex :  Kensaï / Mage (Clerc), Ensorceleur (Clerc) ou même un Scalde (Clerc)
 
-Extract archive contents into your game directory
-Run Setup-iwditempack.exe
-Follow the prompt
+Si vous utilisez IWDEE ou BGEE, le vendeur se trouvera près de la tour d'Orrick, chez Perleflamme Cheveuxd'Elfe à Bérégost ou au Bazar Magique de la Porte de Baldur. (Le grimoire sera accessible après avoir atteint 5000 XP.)
+
+Le marchand apparaîtra également dans l'Antichambre et les zones de repos des Fosses Noires I et II.
+
+## Installation :
+----------------
+
+Extraire le contenu de l'archive dans le répertoire du jeu.
+Lancer le Setup-semi_multi_clerics.exe
+Et suivre les indications.
 
 
 ## Version History:
-----------------
+------------------
 
 Version 0.4.2 - August 2025:
 
