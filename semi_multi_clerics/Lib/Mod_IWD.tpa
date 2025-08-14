@@ -1,6 +1,6 @@
 	// Mod_IWD.tpa
 
-		COMPILE ~semi_multi_clerics/Dialog/TACPRIW.d~
+		COMPILE ~semi_multi_clerics/Dialog/TACPRIW.d~ USING ~weidu_external/semi_multi_clerics/languages/autotra/%LANGUAGE%/tacprsp.tra~
 
 	// Add merchant to Kuldahar  
 
