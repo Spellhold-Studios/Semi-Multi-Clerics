@@ -8,9 +8,9 @@
 
 [Lien vers le forum original du Mod](http://www.shsforums.net/topic/27189-new-version-of-semi-multi-clerics-released/)
 
-[Click to access the Readme in English](https://github.com/Plutonium-X/KIT_Semi_Multi/blob/master/Readme.md)
+[Click to access the Readme in English](https://github.com/11jo/semi_multi_clerics/blob/master/Readme.md)
 
-[Clicker pour acceder au readme officiel en anglais](https://htmlpreview.github.io/?https://github.com/Plutonium-X/KIT_Semi_Multi/blob/master/semi_multi_clerics/Readme/readme.html)
+[Clicker pour acceder au readme officiel en anglais](https://htmlpreview.github.io/?https://github.com/11jo/semi_multi_clerics/blob/master/semi_multi_clerics/Readme/readme.html)
 
 
 
