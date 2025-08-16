@@ -36,7 +36,7 @@ ACTION_DEFINE_ARRAY fl#reload BEGIN setup END
 
 INCLUDE ~Semi_multi_clerics/Lib/gw_functions.tpa~
 
-	ACTION_IF NOT GAME_IS ~iwdee iwd bg2ee~ BEGIN
+	ACTION_IF GAME_IS ~bgee bgt eet~ BEGIN
 INCLUDE ~Semi_multi_clerics/Lib/g3_cpmvars_master.tpa~
 	END
 
