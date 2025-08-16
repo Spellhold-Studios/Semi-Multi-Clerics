@@ -1,0 +1,13 @@
+ADD_TRANS_TRIGGER TACPRSP 0 ~Global("TACPRSP_EMPTY","GLOBAL",0)~ DO 1
+
+EXTEND_BOTTOM TACPRSP 0
+		IF ~XPGT(LastTalkedToBy,46999) Global("TACPR_BG2","LOCALS",1)~ THEN REPLY @12 DO ~StartStore("TACPRS1",LastTalkedToBy)~ EXIT
+		IF ~XPGT(LastTalkedToBy,46999) Global("TACPR_BG2","LOCALS",2)~ THEN REPLY @12 DO ~StartStore("TACPRS2",LastTalkedToBy)~ EXIT
+		IF ~XPGT(LastTalkedToBy,46999) Global("TACPR_BG2","LOCALS",3)~ THEN REPLY @12 DO ~StartStore("TACPRS3",LastTalkedToBy)~ EXIT
+		IF ~XPGT(LastTalkedToBy,46999) Global("TACPR_BG2","LOCALS",4)~ THEN REPLY @12 DO ~StartStore("TACPRS4",LastTalkedToBy)~ EXIT
+		IF ~XPGT(LastTalkedToBy,46999) Global("TACPR_BG2","LOCALS",5)~ THEN REPLY @12 DO ~StartStore("TACPRS5",LastTalkedToBy)~ EXIT
+		IF ~XPGT(LastTalkedToBy,46999) Global("TACPR_BG2","LOCALS",6)~ THEN REPLY @12 DO ~StartStore("TACPRS6",LastTalkedToBy)~ EXIT
+		IF ~XPGT(LastTalkedToBy,46999) Global("TACPR_BG2","LOCALS",7)~ THEN REPLY @12 DO ~StartStore("TACPRS7",LastTalkedToBy)~ EXIT
+		IF ~XPGT(LastTalkedToBy,46999) Global("TACPR_BG2","LOCALS",8)~ THEN REPLY @12 DO ~StartStore("TACPRS8",LastTalkedToBy)~ EXIT
+		IF ~XPGT(LastTalkedToBy,46999) Global("TACPR_BG2","LOCALS",9)~ THEN REPLY @12 DO ~StartStore("TACPRS9",LastTalkedToBy)~ EXIT
+END

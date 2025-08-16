@@ -85,25 +85,25 @@ COPY ~Semi_multi_clerics/Creature/tacturn5.cre~	~override~
 	WRITE_ASCII 0x268 ~~ (8) // Default script
 */
 
-ACTION_IF GAME_IS ~bgt bg2 bg2ee eet~ THEN BEGIN
-
 	COPY   ~semi_multi_clerics/Store/tacprsp.sto~	~override~
 		SAY STORE_NAME @8
-		WRITE_LONG 0x14 150 // Sell markup
-		WRITE_SHORT 0x18 50 // Buy markup
+		WRITE_LONG 0x14 ~100~ // Sell markup
+		WRITE_LONG 0x18 ~50~ // Buy markup
 		// ADD_STORE_ITEM ~tacprsp~ #1 #1 #1 ~IDENTIFIED~ #10	 
 		LPF ADD_STORE_ITEM_EX
 			INT_VAR stack=10 
 			STR_VAR item_name=~tacprsp~ flags=~identified~
 		END
 
+ACTION_IF GAME_IS ~bgt bg2 bg2ee eet~ THEN BEGIN
+
 	COPY_EXISTING   ~wmart1.cre~	~override/tb#prsp.cre~
 			SAY NAME1     @7
 			SAY NAME2     @7
-			WRITE_SHORT 0x28      24832   // fighter_male_human
-			WRITE_ASCII SCRIPT_GENERAL ~tacprsp~ (8)
-			WRITE_ASCII             0x280   ~tacprsp~ (8)
-			WRITE_ASCII             0x2cc   ~tacprsp~ (8)
+			WRITE_LONG  0x028 IDS_OF_SYMBOL(~ANIMATE~ ~FIGHTER_MALE_HUMAN~)
+			WRITE_ASCII SCRIPT_GENERAL  ~tacprsp~ (8)
+			WRITE_ASCII	0x280   ~tacprsp~ (8)
+			WRITE_ASCII	0x2cc   ~tacprsp~ (8)
 
 	 	// Adapte inconvenients  
 
@@ -112,7 +112,7 @@ ACTION_IF GAME_IS ~bgt bg2 bg2ee eet~ THEN BEGIN
 		SAY NAME2 @2
 		SAY UNIDENTIFIED_DESC @3
 		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_SHORT 0x34 1000 // Store price
+		WRITE_LONG 0x34 1000 // Store price
      PATCH_IF (ADOUCIE == 1) BEGIN	
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
 		LPF ADD_ITEM_EFFECT

@@ -7,8 +7,8 @@
 		COPY_EXISTING   ~pomab.cre~	~override/tb#prsp.cre~
 			SAY NAME1     @7
 			SAY NAME2     @7
-			WRITE_SHORT 0x28      24832   // fighter_male_human
-			WRITE_ASCII SCRIPT_GENERAL ~tacprsp~ (8)
+			WRITE_LONG  0x028 IDS_OF_SYMBOL(~ANIMATE~ ~FIGHTER_MALE_HUMAN~)
+			WRITE_ASCII SCRIPT_GENERAL   ~tacprsp~ (8)
 			WRITE_ASCII	0x280   ~tacprsp~ (8)
 			WRITE_ASCII	0x2cc   ~tacprsp~ (8)
 
@@ -20,7 +20,7 @@
 		SAY NAME2 @2
 		SAY UNIDENTIFIED_DESC @3
 		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_SHORT 0x34 1000 // Store price
+		WRITE_LONG 0x34 1000 // Store price
      PATCH_IF (ADOUCIE == 1) BEGIN
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
 		LPF ADD_ITEM_EFFECT

@@ -307,7 +307,7 @@ REQUIRE_PREDICATE ((MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 1 ||
 
 	COMPILE ~Semi_multi_clerics/Dialog/empty.d~ USING ~weidu_external/Semi_multi_clerics/Languages/autotra/%s/tacprsp.tra~
 
-ACTION_IF GAME_IS ~bgee eet~ THEN BEGIN
+ACTION_IF GAME_IS ~bgee bgt eet~ THEN BEGIN
 
 	COMPILE ~Semi_multi_clerics/Dialog/empty_BG.d~
 

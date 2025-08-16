@@ -8,12 +8,79 @@
 
 	COPY   ~semi_multi_clerics/Store/tacprsp.sto~	~override/tacprbg.sto~
 		SAY STORE_NAME @8
-		WRITE_LONG 0x14 100 // Sell markup
-		WRITE_SHORT 0x18 50 // Buy markup
+		WRITE_LONG 0x14 ~70~ // Sell markup
+		WRITE_LONG 0x18 ~50~ // Buy markup
 		// ADD_STORE_ITEM ~tacprsp~ #1 #1 #1 ~IDENTIFIED~ #10	 
 		LPF ADD_STORE_ITEM_EX
 			INT_VAR stack=10 
 			STR_VAR item_name=~tacprbg~ flags=~identified~
+		END
+		
+		ACTION_IF GAME_IS ~bgt~ BEGIN
+
+	COPY   ~semi_multi_clerics/Store/tacprsp.sto~	~override/tacprs0.sto~
+		SAY STORE_NAME @8
+		WRITE_LONG 0x14 ~100~ // Sell markup
+		WRITE_SHORT 0x18 ~50~ // Buy markup
+		// ADD_STORE_ITEM ~tacprsp~ #1 #1 #1 ~IDENTIFIED~ #10	 
+			LPF REMOVE_STORE_ITEM_EX
+				STR_VAR item_name=~tacprsp~
+			END
+
+	COPY_EXISTING   ~tacprs0.sto~	~override/tacprs1.sto~
+			LPF ADD_STORE_ITEM_EX
+				INT_VAR stack=9
+				STR_VAR item_name=~tacprsp~ flags=~identified~
+			END
+
+	COPY_EXISTING   ~tacprs0.sto~	~override/tacprs2.sto~
+			LPF ADD_STORE_ITEM_EX
+				INT_VAR stack=8
+				STR_VAR item_name=~tacprsp~ flags=~identified~
+			END
+
+	COPY_EXISTING   ~tacprs0.sto~	~override/tacprs3.sto~
+			LPF ADD_STORE_ITEM_EX
+				INT_VAR stack=7
+				STR_VAR item_name=~tacprsp~ flags=~identified~
+			END
+
+	COPY_EXISTING   ~tacprs0.sto~	~override/tacprs4.sto~
+			LPF ADD_STORE_ITEM_EX
+				INT_VAR stack=6
+				STR_VAR item_name=~tacprsp~ flags=~identified~
+			END
+
+	COPY_EXISTING   ~tacprs0.sto~	~override/tacprs5.sto~
+			LPF ADD_STORE_ITEM_EX
+				INT_VAR stack=5
+				STR_VAR item_name=~tacprsp~ flags=~identified~
+			END
+
+	COPY_EXISTING   ~tacprs0.sto~	~override/tacprs6.sto~
+			LPF ADD_STORE_ITEM_EX
+				INT_VAR stack=4
+				STR_VAR item_name=~tacprsp~ flags=~identified~
+			END
+
+	COPY_EXISTING   ~tacprs0.sto~	~override/tacprs7.sto~
+			LPF ADD_STORE_ITEM_EX
+				INT_VAR stack=3
+				STR_VAR item_name=~tacprsp~ flags=~identified~
+			END
+
+	COPY_EXISTING   ~tacprs0.sto~	~override/tacprs8.sto~
+			LPF ADD_STORE_ITEM_EX
+				INT_VAR stack=2
+				STR_VAR item_name=~tacprsp~ flags=~identified~
+			END
+
+	COPY_EXISTING   ~tacprs0.sto~	~override/tacprs9.sto~
+			LPF ADD_STORE_ITEM_EX
+				INT_VAR stack=1
+				STR_VAR item_name=~tacprsp~ flags=~identified~
+			END
+
 		END
 
 	ACTION_IF (GAME_IS ~bgee~ AND NOT GAME_IS ~eet~) THEN BEGIN
@@ -23,7 +90,7 @@
 		COPY_EXISTING   ~INNKE2.CRE~	~override/tb#prsp.cre~
 			SAY NAME1     @7
 			SAY NAME2     @7
-			WRITE_SHORT 0x28      24832   // fighter_male_human
+			WRITE_LONG  0x028 IDS_OF_SYMBOL(~ANIMATE~ ~FIGHTER_MALE_HUMAN~)
 			WRITE_ASCII SCRIPT_GENERAL ~tacprBG~ (8)
 			WRITE_ASCII             0x280   ~tacprsp~ (8)
 			WRITE_ASCII             0x2cc   ~tacprsp~ (8)
@@ -38,6 +105,12 @@
 
 	EXTEND_TOP ~tacprsp.BCS~ ~semi_multi_clerics/Script/tacprsp_EET.baf~
 
+		END ELSE ACTION_IF GAME_IS ~bgt~ BEGIN
+
+		COMPILE ~semi_multi_clerics/Dialog/empty_BGT.d~ USING ~weidu_external/semi_multi_clerics/languages/autotra/%LANGUAGE%/tacprsp.tra~
+
+	EXTEND_TOP ~tacprsp.BCS~ ~semi_multi_clerics/Script/tacprsp_BGT.baf~
+
 		END
 
 		// Adapte inconvenients  
@@ -47,7 +120,7 @@
 		SAY NAME2 @2
 		SAY UNIDENTIFIED_DESC @3
 		LPF ~GW_WRITE_EE_ITM_DESCRIPTIONS~ STR_VAR GW_desc_to_update = "@4" END
-		WRITE_SHORT 0x34 1000 // Store price
+		WRITE_LONG 0x34 1000 // Store price
      PATCH_IF (ADOUCIE == 1) BEGIN	
 		LPF DELETE_ITEM_EFFECT INT_VAR opcode_to_delete=104 END // Delete extended effect
 		LPF ADD_ITEM_EFFECT
