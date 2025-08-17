@@ -302,7 +302,7 @@
 		<div id="headerdiv-middle">
 		<span class="headerdiv-line">Author: Bob Tokyo</span> | <span
 		class="headerdiv-line">
-		WeiDU, maintainer: the bigg</a></span> | <span class="headerdiv-line"><a href="http://forums.spellholdstudios.net/index.php?showforum=158" target="_blank">Forum</a> (opens new window)</span> | <span class="headerdiv-line">Version: 0.4.2</span>
+		WeiDU, maintainer: the bigg</a></span> | <span class="headerdiv-line"><a href="http://forums.spellholdstudios.net/index.php?showforum=158" target="_blank">Forum</a> (opens new window)</span> | <span class="headerdiv-line">Version: 0.4.3</span>
 		</div>
 		<div id="headerdiv-bottom">
 		<a href="#intro">Introduction</a> | <a href="#compatibility">Compatibility notes</a> | <a href="#installation">Installation</a> | <a href="#components">Components</a>| <a href="#version">Version history</a> | <a href="#credits">Credits</a> | <a href="#contact">Contact info</a>
@@ -344,11 +344,20 @@
 		<h4>
 		Compatibility notes
 		</h4>
+		<div class=divimp>
+		For BGT user, when Tobex is installed the item price is lowered to 1Po due to option <a href="https://github.com/BGforgeNet/TobEx/blob/05f7c1c2eb19195b5c96a55f643b7d9d7eef78ee/WeiDU/TobEx/TobEx_redist/TobEx_ini.txt#L1862-L1871">Item Recharge Mod</a>.<br>
+		<br>
+		Can be disabled in an ongoing game will setting :<br>
+		<br>
+		<b><FONT size="3pt"><code>Item Recharge Mod=1</code></FONT><span></b> to <b><FONT size="3pt"><code>Item Recharge Mod=0</code></FONT></b> in folder <i><FONT size="3pt"><code>Baldurs Gate 2\TobEx_ini\<b>TobExCore.ini</i></code></FONT></b>.
+		</div>
+		<hr>
 		<p>
 		<br>Generally speaking, this mod should be compatible with virtually any
 		other decently made WeiDU mod in existance. In over twenty years, no
 		incompatibility has been reported.
-		</p>
+		</p><br>
+		<hr>
 		<p>
 		<ul class="version-list">
 		<li>For BG2, the mod can be used only if you have access to either Waukeen
@@ -523,6 +532,16 @@
 		<h4>
 		Version History
 		</h4>
+		
+		<p class="version">
+	  Version 0.4.3 - August 2025:
+	  	</p>
+		<ul class="version-list">
+		<li>Workaround for continuity in BGT</li>
+		<li>Some WRITE_SHORT to WRITE_LONG</li>
+		<li>Move misplaced ACTION_IF GAME_IS bgt bg2 bg2ee eet THEN BEGIN preventing store installation on IWD</li>
+		<li>GAME_IS instead of NOT GAME_IS</li>
+		</ul>
 		
 		<p class="version">
 	  Version 0.4.2 - August 2025:

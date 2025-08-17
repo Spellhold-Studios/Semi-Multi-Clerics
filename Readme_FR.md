@@ -17,6 +17,13 @@
 Pour IWD, IWDEE, BG: EE, Baldur's Gate 2, BG2: EE, BGT and the Enhanced Edition Trilogy (EET).
 
 
+#### Compatibilité :
+
+Pour les utilisateurs de BGT, lorsque Tobex est installé, le prix de l'article est abaissé à 1Po en raison de l'option [Item Recharge Mod](https://github.com/BGforgeNet/TobEx/blob/05f7c1c2eb19195b5c96a55f643b7d9d7eef78ee/WeiDU/TobEx/TobEx_redist/TobEx_ini.txt#L1862-L1871)
+
+Cette option peut être désactivée même dans une partie en cours en remplaçant **`Item Recharge Mod=1`** par **`Item Recharge Mod=0`** dans ***Baldurs Gate 2\TobEx_ini\\`TobExCore.ini`***.
+
+
 ## Description :
 ---------------
 
@@ -38,6 +45,13 @@ Et suivre les indications.
 
 ## Version History:
 ------------------
+
+Version 0.4.3 - August 2025:
+
+- Workaround for continuity in BGT
+- Some WRITE_SHORT  to WRITE_LONG
+- Move misplaced ACTION_IF GAME_IS ~bgt bg2 bg2ee eet~ THEN BEGIN preventing store installation on IWD
+- GAME_IS instead of NOT GAME_IS
 
 Version 0.4.2 - August 2025:
 

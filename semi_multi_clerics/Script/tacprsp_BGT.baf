@@ -32,7 +32,9 @@ END
 IF
 	Global("TACPRSP_EMPTY","GLOBAL",1)
 	Global("TACPR_BG2","LOCALS",0)
-	AreaCheck("AR0700")
+	OR(2)
+		AreaCheck("AR4500")
+		AreaCheck("AR0700")
 THEN
 	RESPONSE #100
 		SetGlobal("TACPR_BG2","LOCALS",1)
@@ -42,7 +44,9 @@ END
 IF
 	Global("TACPRSP_EMPTY","GLOBAL",2)
 	Global("TACPR_BG2","LOCALS",0)
-	AreaCheck("AR0700")
+	OR(2)
+		AreaCheck("AR4500")
+		AreaCheck("AR0700")
 THEN
 	RESPONSE #100
 		SetGlobal("TACPR_BG2","LOCALS",2)
@@ -52,7 +56,9 @@ END
 IF
 	Global("TACPRSP_EMPTY","GLOBAL",3)
 	Global("TACPR_BG2","LOCALS",0)
-	AreaCheck("AR0700")
+	OR(2)
+		AreaCheck("AR4500")
+		AreaCheck("AR0700")
 THEN
 	RESPONSE #100
 		SetGlobal("TACPR_BG2","LOCALS",3)
@@ -63,7 +69,9 @@ END
 IF
 	Global("TACPRSP_EMPTY","GLOBAL",4)
 	Global("TACPR_BG2","LOCALS",0)
-	AreaCheck("AR0700")
+	OR(2)
+		AreaCheck("AR4500")
+		AreaCheck("AR0700")
 THEN
 	RESPONSE #100
 		SetGlobal("TACPR_BG2","LOCALS",4)
@@ -74,7 +82,9 @@ END
 IF
 	Global("TACPRSP_EMPTY","GLOBAL",5)
 	Global("TACPR_BG2","LOCALS",0)
-	AreaCheck("AR0700")
+	OR(2)
+		AreaCheck("AR4500")
+		AreaCheck("AR0700")
 THEN
 	RESPONSE #100
 		SetGlobal("TACPR_BG2","LOCALS",5)
@@ -85,7 +95,9 @@ END
 IF
 	Global("TACPRSP_EMPTY","GLOBAL",6)
 	Global("TACPR_BG2","LOCALS",0)
-	AreaCheck("AR0700")
+	OR(2)
+		AreaCheck("AR4500")
+		AreaCheck("AR0700")
 THEN
 	RESPONSE #100
 		SetGlobal("TACPR_BG2","LOCALS",6)
@@ -96,7 +108,9 @@ END
 IF
 	Global("TACPRSP_EMPTY","GLOBAL",7)
 	Global("TACPR_BG2","LOCALS",0)
-	AreaCheck("AR0700")
+	OR(2)
+		AreaCheck("AR4500")
+		AreaCheck("AR0700")
 THEN
 	RESPONSE #100
 		SetGlobal("TACPR_BG2","LOCALS",7)
@@ -107,7 +121,9 @@ END
 IF
 	Global("TACPRSP_EMPTY","GLOBAL",8)
 	Global("TACPR_BG2","LOCALS",0)
-	AreaCheck("AR0700")
+	OR(2)
+		AreaCheck("AR4500")
+		AreaCheck("AR0700")
 THEN
 	RESPONSE #100
 		SetGlobal("TACPR_BG2","LOCALS",8)
@@ -118,7 +134,9 @@ END
 IF
 	Global("TACPRSP_EMPTY","GLOBAL",9)
 	Global("TACPR_BG2","LOCALS",0)
-	AreaCheck("AR0700")
+	OR(2)
+		AreaCheck("AR4500")
+		AreaCheck("AR0700")
 THEN
 	RESPONSE #100
 		SetGlobal("TACPR_BG2","LOCALS",9)
