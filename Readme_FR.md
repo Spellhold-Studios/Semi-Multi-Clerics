@@ -8,18 +8,19 @@
 
 [Lien vers le forum original du Mod](http://www.shsforums.net/topic/27189-new-version-of-semi-multi-clerics-released/)
 
-[Click to access the Readme in English](https://github.com/11jo/semi_multi_clerics/blob/master/Readme.md)
+[Click to access the Readme in English](https://github.com/Spellhold-Studios/semi_multi_clerics/blob/master/Readme.md)
 
-[Clicker pour acceder au readme officiel en anglais](https://htmlpreview.github.io/?https://github.com/11jo/semi_multi_clerics/blob/master/semi_multi_clerics/Readme/readme.html)
+[Clicker pour acceder au readme officiel en anglais](https://htmlpreview.github.io/?https://github.com/Spellhold-Studios/semi_multi_clerics/blob/master/semi_multi_clerics/Readme/readme.html)
 
 
 
 Pour IWD, IWDEE, BG: EE, Baldur's Gate 2, BG2: EE, BGT and the Enhanced Edition Trilogy (EET).
 
+---
 
 #### Compatibilité :
 
-Pour les utilisateurs de BGT, lorsque Tobex est installé, le prix de l'article est abaissé à 1Po en raison de l'option [Item Recharge Mod](https://github.com/BGforgeNet/TobEx/blob/05f7c1c2eb19195b5c96a55f643b7d9d7eef78ee/WeiDU/TobEx/TobEx_redist/TobEx_ini.txt#L1862-L1871)
+Pour les utilisateurs de BGT / BG2, lorsque Tobex est installé, le prix de l'article est abaissé à 1Po en raison de l'option [Item Recharge Mod](https://github.com/BGforgeNet/TobEx/blob/05f7c1c2eb19195b5c96a55f643b7d9d7eef78ee/WeiDU/TobEx/TobEx_redist/TobEx_ini.txt#L1862-L1871)
 
 Cette option peut être désactivée même dans une partie en cours en remplaçant **`Item Recharge Mod=1`** par **`Item Recharge Mod=0`** dans ***Baldurs Gate 2\TobEx_ini\\`TobExCore.ini`***.
 

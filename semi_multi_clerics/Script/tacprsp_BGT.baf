@@ -1,7 +1,7 @@
 //////////////////// BGT (BG2) ////////////////////
 /*
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	AreaCheck("AR0700")
 	Global("TACPRSP_BGT","MYAREA",0)
 THEN

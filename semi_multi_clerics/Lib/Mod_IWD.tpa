@@ -31,6 +31,13 @@
 			parameter1=~-5000~
 			parameter2=0
 		END // Add extended effect
+		LPF ADD_ITEM_EFFECT // Global Variable
+		INT_VAR
+			opcode=265
+			parameter2= ~1~
+			STR_VAR
+				resource = ~TACREAD~
+		END // Add extended effect
 		LPF ADD_ITEM_EFFECT
 		INT_VAR
 			opcode=139
@@ -64,6 +71,13 @@
 			timing=1
 			parameter1=~-5000~
 			parameter2=0
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT // Global Variable
+		INT_VAR
+			opcode=265
+			parameter2= ~1~
+			STR_VAR
+				resource = ~TACREAD~
 		END // Add extended effect
 		LPF ADD_ITEM_EFFECT
 		INT_VAR

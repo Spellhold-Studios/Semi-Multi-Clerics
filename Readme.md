@@ -8,18 +8,19 @@
 
 [Link to original Mod Forum](http://www.shsforums.net/topic/27189-new-version-of-semi-multi-clerics-released/)
 
-[Clicker pour acceder au readme en français](https://github.com/11jo/semi_multi_clerics/blob/master/Readme_FR.md)
+[Clicker pour acceder au readme en français](https://github.com/Spellhold-Studios/semi_multi_clerics/blob/master/Readme_FR.md)
 
-[Click to access the official Readme](https://htmlpreview.github.io/?https://github.com/11jo/semi_multi_clerics/blob/master/semi_multi_clerics/Readme/readme.html)
+[Click to access the official Readme](https://htmlpreview.github.io/?https://github.com/Spellhold-Studios/semi_multi_clerics/blob/master/semi_multi_clerics/Readme/readme.html)
 
 
 
 For IWD, IWDEE, BG: EE, Baldur's Gate 2, BG2: EE, BGT and the Enhanced Edition Trilogy (EET).
 
+--- 
 
 #### Compatibility :
 
-For BGT user, when Tobex is installed the item price is lowered to 1Po due to option [Item Recharge Mod](https://github.com/BGforgeNet/TobEx/blob/05f7c1c2eb19195b5c96a55f643b7d9d7eef78ee/WeiDU/TobEx/TobEx_redist/TobEx_ini.txt#L1862-L1871)
+For BGT / BG2 userS, when Tobex is installed the item price is lowered to 1Po due to option [Item Recharge Mod](https://github.com/BGforgeNet/TobEx/blob/05f7c1c2eb19195b5c96a55f643b7d9d7eef78ee/WeiDU/TobEx/TobEx_redist/TobEx_ini.txt#L1862-L1871)
 
 The option can be disabled in an ongoing game will setting **`Item Recharge Mod=1`** to **`Item Recharge Mod=0`** in ***Baldurs Gate 2\TobEx_ini\\`TobExCore.ini`***.
 

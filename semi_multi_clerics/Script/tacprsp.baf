@@ -1,7 +1,7 @@
 //////////////////// BG2 IWD BP2 ////////////////////
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP1","GLOBAL",0)
 	Global("TACPRSP","GLOBAL",0)
 	NumItemsParty("TACPRSP",1)
@@ -15,7 +15,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP1","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -29,7 +29,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP2","GLOBAL",0)
 	Global("TACPRSP","GLOBAL",0)
 	NumItemsParty("TACPRSP",2)
@@ -44,7 +44,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP2","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -58,7 +58,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP3","GLOBAL",0)
 	Global("TACPRSP","GLOBAL",0)
 	NumItemsParty("TACPRSP",3)
@@ -73,7 +73,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP3","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -87,7 +87,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP4","GLOBAL",0)
 	NumItemsParty("TACPRSP",4)
@@ -102,7 +102,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP4","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -116,7 +116,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP5","GLOBAL",0)
 	NumItemsParty("TACPRSP",5)
@@ -131,7 +131,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP5","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -145,7 +145,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP6","GLOBAL",0)
 	NumItemsParty("TACPRSP",6)
@@ -160,7 +160,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP6","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -174,7 +174,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP7","GLOBAL",0)
 	NumItemsParty("TACPRSP",7)
@@ -189,7 +189,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP7","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -203,7 +203,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP8","GLOBAL",0)
 	NumItemsParty("TACPRSP",8)
@@ -218,7 +218,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP8","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -232,7 +232,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP9","GLOBAL",0)
 	NumItemsParty("TACPRSP",9)
@@ -247,7 +247,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP9","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -261,7 +261,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	Global("TACPRSP","GLOBAL",0)
 	NumItemsParty("TACPRSP",10)
 THEN
@@ -272,7 +272,7 @@ THEN
 END
 
 IF
-	InMyArea([GOODCUTOFF])
+	See([PC])
 	!Global("TACPRSP","GLOBAL",0)
 	!PartyHasItem("TACPRSP")
 THEN

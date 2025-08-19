@@ -105,7 +105,7 @@ ACTION_IF GAME_IS ~bgt tob bg2ee eet~ THEN BEGIN
 			WRITE_ASCII	0x280   ~tacprsp~ (8)
 			WRITE_ASCII	0x2cc   ~tacprsp~ (8)
 
-	 	// Adapte inconvenients  
+	 	// Adapte inconvenients
 
 	 COPY ~Semi_multi_clerics/Item/TACPRSP.ITM~	~override~
 		SAY NAME1 @1
@@ -122,6 +122,13 @@ ACTION_IF GAME_IS ~bgt tob bg2ee eet~ THEN BEGIN
 			timing=1
 			parameter1=~-47000~
 			parameter2=0
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT // Global Variable
+		INT_VAR
+			opcode=265
+			parameter2= ~1~
+			STR_VAR
+				resource = ~TACREAD~
 		END // Add extended effect
 		LPF ADD_ITEM_EFFECT
 		INT_VAR
@@ -156,6 +163,13 @@ ACTION_IF GAME_IS ~bgt tob bg2ee eet~ THEN BEGIN
 			timing=1
 			parameter1=~-47000~
 			parameter2=0
+		END // Add extended effect
+		LPF ADD_ITEM_EFFECT // Global Variable
+		INT_VAR
+			opcode=265
+			parameter2= ~1~
+			STR_VAR
+				resource = ~TACREAD~
 		END // Add extended effect
 		LPF ADD_ITEM_EFFECT
 		INT_VAR
