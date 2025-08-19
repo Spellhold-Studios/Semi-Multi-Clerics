@@ -2,14 +2,39 @@
 
 IF
 	See([PC])
+	!Global("TACPRSP","GLOBAL",0)
+	OR(2)
+		Global("TACPRSP_EMPTY","GLOBAL",10)
+		!PartyHasItem("TACPRSP")
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP","GLOBAL",0)
+		SetGlobal("TACPRSP1","GLOBAL",0)
+		SetGlobal("TACPRSP2","GLOBAL",0)
+		SetGlobal("TACPRSP3","GLOBAL",0)
+		SetGlobal("TACPRSP4","GLOBAL",0)
+		SetGlobal("TACPRSP5","GLOBAL",0)
+		SetGlobal("TACPRSP6","GLOBAL",0)
+		SetGlobal("TACPRSP7","GLOBAL",0)
+		SetGlobal("TACPRSP8","GLOBAL",0)
+		SetGlobal("TACPRSP9","GLOBAL",0)
+		Continue()
+END
+
+///////////////////
+
+IF
+	See([PC])
 	Global("TACPRSP1","GLOBAL",0)
 	Global("TACPRSP","GLOBAL",0)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	NumItemsParty("TACPRSP",1)
 	!NumItemsPartyGT("TACPRSP",1)
 THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",1)
 		SetGlobal("TACPRSP1","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
 		IncrementGlobal("TACPRSP_EMPTY","GLOBAL",1)
 		Continue()
 END
@@ -18,8 +43,9 @@ IF
 	See([PC])
 	Global("TACPRSP1","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	!NumItemsParty("TACPRSP",0)
-	!NumItemsParty("TACPRSP",1)
+	NumItemsPartyGT("TACPRSP",1)
 THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",0)
@@ -30,8 +56,24 @@ END
 
 IF
 	See([PC])
+	Global("TACPRSP1","GLOBAL",1)
+	Global("TACPRSP","GLOBAL",1)
+	!NumItemsParty("TACPRSP",0)
+	!NumItemsParty("TACPRSP",1)
+	!NumItemsPartyGT("TACPRSP",1)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP_TALKED","LOCALS",0)
+		SetGlobal("TACPRSP","GLOBAL",0)
+		SetGlobal("TACPRSP1","GLOBAL",0)
+		Continue()
+END
+
+IF
+	See([PC])
 	Global("TACPRSP2","GLOBAL",0)
 	Global("TACPRSP","GLOBAL",0)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	NumItemsParty("TACPRSP",2)
 	!NumItemsPartyGT("TACPRSP",2)
 	!NumItemsPartyLT("TACPRSP",2)
@@ -39,6 +81,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",1)
 		SetGlobal("TACPRSP2","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
 		IncrementGlobal("TACPRSP_EMPTY","GLOBAL",2)
 		Continue()
 END
@@ -47,8 +90,9 @@ IF
 	See([PC])
 	Global("TACPRSP2","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	!NumItemsParty("TACPRSP",0)
-	!NumItemsParty("TACPRSP",2)
+	NumItemsPartyGT("TACPRSP",2)
 THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",0)
@@ -59,8 +103,24 @@ END
 
 IF
 	See([PC])
+	Global("TACPRSP2","GLOBAL",1)
+	Global("TACPRSP","GLOBAL",1)
+	!NumItemsParty("TACPRSP",0)
+	!NumItemsParty("TACPRSP",2)
+	!NumItemsPartyGT("TACPRSP",2)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP_TALKED","LOCALS",0)
+		SetGlobal("TACPRSP","GLOBAL",0)
+		SetGlobal("TACPRSP2","GLOBAL",0)
+		Continue()
+END
+
+IF
+	See([PC])
 	Global("TACPRSP3","GLOBAL",0)
 	Global("TACPRSP","GLOBAL",0)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	NumItemsParty("TACPRSP",3)
 	!NumItemsPartyGT("TACPRSP",3)
 	!NumItemsPartyLT("TACPRSP",3)
@@ -68,6 +128,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",1)
 		SetGlobal("TACPRSP3","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
 		IncrementGlobal("TACPRSP_EMPTY","GLOBAL",3)
 		Continue()
 END
@@ -76,8 +137,9 @@ IF
 	See([PC])
 	Global("TACPRSP3","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	!NumItemsParty("TACPRSP",0)
-	!NumItemsParty("TACPRSP",3)
+	NumItemsPartyGT("TACPRSP",3)
 THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",0)
@@ -88,8 +150,24 @@ END
 
 IF
 	See([PC])
+	Global("TACPRSP3","GLOBAL",1)
+	Global("TACPRSP","GLOBAL",1)
+	!NumItemsParty("TACPRSP",0)
+	!NumItemsParty("TACPRSP",3)
+	!NumItemsPartyGT("TACPRSP",3)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP_TALKED","LOCALS",0)
+		SetGlobal("TACPRSP","GLOBAL",0)
+		SetGlobal("TACPRSP3","GLOBAL",0)
+		Continue()
+END
+
+IF
+	See([PC])
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP4","GLOBAL",0)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	NumItemsParty("TACPRSP",4)
 	!NumItemsPartyGT("TACPRSP",4)
 	!NumItemsPartyLT("TACPRSP",4)
@@ -97,6 +175,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",1)
 		SetGlobal("TACPRSP4","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
 		IncrementGlobal("TACPRSP_EMPTY","GLOBAL",4)
 		Continue()
 END
@@ -105,8 +184,9 @@ IF
 	See([PC])
 	Global("TACPRSP4","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	!NumItemsParty("TACPRSP",0)
-	!NumItemsParty("TACPRSP",4)
+	NumItemsPartyGT("TACPRSP",4)
 THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",0)
@@ -117,8 +197,24 @@ END
 
 IF
 	See([PC])
+	Global("TACPRSP4","GLOBAL",1)
+	Global("TACPRSP","GLOBAL",1)
+	!NumItemsParty("TACPRSP",0)
+	!NumItemsParty("TACPRSP",4)
+	!NumItemsPartyGT("TACPRSP",4)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP_TALKED","LOCALS",0)
+		SetGlobal("TACPRSP","GLOBAL",0)
+		SetGlobal("TACPRSP4","GLOBAL",0)
+		Continue()
+END
+
+IF
+	See([PC])
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP5","GLOBAL",0)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	NumItemsParty("TACPRSP",5)
 	!NumItemsPartyGT("TACPRSP",5)
 	!NumItemsPartyLT("TACPRSP",5)
@@ -126,6 +222,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",1)
 		SetGlobal("TACPRSP5","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
 		IncrementGlobal("TACPRSP_EMPTY","GLOBAL",5)
 		Continue()
 END
@@ -134,8 +231,9 @@ IF
 	See([PC])
 	Global("TACPRSP5","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	!NumItemsParty("TACPRSP",0)
-	!NumItemsParty("TACPRSP",5)
+	NumItemsPartyGT("TACPRSP",5)
 THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",0)
@@ -146,8 +244,24 @@ END
 
 IF
 	See([PC])
+	Global("TACPRSP5","GLOBAL",1)
+	Global("TACPRSP","GLOBAL",1)
+	!NumItemsParty("TACPRSP",0)
+	!NumItemsParty("TACPRSP",5)
+	!NumItemsPartyGT("TACPRSP",5)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP_TALKED","LOCALS",0)
+		SetGlobal("TACPRSP","GLOBAL",0)
+		SetGlobal("TACPRSP5","GLOBAL",0)
+		Continue()
+END
+
+IF
+	See([PC])
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP6","GLOBAL",0)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	NumItemsParty("TACPRSP",6)
 	!NumItemsPartyGT("TACPRSP",6)
 	!NumItemsPartyLT("TACPRSP",6)
@@ -155,6 +269,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",1)
 		SetGlobal("TACPRSP6","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
 		IncrementGlobal("TACPRSP_EMPTY","GLOBAL",6)
 		Continue()
 END
@@ -163,8 +278,9 @@ IF
 	See([PC])
 	Global("TACPRSP6","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	!NumItemsParty("TACPRSP",0)
-	!NumItemsParty("TACPRSP",6)
+	NumItemsPartyGT("TACPRSP",6)
 THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",0)
@@ -175,8 +291,24 @@ END
 
 IF
 	See([PC])
+	Global("TACPRSP6","GLOBAL",1)
+	Global("TACPRSP","GLOBAL",1)
+	!NumItemsParty("TACPRSP",0)
+	!NumItemsParty("TACPRSP",6)
+	!NumItemsPartyGT("TACPRSP",6)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP_TALKED","LOCALS",0)
+		SetGlobal("TACPRSP","GLOBAL",0)
+		SetGlobal("TACPRSP6","GLOBAL",0)
+		Continue()
+END
+
+IF
+	See([PC])
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP7","GLOBAL",0)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	NumItemsParty("TACPRSP",7)
 	!NumItemsPartyGT("TACPRSP",7)
 	!NumItemsPartyLT("TACPRSP",7)
@@ -184,6 +316,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",1)
 		SetGlobal("TACPRSP7","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
 		IncrementGlobal("TACPRSP_EMPTY","GLOBAL",7)
 		Continue()
 END
@@ -192,8 +325,9 @@ IF
 	See([PC])
 	Global("TACPRSP7","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	!NumItemsParty("TACPRSP",0)
-	!NumItemsParty("TACPRSP",7)
+	NumItemsPartyGT("TACPRSP",7)
 THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",0)
@@ -204,8 +338,24 @@ END
 
 IF
 	See([PC])
+	Global("TACPRSP7","GLOBAL",1)
+	Global("TACPRSP","GLOBAL",1)
+	!NumItemsParty("TACPRSP",0)
+	!NumItemsParty("TACPRSP",7)
+	!NumItemsPartyGT("TACPRSP",7)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP_TALKED","LOCALS",0)
+		SetGlobal("TACPRSP","GLOBAL",0)
+		SetGlobal("TACPRSP7","GLOBAL",0)
+		Continue()
+END
+
+IF
+	See([PC])
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP8","GLOBAL",0)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	NumItemsParty("TACPRSP",8)
 	!NumItemsPartyGT("TACPRSP",8)
 	!NumItemsPartyLT("TACPRSP",8)
@@ -213,6 +363,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",1)
 		SetGlobal("TACPRSP8","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
 		IncrementGlobal("TACPRSP_EMPTY","GLOBAL",8)
 		Continue()
 END
@@ -221,8 +372,9 @@ IF
 	See([PC])
 	Global("TACPRSP8","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	!NumItemsParty("TACPRSP",0)
-	!NumItemsParty("TACPRSP",8)
+	NumItemsPartyGT("TACPRSP",8)
 THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",0)
@@ -233,8 +385,24 @@ END
 
 IF
 	See([PC])
+	Global("TACPRSP8","GLOBAL",1)
+	Global("TACPRSP","GLOBAL",1)
+	!NumItemsParty("TACPRSP",0)
+	!NumItemsParty("TACPRSP",8)
+	!NumItemsPartyGT("TACPRSP",8)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP_TALKED","LOCALS",0)
+		SetGlobal("TACPRSP","GLOBAL",0)
+		SetGlobal("TACPRSP8","GLOBAL",0)
+		Continue()
+END
+
+IF
+	See([PC])
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP9","GLOBAL",0)
+	Global("TACPRSP_TALKED","LOCALS",2)
 	NumItemsParty("TACPRSP",9)
 	!NumItemsPartyGT("TACPRSP",9)
 	!NumItemsPartyLT("TACPRSP",9)
@@ -242,7 +410,23 @@ THEN
 	RESPONSE #100
 		SetGlobal("TACPRSP","GLOBAL",1)
 		SetGlobal("TACPRSP9","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
 		IncrementGlobal("TACPRSP_EMPTY","GLOBAL",9)
+		Continue()
+END
+
+IF
+	See([PC])
+	Global("TACPRSP9","GLOBAL",1)
+	Global("TACPRSP","GLOBAL",1)
+	Global("TACPRSP_TALKED","LOCALS",2)
+	!NumItemsParty("TACPRSP",0)
+	NumItemsPartyGT("TACPRSP",9)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP","GLOBAL",0)
+		SetGlobal("TACPRSP9","GLOBAL",0)
+		IncrementGlobal("TACPRSP_EMPTY","GLOBAL",-9)
 		Continue()
 END
 
@@ -252,11 +436,12 @@ IF
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
 	!NumItemsParty("TACPRSP",9)
+	!NumItemsPartyGT("TACPRSP",9)
 THEN
 	RESPONSE #100
+		SetGlobal("TACPRSP_TALKED","LOCALS",0)
 		SetGlobal("TACPRSP","GLOBAL",0)
 		SetGlobal("TACPRSP9","GLOBAL",0)
-		IncrementGlobal("TACPRSP_EMPTY","GLOBAL",-9)
 		Continue()
 END
 
@@ -271,21 +456,129 @@ THEN
 		Continue()
 END
 
+////////////////
+
 IF
 	See([PC])
-	!Global("TACPRSP","GLOBAL",0)
-	!PartyHasItem("TACPRSP")
+	Global("TACPRSP_TALKED","LOCALS",0)
+	NumItemsParty("TACPRSP",1)
+	!NumItemsPartyGT("TACPRSP",1)
 THEN
 	RESPONSE #100
-		SetGlobal("TACPRSP","GLOBAL",0)
-		SetGlobal("TACPRSP1","GLOBAL",0)
-		SetGlobal("TACPRSP2","GLOBAL",0)
-		SetGlobal("TACPRSP3","GLOBAL",0)
-		SetGlobal("TACPRSP4","GLOBAL",0)
-		SetGlobal("TACPRSP5","GLOBAL",0)
-		SetGlobal("TACPRSP6","GLOBAL",0)
-		SetGlobal("TACPRSP7","GLOBAL",0)
-		SetGlobal("TACPRSP8","GLOBAL",0)
-		SetGlobal("TACPRSP9","GLOBAL",0)
+		SetGlobal("TACPRSP","GLOBAL",1)
+		SetGlobal("TACPRSP1","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
 		Continue()
 END
+
+IF
+	See([PC])
+	Global("TACPRSP_TALKED","LOCALS",0)
+	NumItemsParty("TACPRSP",2)
+	!NumItemsPartyGT("TACPRSP",2)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP","GLOBAL",1)
+		SetGlobal("TACPRSP2","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
+		Continue()
+END
+
+IF
+	See([PC])
+	Global("TACPRSP_TALKED","LOCALS",0)
+	NumItemsParty("TACPRSP",3)
+	!NumItemsPartyGT("TACPRSP",3)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP","GLOBAL",1)
+		SetGlobal("TACPRSP3","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
+		Continue()
+END
+
+
+IF
+	See([PC])
+	Global("TACPRSP_TALKED","LOCALS",0)
+	NumItemsParty("TACPRSP",4)
+	!NumItemsPartyGT("TACPRSP",4)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP","GLOBAL",1)
+		SetGlobal("TACPRSP4","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
+		Continue()
+END
+
+
+IF
+	See([PC])
+	Global("TACPRSP_TALKED","LOCALS",0)
+	NumItemsParty("TACPRSP",5)
+	!NumItemsPartyGT("TACPRSP",5)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP","GLOBAL",1)
+		SetGlobal("TACPRSP5","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
+		Continue()
+END
+
+
+IF
+	See([PC])
+	Global("TACPRSP_TALKED","LOCALS",0)
+	NumItemsParty("TACPRSP",6)
+	!NumItemsPartyGT("TACPRSP",6)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP","GLOBAL",1)
+		SetGlobal("TACPRSP6","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
+		Continue()
+END
+
+
+IF
+	See([PC])
+	Global("TACPRSP_TALKED","LOCALS",0)
+	NumItemsParty("TACPRSP",7)
+	!NumItemsPartyGT("TACPRSP",7)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP","GLOBAL",1)
+		SetGlobal("TACPRSP7","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
+		Continue()
+END
+
+
+IF
+	See([PC])
+	Global("TACPRSP_TALKED","LOCALS",0)
+	NumItemsParty("TACPRSP",8)
+	!NumItemsPartyGT("TACPRSP",8)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP","GLOBAL",1)
+		SetGlobal("TACPRSP8","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
+		Continue()
+END
+
+
+IF
+	See([PC])
+	Global("TACPRSP_TALKED","LOCALS",0)
+	NumItemsParty("TACPRSP",9)
+	!NumItemsPartyGT("TACPRSP",9)
+THEN
+	RESPONSE #100
+		SetGlobal("TACPRSP","GLOBAL",1)
+		SetGlobal("TACPRSP9","GLOBAL",1)
+		SetGlobal("TACPRSP_TALKED","LOCALS",1)
+		Continue()
+END
+
+
