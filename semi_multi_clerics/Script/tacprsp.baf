@@ -25,6 +25,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP1","GLOBAL",0)
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -41,6 +42,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP1","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -56,6 +58,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP1","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -71,6 +74,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP2","GLOBAL",0)
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -88,6 +92,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP2","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -103,6 +108,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP2","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -118,6 +124,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP3","GLOBAL",0)
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -135,6 +142,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP3","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -150,6 +158,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP3","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -165,6 +174,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP4","GLOBAL",0)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -182,6 +192,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP4","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -197,6 +208,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP4","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -212,6 +224,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP5","GLOBAL",0)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -229,6 +242,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP5","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -244,6 +258,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP5","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -259,6 +274,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP6","GLOBAL",0)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -276,6 +292,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP6","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -291,6 +308,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP6","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -306,6 +324,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP7","GLOBAL",0)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -323,6 +342,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP7","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -338,6 +358,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP7","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -353,6 +374,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP8","GLOBAL",0)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -370,6 +392,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP8","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -385,6 +408,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP8","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -400,6 +424,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP","GLOBAL",0)
 	Global("TACPRSP9","GLOBAL",0)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -417,6 +442,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP9","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	Global("TACPRSP_TALKED","LOCALS",2)
@@ -432,6 +458,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP9","GLOBAL",1)
 	Global("TACPRSP","GLOBAL",1)
 	!NumItemsParty("TACPRSP",0)
@@ -447,6 +474,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP","GLOBAL",0)
 	NumItemsParty("TACPRSP",10)
 THEN
@@ -460,6 +488,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP_TALKED","LOCALS",0)
 	NumItemsParty("TACPRSP",1)
 	!NumItemsPartyGT("TACPRSP",1)
@@ -473,6 +502,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP_TALKED","LOCALS",0)
 	NumItemsParty("TACPRSP",2)
 	!NumItemsPartyGT("TACPRSP",2)
@@ -486,6 +516,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP_TALKED","LOCALS",0)
 	NumItemsParty("TACPRSP",3)
 	!NumItemsPartyGT("TACPRSP",3)
@@ -500,6 +531,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP_TALKED","LOCALS",0)
 	NumItemsParty("TACPRSP",4)
 	!NumItemsPartyGT("TACPRSP",4)
@@ -514,6 +546,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP_TALKED","LOCALS",0)
 	NumItemsParty("TACPRSP",5)
 	!NumItemsPartyGT("TACPRSP",5)
@@ -528,6 +561,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP_TALKED","LOCALS",0)
 	NumItemsParty("TACPRSP",6)
 	!NumItemsPartyGT("TACPRSP",6)
@@ -542,6 +576,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP_TALKED","LOCALS",0)
 	NumItemsParty("TACPRSP",7)
 	!NumItemsPartyGT("TACPRSP",7)
@@ -556,6 +591,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP_TALKED","LOCALS",0)
 	NumItemsParty("TACPRSP",8)
 	!NumItemsPartyGT("TACPRSP",8)
@@ -570,6 +606,7 @@ END
 
 IF
 	See([PC])
+	!GlobalGT("TACPRBG_EMPTY","GLOBAL",9)
 	Global("TACPRSP_TALKED","LOCALS",0)
 	NumItemsParty("TACPRSP",9)
 	!NumItemsPartyGT("TACPRSP",9)
