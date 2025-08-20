@@ -105,3 +105,44 @@
 		EXTEND_TOP ~ar2100.bcs~ ~weidu_external/semi_multi_clerics/Script/ar2100.baf~
 
 	END
+	
+ACTION_IF GAME_IS ~iwd how totlm~ THEN BEGIN
+
+		COPY_EXISTING 
+			~sppr101.spl~ ~override/tacpr25.spl~ //bless
+			~sppr110.spl~ ~override/tacpr1.spl~ //shillelagh
+			~sppr113.spl~ ~override/tacpr26.spl~ //doom // No IWD
+			~sppr109.spl~ ~override/tacpr3.spl~ //armour of faith // No IWD // 109 Sanctuary / sppr111
+			~sppr201.spl~ ~override/tacpr2.spl~ //aid
+			~sppr210.spl~ ~override/tacpr4.spl~ //resist fire and cold
+			~sppr215.spl~ ~override/tacpr5.spl~ //draw upon holy might // 215 / sppr214
+			~sppr308.spl~ ~override/tacpr6.spl~ //remove paralysis
+			~sppr313.spl~ ~override/tacpr7.spl~ //holy smite // No IWD
+			~sppr318.spl~ ~override/tacpr27.spl~ //zone of sweet air // No IWD
+			~sppr401.spl~ ~override/tacpr23.spl~ //cure serious wounds
+			~sppr403.spl~ ~override/tacpr24.spl~ //free action
+			~sppr406.spl~ ~override/tacpr8.spl~ //defensive harmony
+			~sppr408.spl~ ~override/tacpr9.spl~ //protection from evil 10 ft.
+			~sppr409.spl~ ~override/tacpr35.spl~ //deathward // No IWD
+			~sppr410.spl~ ~override/tacpr29.spl~ //call woodland beings
+			~sppr412.spl~ ~override/tacpr10.spl~ //holy power // No IWD
+			~sppr417.spl~ ~override/tacpr11.spl~ //lesser restoration // No IWD
+			~sppr504.spl~ ~override/tacpr12.spl~ //raise dead
+			~sppr508.spl~ ~override/tacpr13.spl~ //chaotic commands
+			~sppr519.spl~ ~override/tacpr14.spl~ //magic resistance // 519 / sppr509
+			~sppr513.spl~ ~override/tacpr16.spl~ //righteous magic // No IWD
+			~sppr514.spl~ ~override/tacpr30.spl~ //mass cure // No IWD
+			~sppr510.spl~ ~override/tacpr15.spl~ //insesct plague // 510 / sppr517
+			~sppr610.spl~ ~override/tacpr17.spl~ //blade barrer // 610 / sppr603
+			~sppr607.spl~ ~override/tacpr31.spl~ //heal
+			~sppr611.spl~ ~override/tacpr32.spl~ //harm // 611 / sppr608
+			~sppr612.spl~ ~override/tacpr33.spl~ //bolt of glory // No IWD
+			~sppr613.spl~ ~override/tacpr18.spl~ //physical mirror // No IWD
+			~sppr705.spl~ ~override/tacpr19.spl~ //fire storm
+			~sppr707.spl~ ~override/tacpr34.spl~ //sunray
+			~sppr712.spl~ ~override/tacpr20.spl~ //regenerate // No IWD // 712 Résurrection / sppr711
+			~sppr720.spl~ ~override/tacpr21.spl~ //(greater) restoration // No IWD // 720 Brume / sppr713
+			~sppr704.spl~ ~override/tacpr22.spl~ //creeping doom // 704 / sppr717
+			WRITE_SHORT 0x1c 1
+
+END

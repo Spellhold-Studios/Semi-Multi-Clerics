@@ -163,7 +163,7 @@ Accessible au commencement / 100 % de chance de perdre 2 points de Dexterite et 
 DESIGNATED 5
 SUBCOMPONENT @9 /* Semi-multi-clerics pour IWD / IWDEE */
 LABEL ~thebigg-semi-multi-ORIGINALE-IWD~
-REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @31 /*Necessite IWD / IWDEE */
+REQUIRE_PREDICATE (GAME_IS ~iwdee iwd how totlm~) @31 /*Necessite IWD / IWDEE */ 
 
 OUTER_SET ORIGINALE = 1
 OUTER_SET ADOUCIE = 0
@@ -176,7 +176,7 @@ Accessible au commencement / 25 % de chance de perdre 2 points de Dexterite et C
 DESIGNATED 6
 SUBCOMPONENT @9 /* Semi-multi-clerics pour IWD / IWDEE */
 LABEL ~thebigg-semi-multi-ADOUCIE-IWD~
-REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @31 /*Necessite IWD / IWDEE */
+REQUIRE_PREDICATE (GAME_IS ~iwdee iwd how totlm~) @31 /*Necessite IWD / IWDEE */ 
 
 OUTER_SET ORIGINALE = 0
 OUTER_SET ADOUCIE = 1
@@ -189,7 +189,7 @@ Accessible apres l'Oeil du Dragon / 100 % de chance de perdre 2 points de Dexter
 DESIGNATED 7
 SUBCOMPONENT @9 /* Semi-multi-clerics pour IWD / IWDEE */
 LABEL ~thebigg-semi-multi-ORIGINALE_RETARDEE-IWD~
-REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @31 /*Necessite IWD / IWDEE */
+REQUIRE_PREDICATE (GAME_IS ~iwdee iwd how totlm~) @31 /*Necessite IWD / IWDEE */ 
 
 OUTER_SET ORIGINALE = 1
 OUTER_SET ADOUCIE = 0
@@ -208,9 +208,9 @@ OUTER_SET DELAYED = 1
 BEGIN @19 /*Version [ADOUCIE RETARDEE] 
 Accessible apres l'Oeil du Dragon / 25 % de chance de perdre 2 points de Dexterite et Constitution */
 DESIGNATED 8
-SUBCOMPONENT @9 /* Semi-multi-clerics pour IWD / IWDEE */
+SUBCOMPONENT @9 /* Semi-multi-clerics pour IWD / IWDEE */ 
 LABEL ~thebigg-semi-multi-ADOUCIE_RETARDEE-IWD~
-REQUIRE_PREDICATE (GAME_IS ~iwdee iwd~) @31 /*Necessite IWD / IWDEE */
+REQUIRE_PREDICATE (GAME_IS ~iwdee iwd how totlm~) @31 /*Necessite IWD / IWDEE */
 
 OUTER_SET ORIGINALE = 0
 OUTER_SET ADOUCIE = 1
@@ -288,8 +288,8 @@ OUTER_SET DELAYED = 1
 
 BEGIN @35
 DESIGNATED 50
-LABEL ~thebigg-semi-multi_Addition~
-REQUIRE_PREDICATE (GAME_IS ~tob bgt bgee iwd iwdee bg2ee eet~) @34
+LABEL ~thebigg-semi-multi_Addition~ 
+REQUIRE_PREDICATE (GAME_IS ~tob bgt bgee iwdee iwd how totlm bg2ee eet~) @34
 REQUIRE_PREDICATE ((MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 1 ||
 					MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 2 ||
 					MOD_IS_INSTALLED ~semi_multi_clerics.tp2~ 3 ||

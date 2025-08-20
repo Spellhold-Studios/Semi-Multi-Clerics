@@ -6,6 +6,8 @@
 
 	COMPILE ~semi_multi_clerics/Dialog/tacprsp.d~
 
+ACTION_IF NOT GAME_IS ~iwd how totlm~ THEN BEGIN
+
 		COPY_EXISTING 
 			~sppr110.spl~ ~override/tacpr1.spl~ //shillelagh
 			~sppr412.spl~ ~override/tacpr10.spl~ //holy power
@@ -43,6 +45,7 @@
 			~sppr408.spl~ ~override/tacpr9.spl~ //protection from evil 10 ft.
 			WRITE_SHORT 0x1c 1
 
+END
 
 COPY ~Semi_multi_clerics/Spell/TACTURN.SPL~	~override~
 	SAY NAME1 @5
