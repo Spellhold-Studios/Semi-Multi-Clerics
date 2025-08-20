@@ -207,7 +207,7 @@ IF
 	!GlobalGT("TACPRSP_EMPTY","GLOBAL",9)
 	See([PC])
 	Global("TACPRSP_TALKED","LOCALS",0)
-	!Global("TACPRSP","LOCALS",1)
+	!Global("TACPRBG","LOCALS",1)
 	NumItemsParty("TACPRBG",1)
 	!NumItemsPartyGT("TACPRBG",1)
 THEN
@@ -371,7 +371,7 @@ IF
 	!GlobalGT("TACPRSP_EMPTY","GLOBAL",9)
 	See([PC])
 	Global("TACPRSP_TALKED","LOCALS",0)
-	!Global("TACPRSP","LOCALS",2)
+	!Global("TACPRBG","LOCALS",2)
 	NumItemsParty("TACPRBG",2)
 	!NumItemsPartyGT("TACPRBG",2)
 THEN
@@ -520,7 +520,7 @@ IF
 	!GlobalGT("TACPRSP_EMPTY","GLOBAL",9)
 	See([PC])
 	Global("TACPRSP_TALKED","LOCALS",0)
-	!Global("TACPRSP","LOCALS",3)
+	!Global("TACPRBG","LOCALS",3)
 	NumItemsParty("TACPRBG",3)
 	!NumItemsPartyGT("TACPRBG",3)
 THEN
@@ -654,7 +654,7 @@ IF
 	!GlobalGT("TACPRSP_EMPTY","GLOBAL",9)
 	See([PC])
 	Global("TACPRSP_TALKED","LOCALS",0)
-	!Global("TACPRSP","LOCALS",4)
+	!Global("TACPRBG","LOCALS",4)
 	NumItemsParty("TACPRBG",4)
 	!NumItemsPartyGT("TACPRBG",4)
 THEN
@@ -773,7 +773,7 @@ IF
 	!GlobalGT("TACPRSP_EMPTY","GLOBAL",9)
 	See([PC])
 	Global("TACPRSP_TALKED","LOCALS",0)
-	!Global("TACPRSP","LOCALS",5)
+	!Global("TACPRBG","LOCALS",5)
 	NumItemsParty("TACPRBG",5)
 	!NumItemsPartyGT("TACPRBG",5)
 THEN
@@ -877,7 +877,7 @@ IF
 	!GlobalGT("TACPRSP_EMPTY","GLOBAL",9)
 	See([PC])
 	Global("TACPRSP_TALKED","LOCALS",0)
-	!Global("TACPRSP","LOCALS",6)
+	!Global("TACPRBG","LOCALS",6)
 	NumItemsParty("TACPRBG",6)
 	!NumItemsPartyGT("TACPRBG",6)
 THEN
@@ -966,7 +966,7 @@ IF
 	!GlobalGT("TACPRSP_EMPTY","GLOBAL",9)
 	See([PC])
 	Global("TACPRSP_TALKED","LOCALS",0)
-	!Global("TACPRSP","LOCALS",7)
+	!Global("TACPRBG","LOCALS",7)
 	NumItemsParty("TACPRBG",7)
 	!NumItemsPartyGT("TACPRBG",7)
 THEN
@@ -1040,7 +1040,7 @@ IF
 	!GlobalGT("TACPRSP_EMPTY","GLOBAL",9)
 	See([PC])
 	Global("TACPRSP_TALKED","LOCALS",0)
-	!Global("TACPRSP","LOCALS",8)
+	!Global("TACPRBG","LOCALS",8)
 	NumItemsParty("TACPRBG",8)
 	!NumItemsPartyGT("TACPRBG",8)
 THEN
@@ -1099,7 +1099,7 @@ IF
 	!GlobalGT("TACPRSP_EMPTY","GLOBAL",9)
 	See([PC])
 	Global("TACPRSP_TALKED","LOCALS",0)
-	!Global("TACPRSP","LOCALS",9)
+	!Global("TACPRBG","LOCALS",9)
 	NumItemsParty("TACPRBG",9)
 	!NumItemsPartyGT("TACPRBG",9)
 THEN

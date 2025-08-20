@@ -12,9 +12,9 @@
 
 [Lien vers le forum original du Mod](http://www.shsforums.net/topic/27189-new-version-of-semi-multi-clerics-released/)
 
-[Click to access the Readme in English](https://github.com/Spellhold-Studios/semi_multi_clerics/blob/master/Readme.md)
+[Readme in English](https://github.com/Spellhold-Studios/semi_multi_clerics/blob/master/Readme.md)
 
-[Clicker pour acceder au readme officiel en anglais](https://htmlpreview.github.io/?https://github.com/Spellhold-Studios/semi_multi_clerics/blob/master/semi_multi_clerics/Readme/readme.html)
+[SHS officiel readme en anglais](https://htmlpreview.github.io/?https://github.com/Spellhold-Studios/semi_multi_clerics/blob/master/semi_multi_clerics/Readme/readme.html)
 
 
 
@@ -50,6 +50,13 @@ Et suivre les indications.
 
 ## Version History:
 ------------------
+
+Version 0.4.4 - August 2025:
+
+- Redo script count
+- More LOCALS less GLOBAL
+- SHS github links
+- oIWD adaptation
 
 Version 0.4.3 - August 2025:
 
