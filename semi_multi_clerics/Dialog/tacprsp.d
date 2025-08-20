@@ -13,6 +13,6 @@ BEGIN ~TACPRSP~
 	
 	IF ~~ THEN BEGIN ciao
 		SAY @14
-		IF ~~ THEN EXIT
+		IF ~~ THEN DO ~SetGlobal("TACPRSP_TALKED","LOCALS",1)~ EXIT
 	END
 

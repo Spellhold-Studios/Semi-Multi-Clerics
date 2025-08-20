@@ -12,6 +12,7 @@ THEN
 END
 */
 
+/*
 IF
 	!Global("TACPRBG","GLOBAL",0)
 THEN
@@ -28,6 +29,7 @@ THEN
 		SetGlobal("TACPRBG9","GLOBAL",0)
 		Continue()
 END
+*/
 
 IF
 	Global("TACPRSP_EMPTY","GLOBAL",1)

@@ -1,6 +1,10 @@
 # Semi Multi Clerics
 
-![Language](https://img.shields.io/static/v1?label=language&message=english%20%7C%20french%20%7C%20italian%20%7C%20spanish%20%7C%20russian%20%7C%20&color=informational)
+![Latest Release](https://img.shields.io/github/v/release/Spellhold-Studios/semi_multi_clerics?include_prereleases&color=gold&label=version%20)
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/Spellhold-Studios/semi_multi_clerics?color=gold&label=publi%C3%A9e%20le)
+![Language](https://img.shields.io/static/v1?label=language&message=english%20%7C%20french%20%7C%20italian%20%7C%20spanish%20%7C%20russian%20%7C%20&color=informational)<a href="#"><img src="https://api.visitorbadge.io/api/VisitorHit?user=Spellhold-Studios&repo=semi_multi_clerics&countColor==red&style=plastic&label=visites%20" /></a>
+![GitHub contributeurs](https://img.shields.io/github/contributors/Spellhold-Studios/semi_multi_clerics?color=blueviolet&label=contributeurs%20&style=plastic)
+![Downloads](https://img.shields.io/github/downloads/Spellhold-Studios/semi_multi_clerics/total?color=%2392403a&label=t%C3%A9l%C3%A9chargements)
 
 **Auteur** : **Bob Tokyo**
 
