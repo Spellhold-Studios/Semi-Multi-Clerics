@@ -34,6 +34,7 @@
 		LPF ADD_ITEM_EFFECT // Global Variable
 		INT_VAR
 			opcode=265
+			parameter1= ~1~
 			parameter2= ~1~
 			STR_VAR
 				resource = ~TACREAD~
@@ -75,6 +76,7 @@
 		LPF ADD_ITEM_EFFECT // Global Variable
 		INT_VAR
 			opcode=265
+			parameter1= ~1~
 			parameter2= ~1~
 			STR_VAR
 				resource = ~TACREAD~

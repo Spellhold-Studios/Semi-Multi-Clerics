@@ -129,6 +129,7 @@ ACTION_IF GAME_IS ~bgt tob bg2ee eet~ THEN BEGIN
 		LPF ADD_ITEM_EFFECT // Global Variable
 		INT_VAR
 			opcode=265
+			parameter1= ~1~
 			parameter2= ~1~
 			STR_VAR
 				resource = ~TACREAD~
@@ -170,6 +171,7 @@ ACTION_IF GAME_IS ~bgt tob bg2ee eet~ THEN BEGIN
 		LPF ADD_ITEM_EFFECT // Global Variable
 		INT_VAR
 			opcode=265
+			parameter1= ~1~
 			parameter2= ~1~
 			STR_VAR
 				resource = ~TACREAD~
