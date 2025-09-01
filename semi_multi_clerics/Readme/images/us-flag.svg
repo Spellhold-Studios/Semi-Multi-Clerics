@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42" height="28" version="1.1" viewBox="0 0 252 168" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="m0 0h252v168h-252" fill="#b31942" stroke-width=".038275"/>
+  <path d="m0 18.695h252m0 26.122h-252m0 26.122h252m0 26.122h-252m0 26.122h252m0 26.122h-252" stroke="#fff" stroke-width="11.544"/>
+  <path d="m0 0h127.68v90.462h-127.68" fill="#0a3161" stroke-width=".043077"/>
+  <g transform="scale(.043077)" fill="#fff">
+    <g id="d">
+      <g id="a">
+        <g id="b">
+          <g id="c">
+            <path id="s" d="m247 90 70.534 217.08-184.66-134.16h228.25l-184.66 134.16z"/>
+            <use y="420" xlink:href="#s"/>
+            <use y="840" xlink:href="#s"/>
+            <use y="1260" xlink:href="#s"/>
+          </g>
+          <use y="1680" xlink:href="#s"/>
+        </g>
+        <use x="247" y="210" xlink:href="#c"/>
+      </g>
+      <use x="494" xlink:href="#a"/>
+    </g>
+    <use x="988" xlink:href="#d"/>
+    <use x="1976" xlink:href="#a"/>
+    <use x="2470" xlink:href="#b"/>
+  </g>
+</svg>
