@@ -22,4 +22,4 @@ jobs:
       type: ${{ matrix.type }}
       architecture: amd64
       suffix: ${{ github.event.release.tag_name }}
-      naming: Semi-Multi Cleric
+      naming: Semi-Multi-Clerics
