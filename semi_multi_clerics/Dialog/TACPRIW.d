@@ -1,6 +1,6 @@
 BEGIN ~tacprsp~
 
-IF ~~ THEN BEGIN holaIWD
+IF ~True()~ THEN BEGIN holaIWD
 	SAY @10
 	IF ~~ THEN REPLY @11 GOTO ciaoIWD
 	IF ~XPGT(LastTalkedToBy,4999)~ THEN REPLY @12 DO ~StartStore("TACPRSP",LastTalkedToBy) SetGlobal("TACPRSP_TALKED","LOCALS",2)~ EXIT
